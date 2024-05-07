@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Lospec Jam 2 - Scaled-Down Adventures"
+config/version="0.1.0"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
