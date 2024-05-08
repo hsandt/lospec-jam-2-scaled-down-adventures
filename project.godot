@@ -12,8 +12,13 @@ config_version=5
 
 config/name="Lospec Jam 2 - Scaled-Down Adventures"
 config/version="0.1.0"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+run/main_scene="res://test_yarn_spinner.tscn"
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="Lospec Jam 2 - Scaled-Down Adventures"
 
 [rendering]
 
