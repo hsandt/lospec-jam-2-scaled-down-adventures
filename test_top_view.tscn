@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxapglgebrrse"]
+[gd_scene load_steps=7 format=3 uid="uid://dxapglgebrrse"]
 
 [ext_resource type="Script" path="res://scripts/TriggerDialogue.gd" id="1_rkuy2"]
 [ext_resource type="Script" path="res://scripts/PlayerCharacter/PlayerCharacter.gd" id="2_lllgy"]
 [ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="2_xdp2v"]
+[ext_resource type="TileSet" uid="uid://b1vpevu4b6jb7" path="res://tilesets/room_tile_set.tres" id="4_1utgh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shiyn"]
 size = Vector2(16, 16)
@@ -40,3 +41,7 @@ shape = SubResource("RectangleShape2D_5rmt5")
 self_modulate = Color(0.419608, 0.270588, 0.0509804, 1)
 scale = Vector2(16, 16)
 texture = ExtResource("2_xdp2v")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("4_1utgh")
+format = 2
