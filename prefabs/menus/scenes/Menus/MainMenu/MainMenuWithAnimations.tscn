@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://b8jibyb5nyfry"]
 
-[ext_resource type="PackedScene" path="res://prefabs/menus/scenes/Menus/MainMenu/MainMenu.tscn" id="1_je6ti"]
+[ext_resource type="PackedScene" uid="uid://cxypbrirpvbay" path="res://prefabs/menus/scenes/Menus/MainMenu/MainMenu.tscn" id="1_je6ti"]
 [ext_resource type="Script" path="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.gd" id="2_hbrfy"]
 
 [sub_resource type="Animation" id="1"]
@@ -332,6 +332,9 @@ libraries = {
 }
 
 [node name="MenuAnimationTree" type="AnimationTree" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_2kqig")
+}
 tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
