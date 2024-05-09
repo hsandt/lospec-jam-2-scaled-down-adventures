@@ -49,6 +49,11 @@ func _setup_for_web():
 		%ExitButton.hide()
 
 func _setup_version_name():
+	# CUSTOM CHANGE by hsandt
+	# If not setting a custom version name, use the one from project settings
+	# This avoids having to manually update it every time
+	if version_name == '0.0.0':
+		version_name = ProjectSettings.get_setting("application/config/version", "0.0.0")
 	AppLog.version_opened(version_name)
 	$"%VersionNameLabel".text = "v%s" % version_name
 
