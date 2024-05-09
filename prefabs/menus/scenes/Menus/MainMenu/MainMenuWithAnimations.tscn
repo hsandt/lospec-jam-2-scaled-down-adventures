@@ -350,3 +350,6 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtons" parent="MenuContainer/VBoxContainer/MenuMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
+
+[node name="BackButton" parent="FlowControlContainer/FlowControl" index="0"]
+visible = false

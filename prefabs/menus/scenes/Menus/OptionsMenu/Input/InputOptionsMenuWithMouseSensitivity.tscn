@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bou73hbwsc2jc"]
 
-[ext_resource type="PackedScene" path="res://prefabs/menus/scenes/Menus/OptionsMenu/Input/InputOptionsMenu.tscn" id="1_kygp6"]
-[ext_resource type="PackedScene" path="res://addons/maaacks_menus_template/base/scenes/Menus/OptionsMenu/OptionControl/SliderOptionControl.tscn" id="2_g32h8"]
+[ext_resource type="PackedScene" uid="uid://cg1jucnlqheox" path="res://prefabs/menus/scenes/Menus/OptionsMenu/Input/InputOptionsMenu.tscn" id="1_kygp6"]
+[ext_resource type="PackedScene" uid="uid://cl416gdb1fgwr" path="res://addons/maaacks_menus_template/base/scenes/Menus/OptionsMenu/OptionControl/SliderOptionControl.tscn" id="2_g32h8"]
 
 [node name="Controls" instance=ExtResource("1_kygp6")]
 
@@ -9,6 +9,7 @@
 theme_override_constants/separation = 16
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" index="0"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_bottom = 32
@@ -34,6 +35,7 @@ max_value = 2.0
 tick_count = 16
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer" index="1"]
+visible = false
 layout_mode = 2
 
 [editable path="VBoxContainer/MarginContainer/VBoxContainer/MouseSensitivityControl"]

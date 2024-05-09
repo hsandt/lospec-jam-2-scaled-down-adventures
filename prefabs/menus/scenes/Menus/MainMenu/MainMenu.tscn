@@ -50,3 +50,17 @@ custom_minimum_size = Vector2(100, 30)
 
 [node name="ExitButton" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons" index="3"]
 custom_minimum_size = Vector2(100, 30)
+
+[node name="BackButton" parent="FlowControlContainer/FlowControl" index="0"]
+visible = true
+custom_minimum_size = Vector2(0, 0)
+anchors_preset = -1
+anchor_left = -0.0449286
+anchor_top = 1.06221
+anchor_right = -0.0449286
+anchor_bottom = 1.06221
+offset_left = 0.0640001
+offset_top = -23.944
+offset_right = 62.064
+offset_bottom = 0.0559998
+metadata/_edit_use_anchors_ = true
