@@ -45,7 +45,7 @@ glossary/default_case_sensitive=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/hyper-godot-commons/plugin.cfg")
 
 [input]
 

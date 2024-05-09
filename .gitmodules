@@ -1,0 +1,4 @@
+[submodule "addons/hyper-godot-commons"]
+	path = addons/hyper-godot-commons
+	url = https://github.com/hsandt/hyper-godot-commons
+	branch = main
