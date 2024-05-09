@@ -20,18 +20,24 @@ self_modulate = Color(0.490196, 0.490196, 0.639216, 1)
 texture = ExtResource("5_ob6uo")
 stretch_mode = 0
 
+[node name="TitlesMargin" parent="MenuContainer/VBoxContainer" index="0"]
+theme_override_constants/margin_top = 8
+
 [node name="Title" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="0"]
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 24
+text = "Down-Scaled
+Adventures"
 
 [node name="SubTitle" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="1"]
 theme_override_font_sizes/font_size = 16
+text = "A Lospec Jam 2 game"
 
 [node name="MenuMargin" parent="MenuContainer/VBoxContainer" index="1"]
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 4
 
 [node name="MenuButtons" parent="MenuContainer/VBoxContainer/MenuMargin" index="0"]
-theme_override_constants/separation = 8
+theme_override_constants/separation = 4
 
 [node name="PlayButton" parent="MenuContainer/VBoxContainer/MenuMargin/MenuButtons" index="0"]
 custom_minimum_size = Vector2(100, 30)
