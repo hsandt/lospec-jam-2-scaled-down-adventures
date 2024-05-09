@@ -11,7 +11,6 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource("2_gfgqd")
-theme_type_variation = &"OptionsPanel"
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_bottom = 24
 script = ExtResource("2_uj1y4")
