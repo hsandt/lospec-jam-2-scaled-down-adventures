@@ -52,6 +52,7 @@ glossary/default_case_sensitive=true
 
 window/size/viewport_width=256
 window/size/viewport_height=224
+window/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
 
 [editor_plugins]
 
