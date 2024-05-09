@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxypbrirpvbay"]
+[gd_scene load_steps=6 format=3 uid="uid://cxypbrirpvbay"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/Menus/MainMenu/MainMenu.tscn" id="1_7dnck"]
 [ext_resource type="Theme" uid="uid://csv4ui1211jbw" path="res://themes/global_theme.tres" id="2_rnp4u"]
 [ext_resource type="PackedScene" uid="uid://dd2ohaviois2l" path="res://prefabs/menus/scenes/Menus/OptionsMenu/MasterOptionsMenuWithTabs.tscn" id="2_t18ep"]
 [ext_resource type="PackedScene" uid="uid://73bswdw2eqw3" path="res://prefabs/menus/scenes/Credits/Credits.tscn" id="3_vnqdd"]
+[ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="5_ob6uo"]
 
 [node name="MainMenu" instance=ExtResource("1_7dnck")]
 theme = ExtResource("2_rnp4u")
@@ -13,6 +14,10 @@ credits_packed_scene = ExtResource("3_vnqdd")
 
 [node name="BackgroundMusicPlayer" parent="." index="1"]
 bus = &"Master"
+
+[node name="BackgroundTextureRect" parent="." index="2"]
+texture = ExtResource("5_ob6uo")
+stretch_mode = 0
 
 [node name="Title" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="0"]
 theme_override_font_sizes/font_size = 32
