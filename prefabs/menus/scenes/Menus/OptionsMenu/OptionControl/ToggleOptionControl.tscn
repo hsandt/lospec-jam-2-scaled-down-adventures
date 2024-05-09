@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6cmvpndguwtx"]
+
+[ext_resource type="PackedScene" uid="uid://bsxh6v7j0257h" path="res://addons/maaacks_menus_template/base/scenes/Menus/OptionsMenu/OptionControl/ToggleOptionControl.tscn" id="1_80uhr"]
+
+[node name="OptionControl" instance=ExtResource("1_80uhr")]
+custom_minimum_size = Vector2(0, 20)
+offset_right = 200.0
+offset_bottom = 24.0
