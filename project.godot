@@ -12,14 +12,18 @@ config_version=5
 
 config/name="Lospec Jam 2 - Scaled-Down Adventures"
 config/version="0.1.0"
-run/main_scene="res://test_top_view.tscn"
+run/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AppManager="*res://prefabs/managers/AppManager.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+AppConfig="*res://addons/maaacks_menus_template/base/scenes/Autoloads/AppConfig.tscn"
+SceneLoader="*res://addons/maaacks_menus_template/base/scenes/Autoloads/SceneLoader.tscn"
+ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectMusicController.tscn"
+ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectUISoundController.tscn"
 
 [dialogic]
 
@@ -46,7 +50,7 @@ glossary/default_case_sensitive=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/hyper-godot-commons/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/hyper-godot-commons/plugin.cfg", "res://addons/maaacks_menus_template/plugin.cfg")
 
 [input]
 
@@ -117,6 +121,11 @@ app_next_resolution={
 
 2d_physics/layer_1="PlayerCharacterMoveBox"
 2d_physics/layer_4="Wall"
+
+[maaacks_menus_template]
+
+disable_plugin_dialogues=true
+copy_path="res://prefabs/menus"
 
 [rendering]
 

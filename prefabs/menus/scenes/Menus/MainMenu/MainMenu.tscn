@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxypbrirpvbay"]
+
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/Menus/MainMenu/MainMenu.tscn" id="1_7dnck"]
+[ext_resource type="PackedScene" uid="uid://dd2ohaviois2l" path="res://prefabs/menus/scenes/Menus/OptionsMenu/MasterOptionsMenuWithTabs.tscn" id="2_t18ep"]
+[ext_resource type="PackedScene" uid="uid://73bswdw2eqw3" path="res://prefabs/menus/scenes/Credits/Credits.tscn" id="3_vnqdd"]
+
+[node name="MainMenu" instance=ExtResource("1_7dnck")]
+game_scene_path = "res://test_top_view.tscn"
+options_packed_scene = ExtResource("2_t18ep")
+credits_packed_scene = ExtResource("3_vnqdd")
+
+[node name="BackgroundMusicPlayer" parent="." index="1"]
+bus = &"Master"
