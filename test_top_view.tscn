@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="2_xdp2v"]
 [ext_resource type="TileSet" uid="uid://b1vpevu4b6jb7" path="res://tilesets/room_tile_set.tres" id="4_1utgh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_shiyn"]
-size = Vector2(16, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmq3u"]
+radius = 6.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,7 +19,8 @@ collision_mask = 8
 script = ExtResource("2_lllgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
-shape = SubResource("RectangleShape2D_shiyn")
+z_index = 1
+shape = SubResource("CircleShape2D_wmq3u")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter"]
 scale = Vector2(16, 16)
