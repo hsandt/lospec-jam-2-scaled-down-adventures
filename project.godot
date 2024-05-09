@@ -57,6 +57,10 @@ window/size/viewport_height=224
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/hyper-godot-commons/plugin.cfg", "res://addons/maaacks_menus_template/plugin.cfg", "res://addons/tile_bit_tools/plugin.cfg")
 
+[gui]
+
+theme/custom="res://themes/global_theme.tres"
+
 [input]
 
 ui_accept={
@@ -154,5 +158,6 @@ copy_path="res://prefabs/menus"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
