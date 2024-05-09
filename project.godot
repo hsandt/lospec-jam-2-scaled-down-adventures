@@ -19,11 +19,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 AppManager="*res://prefabs/managers/AppManager.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AppConfig="*res://addons/maaacks_menus_template/base/scenes/Autoloads/AppConfig.tscn"
 SceneLoader="*res://addons/maaacks_menus_template/base/scenes/Autoloads/SceneLoader.tscn"
 ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectMusicController.tscn"
 ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectUISoundController.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
@@ -47,6 +47,11 @@ choices/reveal_delay=0
 choices/reveal_by_input=false
 text/autopauses={}
 glossary/default_case_sensitive=true
+
+[display]
+
+window/size/viewport_width=256
+window/size/viewport_height=224
 
 [editor_plugins]
 
