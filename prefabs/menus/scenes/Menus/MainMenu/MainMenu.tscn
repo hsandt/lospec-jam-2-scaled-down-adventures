@@ -16,6 +16,7 @@ credits_packed_scene = ExtResource("3_vnqdd")
 bus = &"Master"
 
 [node name="BackgroundTextureRect" parent="." index="2"]
+self_modulate = Color(0.490196, 0.490196, 0.639216, 1)
 texture = ExtResource("5_ob6uo")
 stretch_mode = 0
 
