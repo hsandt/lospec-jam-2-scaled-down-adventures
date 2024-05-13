@@ -36,16 +36,27 @@ func get_resource():
 		_loaded_resource = current_loaded_resource
 	return _loaded_resource
 
+# LOCAL FIX by hsandt
+func change_scene_to_path(scene_path: String) -> void:
+	# Load scene from path
+	# This should only be called for cached or very lightweight scenes
+	# Otherwise, use load_scene to benefit from async loading
+	var scene = ResourceLoader.load(scene_path, "PackedScene")
+	var err = get_tree().change_scene_to_packed(scene)
+	if err:
+		push_error("failed to change scene to passed scene: %d" % err)
+		get_tree().quit()
+
 func change_scene_to_resource() -> void:
 	var err = get_tree().change_scene_to_packed(get_resource())
 	if err:
-		push_error("failed to change scenes: %d" % err)
+		push_error("failed to change scene to loaded resource: %d" % err)
 		get_tree().quit()
 
 func change_scene_to_loading_screen() -> void:
 	var err = get_tree().change_scene_to_packed(_loading_screen)
 	if err:
-		push_error("failed to change scenes to loading screen: %d" % err)
+		push_error("failed to change scene to loading screen: %d" % err)
 		get_tree().quit()
 
 func set_loading_screen(value : String) -> void:
@@ -75,7 +86,8 @@ func load_scene(scene_path : String, in_background : bool = false) -> void:
 		push_error("no path given to load")
 		return
 	if ResourceLoader.has_cached(scene_path):
-		call_deferred("emit_signal", "scene_loaded")
+		# LOCAL FIX by hsandt (removed call_deferred("emit_signal", "scene_loaded"))
+		change_scene_to_path.call_deferred(scene_path)
 		return
 	_scene_path = scene_path
 	_background_loading = in_background
