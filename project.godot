@@ -152,6 +152,7 @@ app_next_resolution={
 
 2d_physics/layer_1="PlayerCharacterMoveBox"
 2d_physics/layer_4="Wall"
+2d_physics/layer_8="Warp"
 
 [maaacks_menus_template]
 
