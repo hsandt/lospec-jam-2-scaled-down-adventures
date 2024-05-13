@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unr31"]
 size = Vector2(96, 20)
 
-[node name="TileMap_RoomB" type="TileMap" node_paths=PackedStringArray("entrance_spots")]
+[node name="TileMap_RoomB" type="TileMap" node_paths=PackedStringArray("entrance_spots") groups=["rooms"]]
 tile_set = ExtResource("1_v5soi")
 format = 2
 layer_0/modulate = Color(0, 1, 1, 1)
