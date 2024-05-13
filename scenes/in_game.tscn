@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxapglgebrrse"]
+
+[ext_resource type="Script" path="res://scripts/InGameManager.gd" id="1_2fg1p"]
+[ext_resource type="PackedScene" uid="uid://bmkfs13qqvqbb" path="res://scenes/room_a.tscn" id="2_spn87"]
+[ext_resource type="Script" path="res://scripts/Camera/InGameCamera.gd" id="3_vlni7"]
+[ext_resource type="Script" path="res://scripts/TriggerDialogue.gd" id="4_wdcnx"]
+[ext_resource type="Script" path="res://scripts/PlayerCharacter/PlayerCharacter.gd" id="5_jxnbp"]
+[ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="6_i4njo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmq3u"]
+radius = 6.0
+
+[node name="InGame" type="Node2D"]
+
+[node name="InGameManager" type="Node" parent="."]
+script = ExtResource("1_2fg1p")
+first_room_scene = ExtResource("2_spn87")
+
+[node name="InGameCamera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+z_index = 100
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_drag_margin = true
+script = ExtResource("3_vlni7")
+
+[node name="TriggerDialogue" type="Node2D" parent="."]
+script = ExtResource("4_wdcnx")
+
+[node name="PlayerCharacter" type="CharacterBody2D" parent="." groups=["player_character"]]
+z_index = 10
+collision_mask = 8
+script = ExtResource("5_jxnbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
+z_index = 1
+shape = SubResource("CircleShape2D_wmq3u")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter"]
+scale = Vector2(16, 16)
+texture = ExtResource("6_i4njo")

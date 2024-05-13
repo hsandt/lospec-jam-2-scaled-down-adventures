@@ -16,7 +16,7 @@ func _process(_delta: float):
 
 
 func set_camera_limits_for_room(room: Room):
-	limit_left = room.camera_limit_top_left.global_position.x
-	limit_right = room.camera_limit_bottom_right.global_position.x
-	limit_top = room.camera_limit_top_left.global_position.y
-	limit_bottom = room.camera_limit_bottom_right.global_position.y
+	limit_left = room.camera_limit_top_left.global_position.x as int
+	limit_right = room.camera_limit_bottom_right.global_position.x as int
+	limit_top = room.camera_limit_top_left.global_position.y as int
+	limit_bottom = room.camera_limit_bottom_right.global_position.y as int

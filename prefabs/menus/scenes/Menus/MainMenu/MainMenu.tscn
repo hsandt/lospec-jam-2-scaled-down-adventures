@@ -8,7 +8,7 @@
 
 [node name="MainMenu" instance=ExtResource("1_7dnck")]
 theme = ExtResource("2_rnp4u")
-game_scene_path = "res://test_top_view.tscn"
+game_scene_path = "res://scenes/in_game.tscn"
 options_packed_scene = ExtResource("2_t18ep")
 credits_packed_scene = ExtResource("3_vnqdd")
 
