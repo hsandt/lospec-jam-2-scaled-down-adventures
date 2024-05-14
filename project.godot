@@ -53,7 +53,6 @@ glossary/default_case_sensitive=true
 
 window/size/viewport_width=256
 window/size/viewport_height=224
-window/stretch/mode="viewport"
 window/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
 
 [editor_plugins]
@@ -154,6 +153,7 @@ app_next_resolution={
 2d_physics/layer_1="PlayerCharacterMoveBox"
 2d_physics/layer_4="Wall"
 2d_physics/layer_8="Warp"
+2d_physics/layer_12="Interactable"
 
 [maaacks_menus_template]
 

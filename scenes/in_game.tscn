@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxapglgebrrse"]
+[gd_scene load_steps=9 format=3 uid="uid://dxapglgebrrse"]
 
 [ext_resource type="Script" path="res://scripts/InGameManager.gd" id="1_2fg1p"]
 [ext_resource type="PackedScene" uid="uid://bmkfs13qqvqbb" path="res://scenes/room_a.tscn" id="2_spn87"]
@@ -9,6 +9,8 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wmq3u"]
 radius = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6jpw"]
 
 [node name="InGame" type="Node2D"]
 
@@ -27,15 +29,25 @@ script = ExtResource("3_vlni7")
 [node name="TriggerDialogue" type="Node2D" parent="."]
 script = ExtResource("4_wdcnx")
 
-[node name="PlayerCharacter" type="CharacterBody2D" parent="." groups=["player_character"]]
+[node name="PlayerCharacter" type="CharacterBody2D" parent="." node_paths=PackedStringArray("interaction_area") groups=["player_character"]]
 z_index = 10
 collision_mask = 8
 script = ExtResource("5_jxnbp")
+interaction_area = NodePath("InteractionArea")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
+[node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="PlayerCharacter"]
 z_index = 1
 shape = SubResource("CircleShape2D_wmq3u")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter"]
 scale = Vector2(16, 16)
 texture = ExtResource("6_i4njo")
+
+[node name="InteractionArea" type="Area2D" parent="PlayerCharacter"]
+position = Vector2(18, 0)
+collision_layer = 0
+collision_mask = 2048
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter/InteractionArea"]
+shape = SubResource("RectangleShape2D_s6jpw")

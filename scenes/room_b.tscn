@@ -1,11 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1eg63dxtanhs"]
+[gd_scene load_steps=3 format=3 uid="uid://b1eg63dxtanhs"]
 
 [ext_resource type="TileSet" uid="uid://b1vpevu4b6jb7" path="res://tilesets/room_tile_set.tres" id="1_v5soi"]
 [ext_resource type="Script" path="res://scripts/Room/Room.gd" id="2_l2yds"]
-[ext_resource type="Script" path="res://scripts/Room/WarpArea.gd" id="3_2t6qh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_unr31"]
-size = Vector2(96, 20)
 
 [node name="TileMap_RoomB" type="TileMap" node_paths=PackedStringArray("entrance_spots") groups=["rooms"]]
 tile_set = ExtResource("1_v5soi")
@@ -23,16 +19,3 @@ position = Vector2(656, 367)
 
 [node name="Marker2D_EntranceSpot0" type="Marker2D" parent="."]
 position = Vector2(555, 304)
-
-[node name="Area2D_WarpToRoomA" type="Area2D" parent="."]
-position = Vector2(556, 344)
-collision_layer = 128
-monitorable = false
-script = ExtResource("3_2t6qh")
-next_room_scene_path = "res://scenes/room_a.tscn"
-warp_entrance_spot_index = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_WarpToRoomA"]
-shape = SubResource("RectangleShape2D_unr31")
-
-[connection signal="body_entered" from="Area2D_WarpToRoomA" to="Area2D_WarpToRoomA" method="_on_body_entered"]

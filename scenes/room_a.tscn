@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmkfs13qqvqbb"]
+[gd_scene load_steps=10 format=3 uid="uid://bmkfs13qqvqbb"]
 
 [ext_resource type="TileSet" uid="uid://b1vpevu4b6jb7" path="res://tilesets/room_tile_set.tres" id="1_2iqis"]
 [ext_resource type="Script" path="res://scripts/Room/Room.gd" id="2_7i2hb"]
 [ext_resource type="Script" path="res://scripts/Room/WarpArea.gd" id="3_1oy3s"]
+[ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="4_vyno3"]
+[ext_resource type="Script" path="res://scripts/Interactable/InteractableArea.gd" id="5_5nh6f"]
+[ext_resource type="Resource" path="res://story/character.dch" id="6_3nkqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcmyl"]
 size = Vector2(96, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yeb4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3atp"]
 
 [node name="TileMap_RoomA" type="TileMap" node_paths=PackedStringArray("entrance_spots") groups=["rooms"]]
 tile_set = ExtResource("1_2iqis")
@@ -35,5 +42,28 @@ next_room_scene_path = "res://scenes/room_b.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_WarpToRoomB"]
 shape = SubResource("RectangleShape2D_dcmyl")
+
+[node name="NPC" type="CharacterBody2D" parent="."]
+collision_layer = 2048
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+self_modulate = Color(1, 0.435294, 1, 1)
+scale = Vector2(16, 16)
+texture = ExtResource("4_vyno3")
+
+[node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="NPC"]
+shape = SubResource("CircleShape2D_yeb4x")
+
+[node name="InteractableArea" type="Area2D" parent="NPC" node_paths=PackedStringArray("owning_entity")]
+collision_layer = 2048
+collision_mask = 0
+monitoring = false
+script = ExtResource("5_5nh6f")
+owning_entity = NodePath("..")
+dialogic_character = ExtResource("6_3nkqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/InteractableArea"]
+self_modulate = Color(1, 0.0980392, 1, 1)
+shape = SubResource("RectangleShape2D_w3atp")
 
 [connection signal="body_entered" from="Area2D_WarpToRoomB" to="Area2D_WarpToRoomB" method="_on_body_entered"]
