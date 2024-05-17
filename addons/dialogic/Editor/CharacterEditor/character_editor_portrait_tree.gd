@@ -27,8 +27,13 @@ func add_portrait_item(portrait_name: String, portrait_data: Dictionary, parent_
 		item.set_meta('previous_name', get_full_item_name(item))
 	else:
 		item.set_meta('previous_name', previous_name)
-	if portrait_name == editor.current_resource.default_portrait:
-		item.add_button(0, get_theme_icon('Favorites', 'EditorIcons'), 2, true, 'Default')
+	# LOCAL FIX by hsandt: check for null current_resource
+	# This avoids errors:
+	# res://addons/dialogic/Editor/CharacterEditor/character_editor_portrait_tree.gd:32 - Invalid get index 'default_portrait' (on base: 'Nil').
+  	# res://addons/dialogic/Editor/CharacterEditor/character_editor.gd:345 - Cannot call method 'set_meta' on a null value.
+	if editor.current_resource:
+		if portrait_name == editor.current_resource.default_portrait:
+			item.add_button(0, get_theme_icon('Favorites', 'EditorIcons'), 2, true, 'Default')
 	return item
 
 
