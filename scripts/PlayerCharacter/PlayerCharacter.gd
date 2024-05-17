@@ -26,7 +26,10 @@ func _ready():
 
 
 func _process(_delta: float):
-	move_intention = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down"))
+	if can_move():
+		move_intention = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down"))
+	else:
+		move_intention = Vector2.ZERO
 
 
 func _physics_process(_delta: float):
@@ -54,6 +57,10 @@ func _update_direction_toward(move_intention: Vector2):
 	directional_parent.rotation = MathUtils.cardinal_direction_to_angle(cardinal_direction)
 
 
+func can_move() -> bool:
+	return !is_interacting
+
+
 func can_interact() -> bool:
 	# character cannot interrupt interaction with another interaction
 	return !is_interacting
@@ -67,30 +74,11 @@ func _process_interact():
 		# usually interactables are not too close to every other, so no need for priority
 		# system, just pick the first one if any
 		if interactable_candidates:
-			_start_interaction(interactable_candidates[0])
+			_interact_async(interactable_candidates[0])
 
 
-# Start interaction
-func _start_interaction(interactable_area: InteractableArea):
+# Play full interaction from start to end
+func _interact_async(interactable_area: InteractableArea):
 	is_interacting = true
-	_interact(interactable_area)
-
-
-# Stop interaction
-func _stop_interaction():
-	# logic & animation
+	await interactable_area.interactable.interact_async()
 	is_interacting = false
-
-
-# Interact
-func _interact(interactable_area: InteractableArea):
-	# TODO: get dialogue from interactable
-	# TODO: preload to avoid lag on first dialogue
-	var layout := Dialogic.start('timeline')
-	layout.register_character(interactable_area.dialogic_character, interactable_area.owning_entity)
-	Dialogic.timeline_ended.connect(_on_timeline_ended)
-
-
-func _on_timeline_ended():
-	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
-	call_deferred("_stop_interaction")

@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmkfs13qqvqbb"]
+[gd_scene load_steps=13 format=3 uid="uid://bmkfs13qqvqbb"]
 
 [ext_resource type="TileSet" uid="uid://b1vpevu4b6jb7" path="res://tilesets/room_tile_set.tres" id="1_2iqis"]
 [ext_resource type="Script" path="res://scripts/Room/Room.gd" id="2_7i2hb"]
 [ext_resource type="Script" path="res://scripts/Room/WarpArea.gd" id="3_1oy3s"]
 [ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="4_vyno3"]
+[ext_resource type="Script" path="res://scripts/NPC/NPC.gd" id="4_yk7q3"]
 [ext_resource type="Script" path="res://scripts/Interactable/InteractableArea.gd" id="5_5nh6f"]
+[ext_resource type="Script" path="res://scripts/Interactable/InteractableNPC.gd" id="5_xi88c"]
 [ext_resource type="Resource" path="res://story/character.dch" id="6_3nkqb"]
+[ext_resource type="Resource" path="res://story/timeline.dtl" id="6_hlicr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcmyl"]
 size = Vector2(96, 20)
@@ -45,6 +48,13 @@ shape = SubResource("RectangleShape2D_dcmyl")
 
 [node name="NPC" type="CharacterBody2D" parent="."]
 collision_layer = 2048
+script = ExtResource("4_yk7q3")
+dialogic_character = ExtResource("6_3nkqb")
+dialogic_timeline = ExtResource("6_hlicr")
+
+[node name="InteractableNPC" type="Node" parent="NPC" node_paths=PackedStringArray("npc")]
+script = ExtResource("5_xi88c")
+npc = NodePath("..")
 
 [node name="Sprite2D" type="Sprite2D" parent="NPC"]
 self_modulate = Color(1, 0.435294, 1, 1)
@@ -54,13 +64,12 @@ texture = ExtResource("4_vyno3")
 [node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="NPC"]
 shape = SubResource("CircleShape2D_yeb4x")
 
-[node name="InteractableArea" type="Area2D" parent="NPC" node_paths=PackedStringArray("owning_entity")]
+[node name="InteractableArea" type="Area2D" parent="NPC" node_paths=PackedStringArray("interactable")]
 collision_layer = 2048
 collision_mask = 0
 monitoring = false
 script = ExtResource("5_5nh6f")
-owning_entity = NodePath("..")
-dialogic_character = ExtResource("6_3nkqb")
+interactable = NodePath("../InteractableNPC")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/InteractableArea"]
 self_modulate = Color(1, 0.0980392, 1, 1)
