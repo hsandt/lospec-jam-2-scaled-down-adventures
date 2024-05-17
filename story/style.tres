@@ -1,11 +1,10 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=12 format=3 uid="uid://3kk5m42vokhk"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=10 format=3 uid="uid://3kk5m42vokhk"]
 
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.gd" id="1_736f2"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="2_dr3ej"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="3_rtgs0"]
 [ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="4_xyoxq"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="5_mpcfh"]
-[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="5_t6irg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70ljh"]
 content_margin_left = 5.0
@@ -44,15 +43,10 @@ script = ExtResource("3_rtgs0")
 scene = ExtResource("4_xyoxq")
 overrides = {}
 
-[sub_resource type="Resource" id="Resource_rv0xn"]
-script = ExtResource("3_rtgs0")
-scene = ExtResource("5_t6irg")
-overrides = {}
-
 [resource]
 script = ExtResource("5_mpcfh")
 name = "style"
 base_scene = SubResource("PackedScene_0prgo")
 base_overrides = {}
-layers = Array[ExtResource("3_rtgs0")]([SubResource("Resource_1xwjx"), SubResource("Resource_c6ifc"), SubResource("Resource_rv0xn")])
+layers = Array[ExtResource("3_rtgs0")]([SubResource("Resource_1xwjx"), SubResource("Resource_c6ifc")])
 metadata/_latest_layer = 2

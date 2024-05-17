@@ -2,21 +2,34 @@ class_name InGameManager
 extends Node
 
 
+@export_group("Assets preloading")
+
+@export var dialogic_style_to_preload: DialogicStyle
+
+@export_group("Setup")
+
 ## First room to load and bind camera to
 @export var first_room_scene: PackedScene
 
 ## Index of warp entrance spot in first room to start at
 @export var first_warp_entrance_spot_index: int
 
+
 @onready var room_on_ready: Room = get_tree().get_first_node_in_group("rooms")
 @onready var camera: InGameCamera = $%InGameCamera
 @onready var player_character: PlayerCharacter = get_tree().get_first_node_in_group("player_character")
+
 
 var current_room_instance: Room
 
 
 func _ready():
+	DebugUtils.assert_member_is_set(self, dialogic_style_to_preload, "dialogic_style_to_preload")
 	DebugUtils.assert_member_is_set(self, first_room_scene, "first_room_scene")
+
+	# This avoids most of the initial loading time on first timeline play and layout display
+	# There is still a very small lag, but I need to identify which other resources need to be preloaded
+	dialogic_style_to_preload.prepare()
 
 	# In normal play, there is no other room as we load InGame scene alone
 	# In debug F6 play a specific room, we load InGame scene additively from
