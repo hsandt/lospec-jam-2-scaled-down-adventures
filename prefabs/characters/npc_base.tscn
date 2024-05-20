@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0127dqab5jx4"]
+
+[ext_resource type="Script" path="res://scripts/NPC/NPC.gd" id="1_st6db"]
+[ext_resource type="Script" path="res://scripts/Interactable/InteractableNPC.gd" id="2_3ewgq"]
+[ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="3_ecait"]
+[ext_resource type="Script" path="res://scripts/Interactable/InteractableArea.gd" id="4_gf3gn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yeb4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3atp"]
+
+[node name="NPC" type="CharacterBody2D"]
+collision_layer = 2048
+script = ExtResource("1_st6db")
+
+[node name="InteractableNPC" type="Node" parent="." node_paths=PackedStringArray("npc")]
+script = ExtResource("2_3ewgq")
+npc = NodePath("")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.435294, 1, 1)
+scale = Vector2(16, 16)
+texture = ExtResource("3_ecait")
+
+[node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yeb4x")
+
+[node name="InteractableArea" type="Area2D" parent="." node_paths=PackedStringArray("interactable")]
+collision_layer = 2048
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_gf3gn")
+interactable = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+self_modulate = Color(1, 0.0980392, 1, 1)
+shape = SubResource("RectangleShape2D_w3atp")

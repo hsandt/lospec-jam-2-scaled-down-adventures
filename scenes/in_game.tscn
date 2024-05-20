@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dxapglgebrrse"]
 
 [ext_resource type="Script" path="res://scripts/InGameManager.gd" id="1_2fg1p"]
-[ext_resource type="PackedScene" uid="uid://bmkfs13qqvqbb" path="res://scenes/room_a.tscn" id="2_spn87"]
+[ext_resource type="PackedScene" uid="uid://bmifdd84jcu0b" path="res://scenes/room_boy.tscn" id="3_0x0ki"]
 [ext_resource type="Resource" uid="uid://3kk5m42vokhk" path="res://story/style.tres" id="3_6am3f"]
 [ext_resource type="Script" path="res://scripts/Camera/InGameCamera.gd" id="3_vlni7"]
 [ext_resource type="Script" path="res://scripts/TriggerDialogue.gd" id="4_wdcnx"]
@@ -18,7 +18,7 @@ radius = 6.0
 [node name="InGameManager" type="Node" parent="." groups=["in_game_manager"]]
 script = ExtResource("1_2fg1p")
 dialogic_style_to_preload = ExtResource("3_6am3f")
-first_room_scene = ExtResource("2_spn87")
+first_room_scene = ExtResource("3_0x0ki")
 
 [node name="InGameCamera" type="Camera2D" parent="."]
 unique_name_in_owner = true
