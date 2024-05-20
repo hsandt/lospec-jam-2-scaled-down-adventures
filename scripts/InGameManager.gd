@@ -43,6 +43,12 @@ func load_room_scene_deferred(room_scene: PackedScene, warp_entrance_spot_index:
 	_load_room_scene.call_deferred(room_scene, warp_entrance_spot_index)
 
 
+## Queue unload current room for end of frame, and load next room deferred
+func switches_room_scene_deferred(room_scene: PackedScene, warp_entrance_spot_index: int):
+	_queue_unload_current_room()
+	load_room_scene_deferred(room_scene, warp_entrance_spot_index)
+
+
 ## Load passed room scene and warp PC to entrance spot of index warp_entrance_spot_index
 func _load_room_scene(room_scene: PackedScene, warp_entrance_spot_index: int):
 	# instantiate room scene below same parent (InGame root node)
@@ -51,6 +57,11 @@ func _load_room_scene(room_scene: PackedScene, warp_entrance_spot_index: int):
 
 	if warp_entrance_spot_index < current_room_instance.entrance_spots.size():
 		player_character.global_position = current_room_instance.entrance_spots[warp_entrance_spot_index].global_position
+		camera.move_to_player_character()
 	else:
 		push_error("[InGameManager] load_room_scene: for room scene '%s', warp_entrance_spot_index (%d) >= current_room_instance.entrance_spots.size() (%d)" %
 			[room_scene.resource_path, warp_entrance_spot_index, current_room_instance.entrance_spots.size()])
+
+
+func _queue_unload_current_room():
+	current_room_instance.queue_free()

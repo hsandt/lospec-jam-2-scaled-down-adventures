@@ -11,6 +11,10 @@ extends Camera2D
 
 
 func _process(_delta: float):
+	move_to_player_character()
+
+
+func move_to_player_character():
 	if follow_player_character:
 		position = player_character.position
 

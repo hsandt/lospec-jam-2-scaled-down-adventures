@@ -18,4 +18,4 @@ func _ready():
 func _on_body_entered(body: Node2D):
 	var player_character := body as PlayerCharacter
 	if player_character:
-		in_game_manager.load_room_scene_deferred(next_room_scene, warp_entrance_spot_index)
+		in_game_manager.switches_room_scene_deferred(next_room_scene, warp_entrance_spot_index)
