@@ -37,6 +37,7 @@ collision_mask = 8
 script = ExtResource("5_jxnbp")
 directional_parent = NodePath("DirectionalParent")
 interaction_area = NodePath("DirectionalParent/InteractionArea")
+move_cardinal_speed = 200.0
 
 [node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="PlayerCharacter"]
 z_index = 1
