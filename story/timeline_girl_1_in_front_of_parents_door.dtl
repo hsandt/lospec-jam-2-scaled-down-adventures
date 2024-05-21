@@ -1,6 +1,6 @@
 if {girl_1_in_front_of_parents_door_has_talked} == false:
 	set {girl_1_in_front_of_parents_door_has_talked} = true
-	Hey! Do you know what happened?
+	character_girl: Hey! Do you know what happened?
 	character_girl: I woke up and I was small like a paint tube!
 	character_girl: Like the small ones they sell at Walmart.\
 You know, not the big ones from Ace Hardware that Mum usually buys.
