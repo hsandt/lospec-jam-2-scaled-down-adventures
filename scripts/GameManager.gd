@@ -16,4 +16,7 @@ func _ready():
 		# To make it easy to debug game from any Room scene,
 		# dynamically load the InGame scene now (it will detect the existing
 		# room on its own ready and therefore not try to load the first scene on top)
-		NodeUtils.instantiate_under.call_deferred(in_game_scene, get_tree().root)
+		# Note: we let InGameManager's own _ready register themselves to GameManager,
+		# so it works the same way as when normally loading InGame scene from main menu
+		# in the end
+		NodeUtils.instantiate_under_deferred(in_game_scene, get_tree().root)
