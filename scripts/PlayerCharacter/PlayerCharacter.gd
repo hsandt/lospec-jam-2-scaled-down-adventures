@@ -50,10 +50,10 @@ func _unhandled_input(event: InputEvent):
 		get_viewport().set_input_as_handled()
 
 
-func _update_direction_toward(move_intention: Vector2):
+func _update_direction_toward(direction_vector: Vector2):
 	# DirectionalParent children must all face RIGHT in initial scene setup, as it is
 	# Godot's angle reference
-	var cardinal_direction := MathUtils.vector2i_to_dominant_cardinal_direction(move_intention, true)
+	var cardinal_direction := MathUtils.vector2i_to_dominant_cardinal_direction(direction_vector, true)
 	directional_parent.rotation = MathUtils.cardinal_direction_to_angle(cardinal_direction)
 
 
