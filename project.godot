@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Lospec Jam 2 - Scaled-Down Adventures"
 config/version="0.1.0"
-run/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
+run/main_scene="res://scenes/room_corridor.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -36,8 +36,8 @@ directories/dtl_directory={
 "timeline": "res://story/timeline.dtl",
 "timeline_girl_1_in_front_of_parents_door": "res://story/timeline_girl_1_in_front_of_parents_door.dtl"
 }
-layout/style_list=["res://story/style.tres"]
-layout/default_style="res://story/style.tres"
+layout/style_list=["res://story/styles_and_layers/style.tres"]
+layout/default_style="res://story/styles_and_layers/style.tres"
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 animations/join_default_length=0.5
