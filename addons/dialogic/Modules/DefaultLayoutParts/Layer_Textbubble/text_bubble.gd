@@ -68,7 +68,9 @@ func _process(delta:float) -> void:
 		)
 	p = p.clamp(bubble_rect.size / 2.0, get_viewport_rect().size - bubble_rect.size / 2.0)
 
-	position = position.lerp(p, 5 * delta)
+	#position = position.lerp(p, 5 * delta)
+	# LOCAL HOTFIX: instant teleport to final position
+	position = p
 
 	var point_a: Vector2 = Vector2.ZERO
 	var point_b: Vector2 = (base_position - position) * 0.75
