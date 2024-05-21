@@ -49,4 +49,4 @@ name = "style"
 base_scene = SubResource("PackedScene_0prgo")
 base_overrides = {}
 layers = Array[ExtResource("3_rtgs0")]([SubResource("Resource_1xwjx"), SubResource("Resource_c6ifc")])
-metadata/_latest_layer = 2
+metadata/_latest_layer = -1

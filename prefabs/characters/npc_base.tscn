@@ -15,7 +15,7 @@ script = ExtResource("1_st6db")
 
 [node name="InteractableNPC" type="Node" parent="." node_paths=PackedStringArray("npc")]
 script = ExtResource("2_3ewgq")
-npc = NodePath("")
+npc = NodePath("..")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(1, 0.435294, 1, 1)
@@ -30,7 +30,7 @@ collision_layer = 2048
 collision_mask = 0
 monitoring = false
 script = ExtResource("4_gf3gn")
-interactable = NodePath("")
+interactable = NodePath("../InteractableNPC")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
 self_modulate = Color(1, 0.0980392, 1, 1)

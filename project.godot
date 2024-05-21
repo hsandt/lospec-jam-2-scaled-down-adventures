@@ -29,10 +29,12 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"character": "res://story/character.dch"
+"character": "res://story/character.dch",
+"character_girl": "res://story/character_girl.dch"
 }
 directories/dtl_directory={
-"timeline": "res://story/timeline.dtl"
+"timeline": "res://story/timeline.dtl",
+"timeline_girl_1_in_front_of_parents_door": "res://story/timeline_girl_1_in_front_of_parents_door.dtl"
 }
 layout/style_list=["res://story/style.tres"]
 layout/default_style="res://story/style.tres"
@@ -55,7 +57,11 @@ text/advance_delay=0.1
 text/autoadvance_per_character_delay=0.1
 text/autoadvance_ignored_characters_enabled=true
 text/autoadvance_enabled=true
-variables={}
+variables={
+"girl_1_in_front_of_parents_door_has_talked": false
+}
+text/split_at_new_lines=true
+text/split_at_new_lines_as=0
 
 [display]
 
