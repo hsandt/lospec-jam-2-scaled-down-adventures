@@ -10,7 +10,9 @@ const APPLICATION_SECTION = &'ApplicationSettings'
 const CUSTOM_SECTION = &'CustomSettings'
 
 const FULLSCREEN_ENABLED = &'FullscreenEnabled'
-const SCREEN_RESOLUTION = &'ScreenResolution'
+# LOCAL PATCH by hsandt: set screen scale instead of resolution
+#const SCREEN_RESOLUTION = &'ScreenResolution'
+const SCREEN_SCALE_RESOLUTION = &'ScreenResolutionScale'
 const MUTE_SETTING = &'Mute'
 const MASTER_BUS_INDEX = 0
 
@@ -126,20 +128,34 @@ static func set_resolution(value : Vector2i, window : Window) -> void:
 static func is_fullscreen(window : Window) -> bool:
 	return (window.mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (window.mode == Window.MODE_FULLSCREEN)
 
-static func get_resolution(window : Window) -> Vector2i:
-	var current_resolution : Vector2i = window.size
-	current_resolution = Config.get_config(VIDEO_SECTION, SCREEN_RESOLUTION, current_resolution)
-	return current_resolution
+#static func get_resolution(window : Window) -> Vector2i:
+	#var current_resolution : Vector2i = window.size
+	#current_resolution = Config.get_config(VIDEO_SECTION, SCREEN_RESOLUTION, current_resolution)
+	#return current_resolution
+
+# LOCAL PATCH by hsandt: get screen scale instead of resolution
+static func get_resolution_scale() -> int:
+	# default to initial window scale preset, although set_window_scale_on_start should be false
+	# to avoid conflict so we're setting the initial window scale manually from here
+	var current_resolution_scale : int = AppManager.cached_valid_window_scale_presets[AppManager.initial_window_scale_preset_index]
+	current_resolution_scale = Config.get_config(VIDEO_SECTION, SCREEN_SCALE_RESOLUTION, current_resolution_scale)
+	return current_resolution_scale
 
 static func set_video_from_config(window : Window) -> void:
 	var fullscreen_enabled : bool = is_fullscreen(window)
 	fullscreen_enabled = Config.get_config(VIDEO_SECTION, FULLSCREEN_ENABLED, fullscreen_enabled)
+	# No need to use our custom AppManager toggle_fullscreen here, as it only matters
+	# when actually switching to fullscreen, in which case there is no window position adjustment to make
 	set_fullscreen_enabled(fullscreen_enabled, window)
 	if not (fullscreen_enabled or OS.has_feature("web")):
-		var current_resolution : Vector2i = get_resolution(window)
-		set_resolution(current_resolution, window)
-		
-# All
+		# LOCAL PATCH by hsandt: get screen scale instead of resolution
+		#var current_resolution : Vector2i = get_resolution(window)
+		var current_resolution_scale : int = get_resolution_scale()
+		#set_resolution(current_resolution, window)
+		# Hack: index = value - 1
+		# we could also call set_window_scale(value), this is really just to update
+		# the tracked scale preset index so we can chain with scale change keyboard shortcuts
+		AppManager.set_window_scale_preset_index(current_resolution_scale - 1, true)
 
 static func set_from_config() -> void:
 	set_default_inputs()
@@ -148,4 +164,9 @@ static func set_from_config() -> void:
 
 static func set_from_config_and_window(window : Window) -> void:
 	set_from_config()
-	set_video_from_config(window)
+	# HOTFIX by hsandt for our custom window position adjustment after rescale
+	# It needs a deferred call to work
+	# Also, in Godot 4.2 we must explicitly indicate class of static method as Callable
+	# see https://github.com/godotengine/godot/issues/91403
+	#AppSettings.set_video_from_config(window)
+	AppSettings.set_video_from_config.call_deferred(window)

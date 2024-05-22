@@ -6,7 +6,9 @@
 [node name="Video" instance=ExtResource("1_olvfj")]
 
 [node name="ResolutionControl" parent="VBoxContainer" index="1"]
-option_titles = Array[String](["640 x 360", "960 x 540", "1024 x 576", "1280 x 720", "1600 x 900", "1920 x 1080", "2048 x 1152", "2560 x 1440", "3200 x 1800", "3840 x 2160"])
+visible = false
+option_values = [Vector2i(256, 224), Vector2i(512, 448), Vector2i(768, 672), Vector2i(1024, 896), Vector2i(1280, 1120), Vector2i(1536, 1344), Vector2i(1792, 1568), Vector2i(2048, 1792), Vector2i(2304, 2016)]
+option_titles = Array[String](["256 x 224", "512 x 448", "768 x 672", "1024 x 576", "1024 x 896", "1280 x 1120", "1536 x 1344", "1792 x 1568", "2048 x 1792", "2304 x 2016"])
 
 [node name="AntiAliasingControl" parent="VBoxContainer" index="2" instance=ExtResource("2_85jru")]
 visible = false
@@ -33,5 +35,17 @@ key = "CameraShake"
 section = "VideoSettings"
 property_type = 3
 default_value = 1.0
+
+[node name="ResolutionScaleControl" parent="VBoxContainer" index="4" instance=ExtResource("2_85jru")]
+unique_name_in_owner = true
+layout_mode = 2
+option_values = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+option_titles = Array[String](["1", "2", "3", "4", "5", "6", "7", "8", "9", "false"])
+option_name = "Resolution Scale"
+option_section = 3
+key = "ScreenResolutionScale"
+section = "VideoSettings"
+
+[connection signal="setting_changed" from="VBoxContainer/ResolutionScaleControl" to="." method="_on_resolution_scale_control_setting_changed"]
 
 [editable path="VBoxContainer/FullscreenControl"]
