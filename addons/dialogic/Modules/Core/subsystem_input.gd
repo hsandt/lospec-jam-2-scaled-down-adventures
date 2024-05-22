@@ -86,10 +86,6 @@ func handle_input() -> void:
 
 	dialogic_action.emit()
 
-	# LOCAL FIX by hsandt for https://github.com/dialogic-godot/dialogic/issues/2249
-	# consume input
-	get_viewport().set_input_as_handled()
-
 
 ## Unhandled Input is used for all NON-Mouse based inputs.
 func _unhandled_input(event:InputEvent) -> void:
@@ -99,6 +95,10 @@ func _unhandled_input(event:InputEvent) -> void:
 		if event is InputEventMouse:
 			return
 		handle_input()
+
+		# LOCAL FIX by hsandt for https://github.com/dialogic-godot/dialogic/issues/2249
+		# consume input
+		get_viewport().set_input_as_handled()
 
 
 ## Input is used for all mouse based inputs.
