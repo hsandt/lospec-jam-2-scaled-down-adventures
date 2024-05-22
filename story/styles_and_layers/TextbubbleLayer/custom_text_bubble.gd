@@ -25,9 +25,10 @@ var name_label_alignment := HBoxContainer.ALIGNMENT_BEGIN
 var name_label_offset := Vector2()
 var force_choices_on_separate_lines := false
 
+# CUSTOM: removed extra padding for wobbling, since no wobbling
 # Sets the padding shader paramter.
 # It's the amount of spacing around the background to allow some wobbeling.
-var bg_padding := 30
+#var bg_padding := 30
 
 
 func _ready() -> void:
@@ -113,7 +114,9 @@ func _on_dialog_text_started_revealing_text():
 
 
 func _resize_bubble(content_size:Vector2, popup:=false) -> void:
-	var bubble_size: Vector2 = content_size+(padding*2)+Vector2.ONE*bg_padding
+	# CUSTOM: removed extra padding for wobbling, since no wobbling
+	#var bubble_size: Vector2 = content_size+(padding*2)+Vector2.ONE*bg_padding
+	var bubble_size: Vector2 = content_size+(padding*2)
 	var half_size: Vector2= (bubble_size / 2.0)
 	bubble.pivot_offset = half_size
 	bubble_rect = Rect2(position, bubble_size * Vector2(1.1, 1.1))
