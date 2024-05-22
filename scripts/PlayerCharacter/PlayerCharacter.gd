@@ -45,7 +45,8 @@ func _unhandled_input(event: InputEvent):
 	if Dialogic.current_timeline != null:
 		return
 
-	if event.is_action_pressed(&"dialogic_default_action"):
+	# Exact match to avoid conflicts with Alt+Enter
+	if event.is_action_pressed(&"dialogic_default_action", false, true):
 		_process_interact()
 		get_viewport().set_input_as_handled()
 

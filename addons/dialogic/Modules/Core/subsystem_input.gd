@@ -86,10 +86,16 @@ func handle_input() -> void:
 
 	dialogic_action.emit()
 
+	# LOCAL FIX by hsandt for https://github.com/dialogic-godot/dialogic/issues/2249
+	# consume input
+	get_viewport().set_input_as_handled()
+
 
 ## Unhandled Input is used for all NON-Mouse based inputs.
 func _unhandled_input(event:InputEvent) -> void:
-	if Input.is_action_just_pressed(ProjectSettings.get_setting('dialogic/text/input_action', 'dialogic_default_action')):
+	# LOCAL FIX by hsandt for https://github.com/dialogic-godot/dialogic/issues/2249
+	# check exact match
+	if Input.is_action_just_pressed(ProjectSettings.get_setting('dialogic/text/input_action', 'dialogic_default_action'), true):
 		if event is InputEventMouse:
 			return
 		handle_input()
