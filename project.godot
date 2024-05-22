@@ -72,7 +72,7 @@ window/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimati
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/hyper-godot-commons/plugin.cfg", "res://addons/maaacks_menus_template/plugin.cfg", "res://addons/tile_bit_tools/plugin.cfg")
+enabled=PackedStringArray("res://addons/AS2P/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/hyper-godot-commons/plugin.cfg", "res://addons/maaacks_menus_template/plugin.cfg", "res://addons/tile_bit_tools/plugin.cfg")
 
 [gui]
 
