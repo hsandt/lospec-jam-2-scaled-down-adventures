@@ -26,6 +26,10 @@ ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/Autoloa
 ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectUISoundController.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
+[debug]
+
+gdscript/warnings/exclude_addons=false
+
 [dialogic]
 
 directories/dch_directory={
@@ -67,6 +71,7 @@ text/split_at_new_lines_as=0
 
 window/size/viewport_width=256
 window/size/viewport_height=224
+window/stretch/mode="viewport"
 window/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
 
 [editor_plugins]
