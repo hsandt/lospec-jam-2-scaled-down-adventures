@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Lospec Jam 2 - Scaled-Down Adventures"
 config/version="0.1.0"
-run/main_scene="res://scenes/room_corridor.tscn"
+run/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,10 +25,6 @@ SceneLoader="*res://addons/maaacks_menus_template/base/scenes/Autoloads/SceneLoa
 ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectMusicController.tscn"
 ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectUISoundController.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-
-[debug]
-
-gdscript/warnings/exclude_addons=false
 
 [dialogic]
 
