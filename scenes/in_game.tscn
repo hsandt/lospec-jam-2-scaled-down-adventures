@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxapglgebrrse"]
+[gd_scene load_steps=9 format=3 uid="uid://dxapglgebrrse"]
 
 [ext_resource type="Script" path="res://scripts/InGameManager.gd" id="1_2fg1p"]
 [ext_resource type="Resource" uid="uid://3kk5m42vokhk" path="res://story/styles_and_layers/style.tres" id="2_sluu0"]
 [ext_resource type="PackedScene" uid="uid://bmifdd84jcu0b" path="res://scenes/room_boy.tscn" id="3_0x0ki"]
 [ext_resource type="Script" path="res://scripts/Camera/InGameCamera.gd" id="3_vlni7"]
-[ext_resource type="Script" path="res://scripts/TriggerDialogue.gd" id="4_wdcnx"]
 [ext_resource type="Script" path="res://scripts/PlayerCharacter/PlayerCharacter.gd" id="5_jxnbp"]
 [ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="6_i4njo"]
 
@@ -27,9 +26,6 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 editor_draw_drag_margin = true
 script = ExtResource("3_vlni7")
-
-[node name="TriggerDialogue" type="Node2D" parent="."]
-script = ExtResource("4_wdcnx")
 
 [node name="PlayerCharacter" type="CharacterBody2D" parent="." node_paths=PackedStringArray("directional_parent", "interaction_area") groups=["player_character"]]
 z_index = 10
