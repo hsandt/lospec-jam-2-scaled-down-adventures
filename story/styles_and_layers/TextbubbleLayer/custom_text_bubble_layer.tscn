@@ -1,9 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2it0xiap3gnt"]
 
-[ext_resource type="Script" path="res://story/styles_and_layers/TextbubbleLayer/text_bubble_layer.gd" id="1_b37je"]
+[ext_resource type="Script" path="res://story/styles_and_layers/TextbubbleLayer/custom_text_bubble_layer.gd" id="1_lfy68"]
 
 [node name="TextBubbleLayer" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 mouse_filter = 2
-script = ExtResource("1_b37je")
+script = ExtResource("1_lfy68")
+text_size = 8
+box_corner_radius = 1
+box_wobble_amount = 0.0
+choices_text_size = 8

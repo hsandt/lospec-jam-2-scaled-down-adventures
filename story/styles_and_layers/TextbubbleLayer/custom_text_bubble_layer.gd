@@ -55,12 +55,12 @@ extends DialogicLayoutLayer
 @export var choices_layout_force_lines: bool = false
 @export_file('*.tres', "*.res") var choices_base_theme: String = ""
 
-const TextBubble := preload("res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble.gd")
+const TextBubble := preload("res://story/styles_and_layers/TextbubbleLayer/custom_text_bubble.gd")
 
 var bubbles: Array[TextBubble] = []
 var fallback_bubble: TextBubble = null
 
-const textbubble_scene: PackedScene = preload("res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble.tscn")
+const textbubble_scene: PackedScene = preload("res://story/styles_and_layers/TextbubbleLayer/custom_text_bubble.tscn")
 
 
 func add_bubble() -> TextBubble:
@@ -106,11 +106,12 @@ func bubble_apply_overrides(bubble:TextBubble) -> void:
 		tail_and_bg_group.self_modulate = bubble.current_character.color
 
 	var background := (bubble.get_node('%Background') as ColorRect)
-	var bg_material: ShaderMaterial = (background.material as ShaderMaterial)
-	bg_material.set_shader_parameter(&'radius', box_corner_radius)
-	bg_material.set_shader_parameter(&'wobble_amount', box_wobble_amount)
-	bg_material.set_shader_parameter(&'wobble_speed', box_wobble_speed)
-	bg_material.set_shader_parameter(&'wobble_detail', box_wobble_detail)
+	# CUSTOM bubble has no corner radius / wobble
+	#var bg_material: ShaderMaterial = (background.material as ShaderMaterial)
+	#bg_material.set_shader_parameter(&'radius', box_corner_radius)
+	#bg_material.set_shader_parameter(&'wobble_amount', box_wobble_amount)
+	#bg_material.set_shader_parameter(&'wobble_speed', box_wobble_speed)
+	#bg_material.set_shader_parameter(&'wobble_detail', box_wobble_detail)
 
 	bubble.padding = box_padding
 
