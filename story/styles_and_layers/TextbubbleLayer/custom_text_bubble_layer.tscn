@@ -8,6 +8,7 @@ anchors_preset = 0
 mouse_filter = 2
 script = ExtResource("1_lfy68")
 text_size = 8
+text_max_width = 180
 box_corner_radius = 1
 box_wobble_amount = 0.0
 choices_text_size = 8
