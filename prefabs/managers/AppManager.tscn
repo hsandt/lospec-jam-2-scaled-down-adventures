@@ -5,3 +5,4 @@
 [node name="AppManager" type="Node"]
 script = ExtResource("1_4emdo")
 initial_window_scale_preset_index = 1
+hide_cursor_during_fullscreen = true
