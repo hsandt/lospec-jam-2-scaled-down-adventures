@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bo240vda13h14"]
+
+[ext_resource type="Script" path="res://scripts/PlayerCharacter/PlayerCharacter.gd" id="1_si7nr"]
+[ext_resource type="SpriteFrames" uid="uid://dejygjcteafbh" path="res://anims/sprite_frames_boy.tres" id="2_688mt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmq3u"]
+radius = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6jpw"]
+
+[node name="PlayerCharacter" type="CharacterBody2D" node_paths=PackedStringArray("directional_parent", "interaction_area") groups=["player_character"]]
+z_index = 10
+collision_mask = 8
+script = ExtResource("1_si7nr")
+directional_parent = NodePath("DirectionalParent")
+interaction_area = NodePath("DirectionalParent/InteractionArea")
+move_cardinal_speed = 200.0
+
+[node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="."]
+z_index = 1
+shape = SubResource("CircleShape2D_wmq3u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_688mt")
+animation = &"IdleDown"
+frame_progress = 0.17747
+
+[node name="DirectionalParent" type="Node2D" parent="."]
+
+[node name="InteractionArea" type="Area2D" parent="DirectionalParent"]
+position = Vector2(18, 0)
+collision_layer = 0
+collision_mask = 2048
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DirectionalParent/InteractionArea"]
+shape = SubResource("RectangleShape2D_s6jpw")
