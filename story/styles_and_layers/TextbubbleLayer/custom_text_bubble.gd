@@ -13,14 +13,16 @@ var node_to_point_at: Node = null
 var current_character: DialogicCharacter = null
 
 var max_width := 300
-# CUSTOM: customize tail_width_factor
-var tail_width_factor := 0.15
 
 var bubble_rect: Rect2 = Rect2(0.0, 0.0, 2.0, 2.0)
 var base_position := Vector2.ZERO
 
 var base_direction := Vector2(1.0, -1.0).normalized()
 var safe_zone := 50.0
+# CUSTOM: customize direction_bubble_size_factor, edge_influence_factor, tail_width_factor
+var direction_bubble_size_factor := 0.4
+var edge_influence_factor := 1.0
+var tail_width_factor := 0.15
 var padding := Vector2()
 
 var name_label_alignment := HBoxContainer.ALIGNMENT_BEGIN
@@ -66,10 +68,10 @@ func _process(_delta:float) -> void:
 	if base_position.y > center.y: influence_y = -influence_y
 	var edge_influence := Vector2(influence_x, influence_y)
 
-	var direction := (base_direction + edge_influence).normalized()
+	var direction := (base_direction + edge_influence_factor * edge_influence).normalized()
 
 	var p: Vector2 = base_position + direction * (
-		safe_zone + lerp(bubble_rect.size.y, bubble_rect.size.x, abs(direction.x)) * 0.4
+		safe_zone + lerp(bubble_rect.size.y, bubble_rect.size.x, abs(direction.x)) * direction_bubble_size_factor
 		)
 	p = p.clamp(bubble_rect.size / 2.0, get_viewport_rect().size - bubble_rect.size / 2.0)
 

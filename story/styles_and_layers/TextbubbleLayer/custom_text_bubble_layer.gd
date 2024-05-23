@@ -12,8 +12,6 @@ extends DialogicLayoutLayer
 @export_file('*.ttf') var italic_font: String = ""
 @export_file('*.ttf') var bold_italic_font: String = ""
 @export var text_max_width: int = 300
-# CUSTOM: customize tail_width_factor
-@export var bubble_tail_width_factor: float = 0.15
 
 @export_subgroup('Box')
 @export var box_modulate: Color = Color.WHITE
@@ -27,6 +25,11 @@ extends DialogicLayoutLayer
 @export_subgroup('Behaviour')
 @export var behaviour_distance: int = 50
 @export var behaviour_direction: Vector2 = Vector2(1, -1)
+
+# CUSTOM: customize direction_bubble_size_factor, edge_influence_factor, tail_width_factor
+@export var behaviour_direction_bubble_size_factor := 0.4
+@export var behaviour_edge_influence_factor := 1.0
+@export var bubble_tail_width_factor: float = 0.15
 
 @export_group('Name Label')
 @export_subgroup("Name Label")
@@ -100,6 +103,8 @@ func bubble_apply_overrides(bubble:TextBubble) -> void:
 		rtl.add_theme_font_override(&"bold_italics_font", load(bold_italic_font) as Font)
 	bubble.set(&'max_width', text_max_width)
 	# CUSTOM: customize tail_width_factor
+	bubble.set(&'direction_bubble_size_factor', behaviour_direction_bubble_size_factor)
+	bubble.set(&'edge_influence_factor', behaviour_edge_influence_factor)
 	bubble.set(&'tail_width_factor', bubble_tail_width_factor)
 
 

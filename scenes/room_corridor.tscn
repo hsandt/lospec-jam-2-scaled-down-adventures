@@ -51,7 +51,7 @@ warp_entrance_spot_index = 1
 shape = SubResource("RectangleShape2D_ri24d")
 
 [node name="NPC Girl" parent="." instance=ExtResource("4_u2yf2")]
-position = Vector2(160, 408)
+position = Vector2(98, 411)
 collision_layer = 2048
 collision_mask = 1
 
