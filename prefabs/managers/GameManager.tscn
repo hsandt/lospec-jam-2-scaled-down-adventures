@@ -1,8 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://og580c23xp7v"]
+[gd_scene load_steps=6 format=3 uid="uid://og580c23xp7v"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_a65vf"]
 [ext_resource type="PackedScene" uid="uid://dxapglgebrrse" path="res://scenes/in_game.tscn" id="2_mseh8"]
+[ext_resource type="Shader" path="res://shaders/clamp_palette.gdshader" id="3_k161n"]
+[ext_resource type="Texture2D" uid="uid://c7flq1je62m6n" path="res://shaders/console16-1x.png" id="4_1f80d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ln3bo"]
+shader = ExtResource("3_k161n")
+shader_parameter/palette = ExtResource("4_1f80d")
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_a65vf")
 in_game_scene = ExtResource("2_mseh8")
+
+[node name="CanvasLayer_FullScreen" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer_FullScreen"]
+material = SubResource("ShaderMaterial_ln3bo")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
