@@ -1,16 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxypbrirpvbay"]
+[gd_scene load_steps=9 format=3 uid="uid://cxypbrirpvbay"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/Menus/MainMenu/MainMenu.tscn" id="1_7dnck"]
 [ext_resource type="Theme" uid="uid://csv4ui1211jbw" path="res://themes/global_theme.tres" id="2_rnp4u"]
 [ext_resource type="PackedScene" uid="uid://dd2ohaviois2l" path="res://prefabs/menus/scenes/Menus/OptionsMenu/MasterOptionsMenuWithTabs.tscn" id="2_t18ep"]
 [ext_resource type="PackedScene" uid="uid://73bswdw2eqw3" path="res://prefabs/menus/scenes/Credits/Credits.tscn" id="3_vnqdd"]
+[ext_resource type="AudioStream" uid="uid://dc6r45ngvjt7t" path="res://audio/sfx/Menu1_PU1.ogg" id="5_4jr57"]
 [ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="5_ob6uo"]
+[ext_resource type="AudioStream" uid="uid://doluh3ck2sfhu" path="res://audio/sfx/Menu2_PU1.ogg" id="6_hhl1a"]
+[ext_resource type="AudioStream" uid="uid://b88jg8nf882sk" path="res://audio/sfx/Menu3_PU1.ogg" id="7_u23b5"]
 
 [node name="MainMenu" instance=ExtResource("1_7dnck")]
 theme = ExtResource("2_rnp4u")
 game_scene_path = "res://scenes/in_game.tscn"
 options_packed_scene = ExtResource("2_t18ep")
 credits_packed_scene = ExtResource("3_vnqdd")
+
+[node name="UISoundController" parent="." index="0"]
+button_focused = ExtResource("5_4jr57")
+button_pressed = ExtResource("6_hhl1a")
+tab_selected = ExtResource("7_u23b5")
+slider_focused = ExtResource("5_4jr57")
 
 [node name="BackgroundMusicPlayer" parent="." index="1"]
 bus = &"Master"
