@@ -1,11 +1,17 @@
 class_name MainMenu
 extends Control
 
+const NO_VERSION_NAME : String = "0.0.0"
 
+## Defines the path to the game scene. Hides the play button if empty.
 @export_file("*.tscn") var game_scene_path : String
 @export var options_packed_scene : PackedScene
 @export var credits_packed_scene : PackedScene
-@export var version_name : String = '0.0.0'
+@export_group("Version")
+## Displays the value of `application/config/version`, set in project settings.
+@export var show_version : bool = true
+## Prefixes the value of `application/config/version` when displaying to the user.
+@export var version_prefix : String = "v"
 
 var options_scene
 var credits_scene
@@ -49,13 +55,12 @@ func _setup_for_web():
 		%ExitButton.hide()
 
 func _setup_version_name():
-	# CUSTOM CHANGE by hsandt
-	# If not setting a custom version name, use the one from project settings
-	# This avoids having to manually update it every time
-	if version_name == '0.0.0':
-		version_name = ProjectSettings.get_setting("application/config/version", "0.0.0")
+	var version_name : String = ProjectSettings.get_setting("application/config/version", NO_VERSION_NAME)
+	if version_name.is_empty():
+		version_name = NO_VERSION_NAME
 	AppLog.version_opened(version_name)
-	$"%VersionNameLabel".text = "v%s" % version_name
+	%VersionNameLabel.text = version_prefix + version_name
+	%VersionNameLabel.visible = show_version
 
 func _setup_play():
 	if game_scene_path.is_empty():
