@@ -1,7 +1,11 @@
 extends "res://addons/maaacks_menus_template/base/scenes/Menus/OptionsMenu/Video/VideoOptionsMenu.gd"
 
 
-func _preselect_resolution(window : Window):
+# note: _preselect_resolution still exists on base to update the hidden resolution setting
+# when manualling resizing the window... not much we can do to adapt to resolution scale
+# since we cannot enforce window to keep the same aspect ratio, nor use an integer scale
+# on OS-level window resize
+func _preselect_resolution_scale():
 	%ResolutionScaleControl.value = AppManager.cached_valid_window_scale_presets[AppManager.current_window_scale_preset_index]
 
 func _update_resolution_options_enabled(window : Window):
@@ -17,11 +21,12 @@ func _update_resolution_options_enabled(window : Window):
 
 func _update_ui(window : Window):
 	%FullscreenControl.value = AppSettings.is_fullscreen(window)
-	_preselect_resolution(window)
+	_preselect_resolution_scale()
 	_update_resolution_options_enabled(window)
 
-func _on_fullscreen_control_setting_changed(value):
+func _on_fullscreen_control_setting_changed(_value):
 	var window : Window = get_window()
+	# trick: we know something changed so we can call toggle and just ignore _value
 	AppManager.toggle_fullscreen()
 
 	_update_resolution_options_enabled(window)

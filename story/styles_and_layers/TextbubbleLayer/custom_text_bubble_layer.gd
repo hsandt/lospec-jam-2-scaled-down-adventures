@@ -105,8 +105,8 @@ func bubble_apply_overrides(bubble:TextBubble) -> void:
 	if box_modulate_by_character_color and bubble.current_character != null:
 		tail_and_bg_group.self_modulate = bubble.current_character.color
 
-	var background := (bubble.get_node('%Background') as ColorRect)
 	# CUSTOM bubble has no corner radius / wobble
+	#var background := (bubble.get_node('%Background') as ColorRect)
 	#var bg_material: ShaderMaterial = (background.material as ShaderMaterial)
 	#bg_material.set_shader_parameter(&'radius', box_corner_radius)
 	#bg_material.set_shader_parameter(&'wobble_amount', box_wobble_amount)

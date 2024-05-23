@@ -47,7 +47,7 @@ func reset() -> void:
 	position = base_position
 
 
-func _process(delta:float) -> void:
+func _process(_delta:float) -> void:
 	base_position = get_speaker_canvas_position()
 
 	var center := get_viewport_rect().size / 2.0
@@ -140,7 +140,7 @@ func _resize_bubble(content_size:Vector2, popup:=false) -> void:
 	name_label_holder.size.x = text.size.x
 
 
-func _on_choices_shown(info:Dictionary) -> void:
+func _on_choices_shown(_info:Dictionary) -> void:
 	if !is_visible_in_tree():
 		return
 
