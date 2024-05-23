@@ -13,6 +13,8 @@ var node_to_point_at: Node = null
 var current_character: DialogicCharacter = null
 
 var max_width := 300
+# CUSTOM: customize tail_width_factor
+var tail_width_factor := 0.15
 
 var bubble_rect: Rect2 = Rect2(0.0, 0.0, 2.0, 2.0)
 var base_position := Vector2.ZERO
@@ -88,7 +90,8 @@ func _process(_delta:float) -> void:
 	curve.add_point(point_a, Vector2.ZERO, direction_point * 0.5)
 	curve.add_point(point_b)
 	tail.points = curve.tessellate(5)
-	tail.width = bubble_rect.size.x * 0.15
+	# CUSTOM: customize tail_width_factor
+	tail.width = bubble_rect.size.x * tail_width_factor
 
 
 func open() -> void:

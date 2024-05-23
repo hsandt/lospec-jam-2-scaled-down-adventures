@@ -12,6 +12,8 @@ extends DialogicLayoutLayer
 @export_file('*.ttf') var italic_font: String = ""
 @export_file('*.ttf') var bold_italic_font: String = ""
 @export var text_max_width: int = 300
+# CUSTOM: customize tail_width_factor
+@export var bubble_tail_width_factor: float = 0.15
 
 @export_subgroup('Box')
 @export var box_modulate: Color = Color.WHITE
@@ -97,6 +99,8 @@ func bubble_apply_overrides(bubble:TextBubble) -> void:
 	if !bold_italic_font.is_empty():
 		rtl.add_theme_font_override(&"bold_italics_font", load(bold_italic_font) as Font)
 	bubble.set(&'max_width', text_max_width)
+	# CUSTOM: customize tail_width_factor
+	bubble.set(&'tail_width_factor', bubble_tail_width_factor)
 
 
 	## BOX & TAIL COLOR
