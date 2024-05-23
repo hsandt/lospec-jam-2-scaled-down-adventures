@@ -2,7 +2,12 @@ class_name CharacterAnimationController
 extends AnimationControllerBase
 
 
-@export var character: PlayerCharacter
+@export var character: Character
+
+
+func initialize():
+	super.initialize()
+	assert(character, "character is not set on %s" % get_path())
 
 
 # override

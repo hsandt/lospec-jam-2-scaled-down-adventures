@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=3 uid="uid://dejygjcteafbh"]
+[gd_resource type="SpriteFrames" load_steps=26 format=3 uid="uid://dejygjcteafbh"]
 
 [ext_resource type="Texture2D" uid="uid://bltmc67enas4x" path="res://sprites/characters/boy_proto_IdleDown_spritesheet.png" id="1_kccob"]
 [ext_resource type="Texture2D" uid="uid://cs3m36vd2yhwc" path="res://sprites/characters/boy_proto_IdleLeft_spritesheet.png" id="2_0hvbl"]
@@ -72,6 +72,10 @@ region = Rect2(0, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_w38go"]
 atlas = ExtResource("8_5l3d8")
 region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3825"]
+atlas = ExtResource("1_kccob")
+region = Rect2(0, 0, 16, 16)
 
 [resource]
 animations = [{
@@ -163,8 +167,11 @@ animations = [{
 "name": &"WalkUp",
 "speed": 6.67
 }, {
-"frames": [],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3825")
+}],
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]

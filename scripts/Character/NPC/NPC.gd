@@ -1,5 +1,5 @@
 class_name NPC
-extends CharacterBody2D
+extends Character
 
 
 @export var dialogic_character: DialogicCharacter

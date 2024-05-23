@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://c0127dqab5jx4"]
 
-[ext_resource type="Script" path="res://scripts/NPC/NPC.gd" id="1_st6db"]
+[ext_resource type="Script" path="res://scripts/Character/NPC/NPC.gd" id="1_5nwsp"]
 [ext_resource type="Script" path="res://scripts/Interactable/InteractableNPC.gd" id="2_3ewgq"]
-[ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="3_ecait"]
+[ext_resource type="Script" path="res://scripts/Character/CharacterAnimationController.gd" id="3_o5k61"]
 [ext_resource type="Script" path="res://scripts/Interactable/InteractableArea.gd" id="4_gf3gn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yeb4x"]
@@ -11,16 +11,21 @@
 
 [node name="NPC" type="CharacterBody2D"]
 collision_layer = 2048
-script = ExtResource("1_st6db")
+script = ExtResource("1_5nwsp")
 
 [node name="InteractableNPC" type="Node" parent="." node_paths=PackedStringArray("npc")]
 script = ExtResource("2_3ewgq")
 npc = NodePath("..")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CharacterAnimationController" type="Node" parent="." node_paths=PackedStringArray("character", "animation_player")]
+script = ExtResource("3_o5k61")
+character = NodePath("..")
+animation_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 self_modulate = Color(1, 0.435294, 1, 1)
-scale = Vector2(16, 16)
-texture = ExtResource("3_ecait")
 
 [node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_yeb4x")

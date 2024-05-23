@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/Room/Room.gd" id="2_7i2hb"]
 [ext_resource type="Script" path="res://scripts/Room/WarpArea.gd" id="3_1oy3s"]
 [ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="4_vyno3"]
-[ext_resource type="Script" path="res://scripts/NPC/NPC.gd" id="4_yk7q3"]
+[ext_resource type="Script" path="res://scripts/Character/NPC/NPC.gd" id="4_yk7q3"]
 [ext_resource type="Script" path="res://scripts/Interactable/InteractableArea.gd" id="5_5nh6f"]
 [ext_resource type="Script" path="res://scripts/Interactable/InteractableNPC.gd" id="5_xi88c"]
 [ext_resource type="Resource" path="res://story/character.dch" id="6_3nkqb"]

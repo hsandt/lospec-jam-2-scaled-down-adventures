@@ -1,55 +1,31 @@
 class_name PlayerCharacter
-extends CharacterBody2D
+extends Character
 
-
-## Parent of all objects that should rotate by multiple of 90 degrees when character changes
-## direction (generally Area2D nodes)
-@export var directional_parent: Node2D
 
 ## Area to detect interactable in
 @export var interaction_area: Area2D
 
-## Move speed applied to each cardinal axis (moving diagonally is sqrt(2) times faster)
-@export var move_cardinal_speed: float = 100.0
-
-
-## Move intention vector: ternary value (-1, 0, +1) for each cardinal axis
-var move_intention: Vector2
-
-## Current direction faced by character
-var current_direction: MathEnums.CardinalDirection
 
 ## Is the character interacting with something or someone?
 var is_interacting: bool
 
 
 func _ready():
-	DebugUtils.assert_member_is_set(self, directional_parent, "directional_parent")
 	DebugUtils.assert_member_is_set(self, interaction_area, "interaction_area")
 
-	move_intention = Vector2.ZERO
-	current_direction = MathEnums.CardinalDirection.DOWN
 	is_interacting = false
 
 
 func _process(_delta: float):
-	if can_move():
+	if can_move_freely():
 		move_intention = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down"))
 	else:
 		move_intention = Vector2.ZERO
 
 
-func _physics_process(_delta: float):
-	if move_intention != Vector2.ZERO:
-		_update_direction_toward(move_intention)
-
-	velocity = move_cardinal_speed * move_intention
-	move_and_slide()
-
-
 func _unhandled_input(event: InputEvent):
-	# check if a dialog is already running
-	if Dialogic.current_timeline != null:
+	# check if a dialog is already running or if any other interaction is running
+	if Dialogic.current_timeline != null or is_interacting:
 		return
 
 	# Exact match to avoid conflicts with Alt+Enter
@@ -58,14 +34,7 @@ func _unhandled_input(event: InputEvent):
 		get_viewport().set_input_as_handled()
 
 
-func _update_direction_toward(direction_vector: Vector2):
-	# DirectionalParent children must all face RIGHT in initial scene setup, as it is
-	# Godot's angle reference
-	current_direction = MathUtils.vector2i_to_dominant_cardinal_direction(direction_vector, true)
-	directional_parent.rotation = MathUtils.cardinal_direction_to_angle(current_direction)
-
-
-func can_move() -> bool:
+func can_move_freely() -> bool:
 	return !is_interacting
 
 
