@@ -168,6 +168,8 @@ app_next_resolution={
 2d_physics/layer_4="Wall"
 2d_physics/layer_8="Warp"
 2d_physics/layer_12="Interactable"
+2d_physics/layer_16="NPCMoveBox"
+2d_physics/layer_17="NPCStaticBox"
 
 [maaacks_menus_template]
 

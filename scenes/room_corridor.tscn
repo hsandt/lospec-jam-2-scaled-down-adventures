@@ -52,6 +52,8 @@ shape = SubResource("RectangleShape2D_ri24d")
 
 [node name="NPC Girl" parent="." instance=ExtResource("4_u2yf2")]
 position = Vector2(160, 408)
+collision_layer = 2048
+collision_mask = 1
 
 [connection signal="body_entered" from="Area2D_WarpToRoom Boy" to="Area2D_WarpToRoom Boy" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D_WarpToRoom Parents" to="Area2D_WarpToRoom Parents" method="_on_body_entered"]
