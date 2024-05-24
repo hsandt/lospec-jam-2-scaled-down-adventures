@@ -41,7 +41,7 @@ layout_mode = 2
 
 [node name="KeyAssignmentDialog" parent="." index="1"]
 initial_position = 1
-size = Vector2i(119, 50)
+size = Vector2i(200, 80)
 min_size = Vector2i(50, 50)
 max_size = Vector2i(200, 200)
 theme = ExtResource("3_yfnsu")
@@ -49,7 +49,7 @@ dialog_autowrap = true
 
 [node name="KeyDeletionDialog" parent="." index="2"]
 initial_position = 1
-size = Vector2i(200, 61)
+size = Vector2i(200, 80)
 min_size = Vector2i(50, 50)
 max_size = Vector2i(200, 200)
 theme = ExtResource("3_yfnsu")
@@ -57,14 +57,14 @@ dialog_autowrap = true
 
 [node name="OneInputMinimumDialog" parent="." index="3"]
 initial_position = 1
-size = Vector2i(200, 50)
+size = Vector2i(200, 80)
 max_size = Vector2i(200, 200)
 theme = ExtResource("3_yfnsu")
 dialog_autowrap = true
 
 [node name="AlreadyAssignedDialog" parent="." index="4"]
 initial_position = 1
-size = Vector2i(200, 50)
+size = Vector2i(200, 80)
 max_size = Vector2i(200, 200)
 theme = ExtResource("3_yfnsu")
 dialog_autowrap = true
