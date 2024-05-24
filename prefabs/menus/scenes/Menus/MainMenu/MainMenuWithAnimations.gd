@@ -1,5 +1,8 @@
 extends MainMenu
 
+@export var bgm_title_intro_loop: AudioStream
+
+# used as fallback
 @export var bgm_title_intro: AudioStream
 @export var bgm_title_loop: AudioStream
 
@@ -39,8 +42,13 @@ func _ready():
 
 	# CUSTOM
 	ProjectMusicController.music_stream_player = $AudioStreamPlayer
-	ProjectMusicController.music_stream_player.stream = bgm_title_intro
-	ProjectMusicController.play()
-	await ProjectMusicController.music_stream_player.finished
-	ProjectMusicController.music_stream_player.stream = bgm_title_loop
-	ProjectMusicController.play()
+
+	if bgm_title_intro_loop:
+		ProjectMusicController.music_stream_player.stream = bgm_title_intro_loop
+		ProjectMusicController.play()
+	else:
+		ProjectMusicController.music_stream_player.stream = bgm_title_intro
+		ProjectMusicController.play()
+		await ProjectMusicController.music_stream_player.finished
+		ProjectMusicController.music_stream_player.stream = bgm_title_loop
+		ProjectMusicController.play()

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cxypbrirpvbay" path="res://prefabs/menus/scenes/Menus/MainMenu/MainMenu.tscn" id="1_je6ti"]
 [ext_resource type="Script" path="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.gd" id="2_hbrfy"]
-[ext_resource type="AudioStream" uid="uid://bmf4s1emu1irc" path="res://audio/bgm/bgm_title.ogg" id="3_okn27"]
+[ext_resource type="AudioStream" uid="uid://ili1fo5txuxx" path="res://audio/bgm/bgm_title_v02.ogg" id="3_lyvi7"]
 [ext_resource type="AudioStream" uid="uid://bife1atbx0ghj" path="res://audio/bgm/bgm_title_loop.ogg" id="4_8xbfh"]
 [ext_resource type="Theme" uid="uid://toq0xa72uxje" path="res://themes/theme_main_menu_big_buttons.tres" id="5_x7h5s"]
 
@@ -352,12 +352,11 @@ graph_offset = Vector2(-180.277, 49)
 
 [node name="MainMenu" instance=ExtResource("1_je6ti")]
 script = ExtResource("2_hbrfy")
-bgm_title_intro = ExtResource("3_okn27")
+bgm_title_intro_loop = ExtResource("3_lyvi7")
+bgm_title_intro = ExtResource("3_lyvi7")
 bgm_title_loop = ExtResource("4_8xbfh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="0"]
-stream = ExtResource("3_okn27")
-bus = &"Music"
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {
