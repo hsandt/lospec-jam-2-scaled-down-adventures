@@ -75,7 +75,7 @@ func _load_room_scene(room_scene: PackedScene, warp_entrance_spot_index: int):
 func _warp_player_character_to_entrance_spot(warp_entrance_spot_index: int):
 	if warp_entrance_spot_index < current_room_instance.entrance_spots.size():
 		player_character.global_position = current_room_instance.entrance_spots[warp_entrance_spot_index].global_position
-		camera.move_to_player_character()
+		camera.move_instantly_to_player_character()
 	else:
 		push_error("[InGameManager] load_room_scene: for room scene '%s', warp_entrance_spot_index (%d) >= current_room_instance.entrance_spots.size() (%d)" %
 			[current_room_instance.get_path(), warp_entrance_spot_index, current_room_instance.entrance_spots.size()])

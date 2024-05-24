@@ -16,6 +16,8 @@ first_room_scene = ExtResource("3_0x0ki")
 [node name="InGameCamera" type="Camera2D" parent="."]
 unique_name_in_owner = true
 z_index = 100
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 editor_draw_drag_margin = true

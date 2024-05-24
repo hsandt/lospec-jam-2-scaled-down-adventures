@@ -19,6 +19,12 @@ func move_to_player_character():
 		position = player_character.position
 
 
+func move_instantly_to_player_character():
+	if follow_player_character:
+		position = player_character.position
+		reset_smoothing()
+
+
 func set_camera_limits_for_room(room: Room):
 	limit_left = room.camera_limit_top_left.global_position.x as int
 	limit_right = room.camera_limit_bottom_right.global_position.x as int
