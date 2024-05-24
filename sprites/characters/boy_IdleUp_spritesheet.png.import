@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bltmc67enas4x"
-path="res://.godot/imported/boy_proto_IdleDown_spritesheet.png-c31819db8059f720d8ceb6b7fddb0e36.ctex"
+uid="uid://ddvy2nmgvpme"
+path="res://.godot/imported/boy_IdleUp_spritesheet.png-8772d2252efee5ee10ec95c60cb349d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/characters/boy_proto_IdleDown_spritesheet.png"
-dest_files=["res://.godot/imported/boy_proto_IdleDown_spritesheet.png-c31819db8059f720d8ceb6b7fddb0e36.ctex"]
+source_file="res://sprites/characters/boy_IdleUp_spritesheet.png"
+dest_files=["res://.godot/imported/boy_IdleUp_spritesheet.png-8772d2252efee5ee10ec95c60cb349d3.ctex"]
 
 [params]
 

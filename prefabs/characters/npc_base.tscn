@@ -30,7 +30,6 @@ animation_player = NodePath("../AnimationPlayer")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-self_modulate = Color(1, 0.435294, 1, 1)
 
 [node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_yeb4x")

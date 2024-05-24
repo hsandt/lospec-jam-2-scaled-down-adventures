@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddvy2nmgvpme"
-path="res://.godot/imported/boy_proto_IdleUp_spritesheet.png-6aacc477ead3e4eeb16f4cd62b509a2f.ctex"
+uid="uid://lryjid86oscj"
+path="res://.godot/imported/boy_WalkRight_spritesheet.png-5304f4b1812724f4a2141fe3aaa4b873.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/characters/boy_proto_IdleUp_spritesheet.png"
-dest_files=["res://.godot/imported/boy_proto_IdleUp_spritesheet.png-6aacc477ead3e4eeb16f4cd62b509a2f.ctex"]
+source_file="res://sprites/characters/boy_WalkRight_spritesheet.png"
+dest_files=["res://.godot/imported/boy_WalkRight_spritesheet.png-5304f4b1812724f4a2141fe3aaa4b873.ctex"]
 
 [params]
 

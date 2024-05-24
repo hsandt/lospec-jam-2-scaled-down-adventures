@@ -4,7 +4,7 @@
 [ext_resource type="Resource" path="res://story/character_girl.dch" id="2_4hc3k"]
 [ext_resource type="Resource" path="res://story/timeline_girl_1_in_front_of_parents_door.dtl" id="3_wvugn"]
 [ext_resource type="AnimationLibrary" uid="uid://b3881453shgdn" path="res://anims/animation_library_girl.res" id="4_5mtq5"]
-[ext_resource type="SpriteFrames" uid="uid://dejygjcteafbh" path="res://anims/sprite_frames_boy.tres" id="4_uffik"]
+[ext_resource type="SpriteFrames" uid="uid://ctblaxw1fyrs1" path="res://anims/sprite_frames_girl.tres" id="5_0flnx"]
 
 [node name="NPC Girl" instance=ExtResource("1_ry2rp")]
 dialogic_character = ExtResource("2_4hc3k")
@@ -16,6 +16,5 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" parent="." index="3"]
-self_modulate = Color(1, 0.435294, 1, 1)
-sprite_frames = ExtResource("4_uffik")
+sprite_frames = ExtResource("5_0flnx")
 animation = &"IdleDown"

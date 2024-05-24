@@ -1,0 +1,151 @@
+[gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://ctblaxw1fyrs1"]
+
+[ext_resource type="Texture2D" uid="uid://bkyqkt8se20q2" path="res://sprites/characters/boy_WalkDown_spritesheet.png" id="1_2gs2x"]
+[ext_resource type="Texture2D" uid="uid://cisf0tx6chmoh" path="res://sprites/characters/girl_WalkDown_spritesheet.png" id="1_t1qud"]
+[ext_resource type="Texture2D" uid="uid://cpmenb77vhjr5" path="res://sprites/characters/girl_WalkLeft_spritesheet.png" id="2_ykx0i"]
+[ext_resource type="Texture2D" uid="uid://vcljqmwh2y2x" path="res://sprites/characters/girl_WalkRight_spritesheet.png" id="3_udii4"]
+[ext_resource type="Texture2D" uid="uid://xyulrmefchkk" path="res://sprites/characters/girl_WalkUp_spritesheet.png" id="4_w67w7"]
+[ext_resource type="Texture2D" uid="uid://di3phf6u2vdfj" path="res://sprites/characters/girl_IdleDown_spritesheet.png" id="6_4sgyh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1os8s"]
+atlas = ExtResource("1_t1qud")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x35ge"]
+atlas = ExtResource("1_t1qud")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eem6r"]
+atlas = ExtResource("2_ykx0i")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5l0v"]
+atlas = ExtResource("2_ykx0i")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o35xv"]
+atlas = ExtResource("3_udii4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2523"]
+atlas = ExtResource("3_udii4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5u6p"]
+atlas = ExtResource("4_w67w7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dhji"]
+atlas = ExtResource("4_w67w7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnlxm"]
+atlas = ExtResource("1_2gs2x")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qgin"]
+atlas = ExtResource("1_2gs2x")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rf3w"]
+atlas = ExtResource("6_4sgyh")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1os8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x35ge")
+}],
+"loop": true,
+"name": &"IdleDown",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eem6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5l0v")
+}],
+"loop": true,
+"name": &"IdleLeft",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o35xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2523")
+}],
+"loop": true,
+"name": &"IdleRight",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5u6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dhji")
+}],
+"loop": true,
+"name": &"IdleUp",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnlxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qgin")
+}],
+"loop": true,
+"name": &"WalkDown",
+"speed": 6.67
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eem6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5l0v")
+}],
+"loop": true,
+"name": &"WalkLeft",
+"speed": 6.67
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o35xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2523")
+}],
+"loop": true,
+"name": &"WalkRight",
+"speed": 6.67
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5u6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dhji")
+}],
+"loop": true,
+"name": &"WalkUp",
+"speed": 6.67
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rf3w")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]

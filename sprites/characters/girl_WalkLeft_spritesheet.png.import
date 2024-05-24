@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkyqkt8se20q2"
-path="res://.godot/imported/boy_proto_WalkDown_spritesheet.png-61b69db0c87883bf2e99358dc13cc9ec.ctex"
+uid="uid://cpmenb77vhjr5"
+path="res://.godot/imported/girl_WalkLeft_spritesheet.png-483e9cb52e9185c17a314fede8df955f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/characters/boy_proto_WalkDown_spritesheet.png"
-dest_files=["res://.godot/imported/boy_proto_WalkDown_spritesheet.png-61b69db0c87883bf2e99358dc13cc9ec.ctex"]
+source_file="res://sprites/characters/girl_WalkLeft_spritesheet.png"
+dest_files=["res://.godot/imported/girl_WalkLeft_spritesheet.png-483e9cb52e9185c17a314fede8df955f.ctex"]
 
 [params]
 
