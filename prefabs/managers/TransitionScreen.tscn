@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://biccvbkepullv"]
+
+[ext_resource type="Script" path="res://addons/hyper-godot-commons/singleton/TransitionScreen.gd" id="1_llesy"]
+[ext_resource type="AnimationLibrary" uid="uid://hmnv4xiknuuf" path="res://prefabs/managers/transition_screen_animation_library.tres" id="2_08fdb"]
+
+[node name="TransitionScreen" type="CanvasLayer" node_paths=PackedStringArray("animation_player")]
+process_mode = 3
+layer = 10
+script = ExtResource("1_llesy")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("2_08fdb")
+}

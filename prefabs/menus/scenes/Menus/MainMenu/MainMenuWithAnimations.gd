@@ -6,6 +6,10 @@ extends MainMenu
 @export var bgm_title_intro: AudioStream
 @export var bgm_title_loop: AudioStream
 
+## Speed factor for fade out animation
+@export var fade_out_speed: float = 1.0
+
+
 var animation_state_machine : AnimationNodeStateMachinePlayback
 
 func intro_done():
@@ -52,3 +56,9 @@ func _ready():
 		await ProjectMusicController.music_stream_player.finished
 		ProjectMusicController.music_stream_player.stream = bgm_title_loop
 		ProjectMusicController.play()
+
+# override
+func play_game():
+	ProjectMusicController.fade_out(1.0)
+	await TransitionScreen.fade_out_async(fade_out_speed)
+	super.play_game()

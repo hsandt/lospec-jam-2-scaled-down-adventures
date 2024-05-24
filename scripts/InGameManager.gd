@@ -14,6 +14,9 @@ extends Node
 ## Index of warp entrance spot in first room to start at
 @export var first_warp_entrance_spot_index: int
 
+## Speed factor for fade in animation
+@export var fade_in_speed: float = 1.0
+
 
 @onready var room_on_ready: Room = get_tree().get_first_node_in_group("rooms")
 @onready var camera: InGameCamera = $%InGameCamera
@@ -47,6 +50,10 @@ func _ready():
 		current_room_instance = room_on_ready
 		# Defer call so camera is ready and knows about player characteraaa
 		_warp_player_character_to_entrance_spot.call_deferred(0)
+
+	# important when playing from main menu as we must revert the fade out
+	# if F6 playing in-game scene / room, it will just fade in from scratch
+	await TransitionScreen.fade_in_async(fade_in_speed)
 
 
 func _exit_tree():
