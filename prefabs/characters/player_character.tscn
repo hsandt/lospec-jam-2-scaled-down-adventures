@@ -187,6 +187,7 @@ collision_mask = 65544
 script = ExtResource("1_bj8jp")
 interaction_area = NodePath("DirectionalParent/InteractionArea")
 directional_parent = NodePath("DirectionalParent")
+move_cardinal_speed = 150.0
 
 [node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="."]
 z_index = 1
