@@ -1,5 +1,8 @@
 extends MainMenu
 
+@export var bgm_title_intro: AudioStream
+@export var bgm_title_loop: AudioStream
+
 var animation_state_machine : AnimationNodeStateMachinePlayback
 
 func intro_done():
@@ -33,3 +36,11 @@ func _input(event):
 func _ready():
 	super._ready()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
+
+	# CUSTOM
+	ProjectMusicController.music_stream_player = $AudioStreamPlayer
+	ProjectMusicController.music_stream_player.stream = bgm_title_intro
+	ProjectMusicController.play()
+	await ProjectMusicController.music_stream_player.finished
+	ProjectMusicController.music_stream_player.stream = bgm_title_loop
+	ProjectMusicController.play()
