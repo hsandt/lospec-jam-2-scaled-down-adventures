@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://b8jibyb5nyfry"]
+[gd_scene load_steps=19 format=3 uid="uid://b8jibyb5nyfry"]
 
 [ext_resource type="PackedScene" uid="uid://cxypbrirpvbay" path="res://prefabs/menus/scenes/Menus/MainMenu/MainMenu.tscn" id="1_je6ti"]
 [ext_resource type="Script" path="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.gd" id="2_hbrfy"]
 [ext_resource type="AudioStream" uid="uid://bmf4s1emu1irc" path="res://audio/bgm/bgm_title.ogg" id="3_okn27"]
 [ext_resource type="AudioStream" uid="uid://bife1atbx0ghj" path="res://audio/bgm/bgm_title_loop.ogg" id="4_8xbfh"]
+[ext_resource type="Theme" uid="uid://toq0xa72uxje" path="res://themes/theme_main_menu_big_buttons.tres" id="5_x7h5s"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -382,7 +383,11 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtons" parent="MenuContainer/VBoxContainer/MenuMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
+theme = ExtResource("5_x7h5s")
 lock = true
 
 [node name="BackButton" parent="FlowControlContainer/FlowControl" index="0"]
 visible = false
+anchor_top = 1.062
+offset_top = -23.904
+offset_right = 61.064

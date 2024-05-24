@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://tnk2t41so8p2"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://toq0xa72uxje"]
 
-[ext_resource type="FontFile" uid="uid://c4yx5crkulmfy" path="res://fonts/04b03.ttf" id="1_lgs2c"]
+[ext_resource type="FontFile" uid="uid://c4yx5crkulmfy" path="res://fonts/04b03.ttf" id="1_gqdyc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wclk"]
 content_margin_left = 4.0
@@ -73,9 +73,9 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 
 [resource]
-default_font = ExtResource("1_lgs2c")
+default_font = ExtResource("1_gqdyc")
 default_font_size = 8
-Button/font_sizes/font_size = 8
+Button/font_sizes/font_size = 16
 Button/styles/disabled = SubResource("StyleBoxFlat_3wclk")
 Button/styles/focus = SubResource("StyleBoxFlat_ii0vm")
 Button/styles/hover = SubResource("StyleBoxFlat_iekwc")
