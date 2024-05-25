@@ -374,6 +374,10 @@ parameters/conditions/intro_done = false
 
 [node name="VersionNameLabel" parent="." index="6"]
 modulate = Color(1, 1, 1, 0)
+offset_left = -70.0
+offset_top = -22.0
+text = "version"
+vertical_alignment = 2
 
 [node name="Title" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="0"]
 modulate = Color(1, 1, 1, 0)
