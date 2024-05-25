@@ -24,8 +24,8 @@ AppConfig="*res://addons/maaacks_menus_template/base/scenes/Autoloads/AppConfig.
 SceneLoader="*res://addons/maaacks_menus_template/base/scenes/Autoloads/SceneLoader.tscn"
 ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectMusicController.tscn"
 ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectUISoundController.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 TransitionScreen="*res://prefabs/managers/TransitionScreen.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
