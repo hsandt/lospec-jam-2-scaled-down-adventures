@@ -20,39 +20,40 @@ custom_minimum_size = Vector2(0, 224)
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
 custom_minimum_size = Vector2(256, 0)
 text = "[center]
-[font_size=10]Collaborators[/font_size]
+[font_size=16]Collaborators[/font_size]
 
 [font_size=8]Role[/font_size]
-[url=https://komehara.itch.io/]komehara[/url] - Story & Mission design, Programming
 
-[url=https://l-sync.itch.io/]L-Sync[/url] - Story & Mission design, Audio
+komehara - Story & Mission design, Programming
 
-[url=https://boopkitty.itch.io/]emmy!![/url] - Art
+L-Sync - Story & Mission design, Audio
+
+emmy!! - Art
 
 
 [font_size=16]Sourced / Unaffiliated[/font_size]
-[font_size=16]Asset Type[/font_size]
-[font_size=16]Use Case[/font_size]
-Author: [url=]Name[/url]  
-Source: [url=]Domain : webpage.html[/url]  
+[font_size=8]Asset Type[/font_size]
+[font_size=8]Use Case[/font_size]
+Author: [url=]Name[/url]
+Source: [url=]Domain : webpage.html[/url]
 License: [url=]License[/url]
 
 
 [font_size=16]Tools[/font_size]
-[font_size=16]Godot[/font_size]
-Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
-Source: [url=https://godotengine.org/]godotengine.org[/url]  
-License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
+[font_size=8]Godot[/font_size]
+Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]
+Source: [url=https://godotengine.org/]godotengine.org[/url]
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url]
 
-[font_size=16]Git[/font_size]
-Author: [url=https://github.com/torvalds]Linus Torvalds[/url]  
-Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
+[font_size=8]Git[/font_size]
+Author: [url=https://github.com/torvalds]Linus Torvalds[/url]
+Source: [url=https://git-scm.com/downloads]git-scm.com[/url]
 License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
 
-[font_size=16]Godot Menus Template[/font_size]
-Author: [url=https://github.com/Maaack/Godot-Menus-Template/graphs/contributors]Marek Belski[/url]  
-Source: [url=https://github.com/Maaack/Godot-Menus-Template]github: Godot-Menus-Template[/url]  
-License: [url=LICENSE.txt]MIT License[/url]  
+[font_size=8]Godot Menus Template[/font_size]
+Author: [url=https://github.com/Maaack/Godot-Menus-Template/graphs/contributors]Marek Belski[/url]
+Source: [url=https://github.com/Maaack/Godot-Menus-Template]github: Godot-Menus-Template[/url]
+License: [url=LICENSE.txt]MIT License[/url]
 [/center]"
 
 [node name="FooterSpace" parent="ScrollContainer/VBoxContainer" index="2"]
