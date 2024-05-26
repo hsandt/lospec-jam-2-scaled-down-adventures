@@ -33,6 +33,6 @@ func _physics_process(_delta: float):
 func _update_direction_toward(direction_vector: Vector2):
 	# DirectionalParent children must all face RIGHT in initial scene setup, as it is
 	# Godot's angle reference
-	current_direction = MathUtils.vector2i_to_dominant_cardinal_direction(direction_vector, true)
+	current_direction = MathUtils.vector_to_dominant_cardinal_direction(direction_vector, true)
 	if directional_parent:
 		directional_parent.rotation = MathUtils.cardinal_direction_to_angle(current_direction)
