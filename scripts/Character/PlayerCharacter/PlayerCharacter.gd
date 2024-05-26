@@ -18,7 +18,8 @@ func _ready():
 
 func _process(_delta: float):
 	if can_move_freely():
-		move_intention = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down"))
+		# Classic ternary input (-1, 0, +1) for each component via sign()
+		move_intention = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down")).sign()
 	else:
 		move_intention = Vector2.ZERO
 
