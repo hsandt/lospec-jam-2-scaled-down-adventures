@@ -1,0 +1,4 @@
+if :
+	character_toy_troll: ...
+else:
+	character_toy_troll: "It's just a toy..."

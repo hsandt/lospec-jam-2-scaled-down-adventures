@@ -1,0 +1,13 @@
+if {} == false:
+	character_ant-worker_bity: They sent me here for nothing.
+	character_ant-worker_bity: there's food to gather over there they said.
+	character_ant-worker_bity: It's important they said!
+	character_ant-worker_bity: We are counting on you they said...
+	character_ant-worker_bity: Too much useless talk.
+	character_ant-worker_bity: These orders are like this draft that comes from under this door since I am not a carrier but a builder.
+	character_ant-worker_bity: This situation is such a non-sense.
+elif {} == false:
+	character_ant-worker_bity: Besides, I'm hungry...
+else:
+	character_ant-worker_bity: Ah, chief said so?
+	Heh, this is a work that is a little more to my measure.

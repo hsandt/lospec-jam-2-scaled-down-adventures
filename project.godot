@@ -31,11 +31,41 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "character": "res://story/character.dch",
-"character_girl": "res://story/character_girl.dch"
+"character_ant-chief_scramble": "res://story/character_ant-chief_scramble.dch",
+"character_ant-worker_anthoven": "res://story/character_ant-worker_anthoven.dch",
+"character_ant-worker_bity": "res://story/character_ant-worker_bity.dch",
+"character_ant-worker_piko": "res://story/character_ant-worker_piko.dch",
+"character_ant-worker_randi": "res://story/character_ant-worker_randi.dch",
+"character_ant-worker_speck": "res://story/character_ant-worker_speck.dch",
+"character_ant-worker_tini": "res://story/character_ant-worker_tini.dch",
+"character_butterfly_philly": "res://story/character_butterfly_philly.dch",
+"character_caterpillar_flubble": "res://story/character_caterpillar_flubble.dch",
+"character_cranefly_slim": "res://story/character_cranefly_slim.dch",
+"character_fly_buzz": "res://story/character_fly_buzz.dch",
+"character_girl": "res://story/character_girl.dch",
+"character_hamster_bubbles": "res://story/character_hamster_bubbles.dch",
+"character_smartphone_hi-phone": "res://story/character_smartphone_hi-phone.dch",
+"character_spider_ben": "res://story/character_spider_ben.dch",
+"character_toy_troll": "res://story/character_toy_troll.dch"
 }
 directories/dtl_directory={
 "timeline": "res://story/timeline.dtl",
-"timeline_girl_1_in_front_of_parents_door": "res://story/timeline_girl_1_in_front_of_parents_door.dtl"
+"timeline_ant-chief_Scramble": "res://story/timeline_ant-chief_Scramble.dtl",
+"timeline_ant-worker_antowen": "res://story/timeline_ant-worker_anthoven.dtl",
+"timeline_ant-worker_bity": "res://story/timeline_ant-worker_bity.dtl",
+"timeline_ant-worker_piko": "res://story/timeline_ant-worker_piko.dtl",
+"timeline_ant-worker_randi": "res://story/timeline_ant-worker_randi.dtl",
+"timeline_ant-worker_speck": "res://story/timeline_ant-worker_speck.dtl",
+"timeline_ant-worker_tini": "res://story/timeline_ant-worker_tini.dtl",
+"timeline_butterfly_philly": "res://story/timeline_butterfly_philly.dtl",
+"timeline_caterpillar_flubble": "res://story/timeline_caterpillar_flubble.dtl",
+"timeline_cranefly_slim": "res://story/timeline_cranefly_slim.dtl",
+"timeline_fly_buzz": "res://story/timeline_fly_buzz.dtl",
+"timeline_girl_1_in_front_of_parents_door": "res://story/timeline_girl_1_in_front_of_parents_door.dtl",
+"timeline_hamster_bubbles": "res://story/timeline_hamster_bubbles.dtl",
+"timeline_smartphone_hi-phone": "res://story/timeline_smartphone_hi-phone.dtl",
+"timeline_spider_ben": "res://story/timeline_spider_ben.dtl",
+"timeline_toy_troll": "res://story/timeline_toy_troll.dtl"
 }
 layout/style_list=["res://story/styles_and_layers/style.tres"]
 layout/default_style="res://story/styles_and_layers/style.tres"
@@ -59,6 +89,10 @@ text/autoadvance_per_character_delay=0.1
 text/autoadvance_ignored_characters_enabled=true
 text/autoadvance_enabled=false
 variables={
+"ant-chief_scramble_accepted_to_help": false,
+"ant-chief_scramble_sentences_told": 0,
+"ant-worker_anthoven_accepted_to_help": false,
+"ant-worker_anthoven_sentences_told": 0,
 "girl_1_in_front_of_parents_door_has_talked": false
 }
 text/split_at_new_lines=true

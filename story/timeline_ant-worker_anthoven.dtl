@@ -1,0 +1,15 @@
+if {ant-worker_anthoven_sentences_told} == 0:
+	character_ant-worker_anthoven: I like my job, but does my job likes me ?
+	set {ant-worker_anthoven_sentences1_told} = 1
+elif {ant-worker_anthoven_sentences2_told} == 1:
+	character_ant-worker_anthoven: Why do we follow the scent trail ?
+	character_ant-worker_anthoven: What if the real adventure lies in getting lost?
+	set {ant-worker_anthoven_sentences2_told} = 2
+elif {ant-worker_anthoven_sentences3_told} == 2:
+	character_ant-worker_anthoven: If I get lost on the way to the colony, can I start my own "ant"topia with new rules?
+	character_ant-worker_anthoven: Like mandatory nap times ?
+	set {ant-worker_anthoven_sentences3_told} = 3
+else:
+	character_ant-worker_anthoven: To be pushing a door or not to be pushing the door.
+	character_ant-worker_anthoven: What was the question again?
+	set {ant-worker_anthoven_accepted_to_help} = true

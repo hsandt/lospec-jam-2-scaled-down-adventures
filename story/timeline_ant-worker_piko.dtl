@@ -1,0 +1,12 @@
+if {} == "":
+	character_ant-worker_piko: zzz zzz
+elif :
+	character_ant-worker_piko: zzz zzz
+elif :
+	character_ant-worker_piko: zzz zzz zzz
+elif :
+	character_ant-worker_piko: zzz zzz zzz zzz
+elif :
+	character_ant-worker_piko: I'm on my break, i have the right!
+else:
+	character_ant-worker_piko: A meeting to the door, man I'm tired.

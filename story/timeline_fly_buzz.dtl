@@ -1,0 +1,4 @@
+if :
+	character_fly_buzz: Heh, this time you cannot squash me haha !
+else:
+	character_fly_buzz: What are you gonna do? haha !

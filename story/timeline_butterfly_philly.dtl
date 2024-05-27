@@ -1,0 +1,6 @@
+if :
+	character_butterfly_philly: It's the first day of my life today!
+	character_butterfly_philly: I'm so happy!
+	character_butterfly_philly: Yay!!!
+else:
+	character_butterfly_philly: Yay!!!!
