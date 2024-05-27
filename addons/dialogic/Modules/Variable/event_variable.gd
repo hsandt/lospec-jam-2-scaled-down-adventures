@@ -79,7 +79,7 @@ func _execute() -> void:
 		if value != null and (original_value != null or (operation == Operations.SET and "[" in name)):
 
 			var interpreted_value: Variant
-			var result: float
+			var result: Variant
 
 			match _value_type:
 				VarValueType.STRING:
@@ -111,7 +111,7 @@ func _execute() -> void:
 					Operations.DIVIDE:
 						result = original_value / interpreted_value
 
-			dialogic.VAR.set_variable(name, interpreted_value)
+			dialogic.VAR.set_variable(name, result)
 			dialogic.VAR.variable_was_set.emit(
 				{
 					'variable' : name,

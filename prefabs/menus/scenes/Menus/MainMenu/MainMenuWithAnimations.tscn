@@ -365,9 +365,6 @@ libraries = {
 }
 
 [node name="MenuAnimationTree" type="AnimationTree" parent="." index="3"]
-libraries = {
-"": SubResource("AnimationLibrary_2kqig")
-}
 tree_root = SubResource("AnimationNodeStateMachine_50wd5")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
