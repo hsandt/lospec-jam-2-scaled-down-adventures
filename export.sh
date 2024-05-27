@@ -3,7 +3,7 @@
 # CONFIG: change this for every new project
 title="Scaled-Down Adventures"
 all_platforms=(windows macos linux web)
-godot_bin="godot4.2.2_stable"
+godot_bin="godot4.2.1_stable"
 export_folder="Export"
 
 usage() {

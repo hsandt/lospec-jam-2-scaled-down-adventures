@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://73bswdw2eqw3"]
+
+[ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_menus_template/base/scenes/Credits/Credits.tscn" id="1_ln32u"]
+[ext_resource type="Theme" uid="uid://csv4ui1211jbw" path="res://themes/global_theme.tres" id="2_muk8d"]
+[ext_resource type="Script" path="res://prefabs/menus/scenes/Credits/Credits.gd" id="2_tp04w"]
+
+[node name="Credits" instance=ExtResource("1_ln32u")]
+theme = ExtResource("2_muk8d")
+script = ExtResource("2_tp04w")
+attribution_file_path = "res://prefabs/menus/ATTRIBUTION.md"
+h1_font_size = 32
+h2_font_size = 16
+h3_font_size = 8
+h4_font_size = 8
+scroll_active = true
+
+[node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(0, 224)
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+custom_minimum_size = Vector2(256, 0)
+text = "[center]
+[font_size=16]Collaborators[/font_size]
+
+[font_size=8]Role[/font_size]
+
+komehara - Story & Mission design, Programming
+
+L-Sync - Story & Mission design, Audio
+
+emmy!! - Art
+
+
+[font_size=16]Sourced / Unaffiliated[/font_size]
+[font_size=8]Asset Type[/font_size]
+[font_size=8]Use Case[/font_size]
+Author: [url=]Name[/url]
+Source: [url=]Domain : webpage.html[/url]
+License: [url=]License[/url]
+
+
+[font_size=16]Tools[/font_size]
+[font_size=8]Godot[/font_size]
+Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]
+Source: [url=https://godotengine.org/]godotengine.org[/url]
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url]
+
+[font_size=8]Git[/font_size]
+Author: [url=https://github.com/torvalds]Linus Torvalds[/url]
+Source: [url=https://git-scm.com/downloads]git-scm.com[/url]
+License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
+
+[font_size=8]Godot Menus Template[/font_size]
+Author: [url=https://github.com/Maaack/Godot-Menus-Template/graphs/contributors]Marek Belski[/url]
+Source: [url=https://github.com/Maaack/Godot-Menus-Template]github: Godot-Menus-Template[/url]
+License: [url=LICENSE.txt]MIT License[/url]
+[/center]"
+
+[node name="FooterSpace" parent="ScrollContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 224)

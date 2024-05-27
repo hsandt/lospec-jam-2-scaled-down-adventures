@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi3x8tv8wf4i5"]
+
+[ext_resource type="PackedScene" uid="uid://c8vnncjwqcpab" path="res://addons/maaacks_menus_template/base/scenes/Menus/OptionsMenu/Audio/AudioOptionsMenu.tscn" id="1_my3af"]
+[ext_resource type="Theme" uid="uid://tnk2t41so8p2" path="res://themes/theme_options_content.tres" id="2_qi4lx"]
+[ext_resource type="Script" path="res://prefabs/menus/scenes/Menus/OptionsMenu/Audio/AudioOptionsMenu.gd" id="2_s0xey"]
+[ext_resource type="PackedScene" uid="uid://cssft8ikwmnxr" path="res://prefabs/menus/scenes/Menus/OptionsMenu/OptionControl/SliderOptionControl.tscn" id="3_vkd07"]
+
+[node name="Audio" instance=ExtResource("1_my3af")]
+custom_minimum_size = Vector2(256, 0)
+theme = ExtResource("2_qi4lx")
+script = ExtResource("2_s0xey")
+audio_control_scene = ExtResource("3_vkd07")
+
+[node name="VBoxContainer" parent="." index="0"]
+custom_minimum_size = Vector2(200, 0)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm2awecyl1up3"]
+
+[ext_resource type="PackedScene" uid="uid://c01ayjblhcg1t" path="res://addons/maaacks_menus_template/base/scenes/Menus/OptionsMenu/OptionControl/Vector2ListOptionControl.tscn" id="1_q57qb"]
+
+[node name="OptionControl" instance=ExtResource("1_q57qb")]
+custom_minimum_size = Vector2(0, 20)
+offset_right = 200.0
+offset_bottom = 20.0

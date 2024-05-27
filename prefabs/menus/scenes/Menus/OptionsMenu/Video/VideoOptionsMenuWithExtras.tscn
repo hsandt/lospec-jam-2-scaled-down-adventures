@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://iip8d3cbky1r"]
+
+[ext_resource type="PackedScene" uid="uid://bn862lvxm7vhv" path="res://prefabs/menus/scenes/Menus/OptionsMenu/Video/VideoOptionsMenu.tscn" id="1_olvfj"]
+[ext_resource type="PackedScene" uid="uid://bl6ekfy1yd2uj" path="res://prefabs/menus/scenes/Menus/OptionsMenu/OptionControl/ListOptionControl.tscn" id="2_85jru"]
+
+[node name="Video" instance=ExtResource("1_olvfj")]
+
+[node name="ResolutionControl" parent="VBoxContainer" index="1"]
+visible = false
+option_values = [Vector2i(256, 224), Vector2i(512, 448), Vector2i(768, 672), Vector2i(1024, 896), Vector2i(1280, 1120), Vector2i(1536, 1344), Vector2i(1792, 1568), Vector2i(2048, 1792), Vector2i(2304, 2016)]
+option_titles = Array[String](["256 x 224", "512 x 448", "768 x 672", "1024 x 576", "1024 x 896", "1280 x 1120", "1536 x 1344", "1792 x 1568", "2048 x 1792", "2304 x 2016"])
+
+[node name="AntiAliasingControl" parent="VBoxContainer" index="2" instance=ExtResource("2_85jru")]
+visible = false
+layout_mode = 2
+option_values = [0, 1, 2, 3]
+option_titles = Array[String](["Disabled (Fastest)", "2x", "4x", "8x (Slowest)"])
+lock_titles = true
+option_name = "Anti-Aliasing"
+option_section = 3
+key = "Anti-aliasing"
+section = "VideoSettings"
+property_type = 2
+default_value = 0
+
+[node name="CameraShakeControl" parent="VBoxContainer" index="3" instance=ExtResource("2_85jru")]
+visible = false
+layout_mode = 2
+option_values = [1.0, 0.75, 0.5, 0.0]
+option_titles = Array[String](["Normal", "Reduced", "Minimal", "None"])
+lock_titles = true
+option_name = "Camera Shake"
+option_section = 3
+key = "CameraShake"
+section = "VideoSettings"
+property_type = 3
+default_value = 1.0
+
+[node name="ResolutionScaleControl" parent="VBoxContainer" index="4" instance=ExtResource("2_85jru")]
+unique_name_in_owner = true
+layout_mode = 2
+option_values = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+option_titles = Array[String](["1", "2", "3", "4", "5", "6", "7", "8", "9", "false"])
+option_name = "Resolution Scale"
+option_section = 3
+key = "ScreenResolutionScale"
+section = "VideoSettings"
+
+[connection signal="setting_changed" from="VBoxContainer/ResolutionScaleControl" to="." method="_on_resolution_scale_control_setting_changed"]
+
+[editable path="VBoxContainer/FullscreenControl"]

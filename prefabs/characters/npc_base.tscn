@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0127dqab5jx4"]
+
+[ext_resource type="Script" path="res://scripts/Character/NPC/NPC.gd" id="1_5nwsp"]
+[ext_resource type="Script" path="res://scripts/Interactable/InteractableNPC.gd" id="2_3ewgq"]
+[ext_resource type="Script" path="res://scripts/Character/CharacterAnimationController.gd" id="3_o5k61"]
+[ext_resource type="Script" path="res://scripts/Interactable/InteractableArea.gd" id="4_gf3gn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yeb4x"]
+radius = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3atp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o38xl"]
+size = Vector2(16, 16)
+
+[node name="NPC" type="CharacterBody2D"]
+collision_layer = 32768
+collision_mask = 0
+script = ExtResource("1_5nwsp")
+
+[node name="InteractableNPC" type="Node" parent="." node_paths=PackedStringArray("npc")]
+script = ExtResource("2_3ewgq")
+npc = NodePath("..")
+
+[node name="CharacterAnimationController" type="Node" parent="." node_paths=PackedStringArray("character", "animation_player")]
+script = ExtResource("3_o5k61")
+character = NodePath("..")
+animation_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yeb4x")
+
+[node name="InteractableArea" type="Area2D" parent="." node_paths=PackedStringArray("interactable")]
+collision_layer = 2048
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_gf3gn")
+interactable = NodePath("../InteractableNPC")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+shape = SubResource("RectangleShape2D_w3atp")
+debug_color = Color(0.678431, 0.415686, 0.741176, 0.419608)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 65536
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_o38xl")
