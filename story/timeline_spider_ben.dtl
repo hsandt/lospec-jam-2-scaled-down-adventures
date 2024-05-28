@@ -1,6 +1,0 @@
-if :
-	character_spider_ben: Yes?
-elif :
-	character_spider_ben: You seem to feel uneasy, are you ok?
-else:
-	character_spider_ben: I'm searching a good spot for a web.

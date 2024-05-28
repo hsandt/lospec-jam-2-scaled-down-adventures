@@ -1,0 +1,9 @@
+if :
+	[voice path="res://audio/vocals/spider.ogg" volume="0.0"]
+	character_spider_ben: Yes?
+elif :
+	[voice path="res://audio/vocals/spider.ogg" volume="0.0"]
+	character_spider_ben: You seem to feel uneasy, are you ok?
+else:
+	[voice path="res://audio/vocals/spider.ogg" volume="0.0"]
+	character_spider_ben: I'm searching a good spot for a web.

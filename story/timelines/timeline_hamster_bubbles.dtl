@@ -1,0 +1,18 @@
+if :
+	[voice path="res://audio/vocals/hamster.ogg" volume="0.0"]
+	character_hamster_bubbles: Hey, i know you,
+	[voice path="res://audio/vocals/hamster.ogg" volume="0.0"]
+	character_hamster_bubbles: This smell...
+	[voice path="res://audio/vocals/hamster.ogg" volume="0.0"]
+	character_hamster_bubbles: You're...
+	[voice path="res://audio/vocals/hamster.ogg" volume="0.0"]
+	character_hamster_bubbles: The guy!
+	[voice path="res://audio/vocals/hamster.ogg" volume="0.0"]
+	character_hamster_bubbles: Like, the guy who brings the food?
+	[voice path="res://audio/vocals/hamster.ogg" volume="0.0"]
+	character_hamster_bubbles: Hey, do you have food for me?
+else:
+	[voice path="res://audio/vocals/hamster.ogg" volume="0.0"]
+	character_hamster_bubbles: Is that you who cleans my cage?
+	[voice path="res://audio/vocals/hamster.ogg" volume="0.0"]
+	character_hamster_bubbles: Like, you're my cleaning man.

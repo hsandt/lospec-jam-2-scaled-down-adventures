@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://clbj6t7sjnlds"]
 
 [ext_resource type="PackedScene" uid="uid://c0127dqab5jx4" path="res://prefabs/characters/npc_base.tscn" id="1_ry2rp"]
-[ext_resource type="Resource" path="res://story/character_girl.dch" id="2_4hc3k"]
-[ext_resource type="Resource" path="res://story/timeline_girl_1_in_front_of_parents_door.dtl" id="3_wvugn"]
+[ext_resource type="Resource" path="res://story/characters/character_girl.dch" id="2_4hc3k"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_girl_1_in_front_of_parents_door.dtl" id="3_wvugn"]
 [ext_resource type="AnimationLibrary" uid="uid://b3881453shgdn" path="res://anims/animation_library_girl.res" id="4_5mtq5"]
 [ext_resource type="SpriteFrames" uid="uid://ctblaxw1fyrs1" path="res://anims/sprite_frames_girl.tres" id="5_0flnx"]
 

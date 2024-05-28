@@ -1,4 +1,6 @@
 if :
+	[voice path="res://audio/vocals/fly.ogg" volume="0.0"]
 	character_fly_buzz: Heh, this time you cannot squash me haha !
 else:
+	[voice path="res://audio/vocals/fly.ogg" volume="0.0"]
 	character_fly_buzz: What are you gonna do? haha !

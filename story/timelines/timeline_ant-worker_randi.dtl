@@ -1,0 +1,16 @@
+if :
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_randi: Oh, you're new here?
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_randi: Never seen ya 'round before, even though I been workin' in this area for four weeks now.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_randi: By the way, you seen my colleagues?
+elif :
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_randi: Where are the others?
+else:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_randi: Oh, the chief said you needed help over at the door zone?
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_randi: Alright, I'm comin'!
+	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]

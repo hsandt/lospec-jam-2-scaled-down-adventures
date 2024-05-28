@@ -1,16 +1,27 @@
 if :
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: Yes? What can i do for you?
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: Here is what i found for "I've been shrinked, i need help" on internet\:
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: The blue book of grammar\: common mistakes about irregular verbs and ...
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: Politopics \: "The education level of our children has dropped" said Mr ...
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: Duke know'em wiki \: "Shoot your shrink ray on yourself by aiming at the mirror in order to ...
 if :
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: May I help you?
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: Here is what i found for "I lost my original size" on internet\:\
-
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: Hardware depot\: 27 Clever Ideas for Teaching Measurement of All Kinds ...
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: Women's daily \: Does really size matters ? We asked celebrities about what is the ...
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: Mac Downald's \: Check our new 'n' tasty size "The TeraMac" and its TeraMenu coming with TeraFries or TeraPotatoes ...
 else:
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
 	character_smartphone_hi-phone: Yes? how can I help?
-	character_smartphone_hi-phone: I could not understand what you said. 
+	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
+	character_smartphone_hi-phone: I could not understand what you said.

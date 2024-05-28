@@ -1,9 +1,16 @@
 if :
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
 	character_ant-worker_tini: Sometime, i wonder if should do something different of my life.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
 	character_ant-worker_tini: I feel like my life is an endless loop, but in my head I'm so afraid to try to do something else.
 elif :
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
 	character_ant-worker_tini: I could see myself doing sculpture for example.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
 	character_ant-worker_tini: Yeah it would be great!
 else:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
 	character_ant-worker_tini: Pulling the door with the others?
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
 	character_ant-worker_tini: Another boring task...
+	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]

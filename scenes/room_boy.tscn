@@ -4,36 +4,36 @@
 [ext_resource type="Script" path="res://scripts/Room/Room.gd" id="2_4ffww"]
 [ext_resource type="Script" path="res://scripts/Room/WarpArea.gd" id="3_1rxmd"]
 [ext_resource type="PackedScene" uid="uid://clbj6t7sjnlds" path="res://prefabs/characters/npc_girl.tscn" id="4_4b3rv"]
-[ext_resource type="Resource" path="res://story/character_ant-chief_scramble.dch" id="5_r5god"]
-[ext_resource type="Resource" path="res://story/timeline_ant-chief_Scramble.dtl" id="5_um573"]
-[ext_resource type="Resource" path="res://story/timeline_ant-worker_anthoven.dtl" id="6_u7abi"]
-[ext_resource type="Resource" path="res://story/character_ant-worker_anthoven.dch" id="7_hm7ul"]
-[ext_resource type="Resource" path="res://story/character_ant-worker_bity.dch" id="9_85k5u"]
-[ext_resource type="Resource" path="res://story/timeline_ant-worker_bity.dtl" id="10_715us"]
-[ext_resource type="Resource" path="res://story/character_ant-worker_piko.dch" id="11_msrv4"]
-[ext_resource type="Resource" path="res://story/timeline_ant-worker_piko.dtl" id="12_64uxx"]
-[ext_resource type="Resource" path="res://story/character_ant-worker_randi.dch" id="13_qnxuq"]
-[ext_resource type="Resource" path="res://story/timeline_ant-worker_randi.dtl" id="14_5yv7q"]
-[ext_resource type="Resource" path="res://story/character_ant-worker_speck.dch" id="15_kl0jc"]
-[ext_resource type="Resource" path="res://story/timeline_ant-worker_speck.dtl" id="16_stw3n"]
-[ext_resource type="Resource" path="res://story/character_ant-worker_tini.dch" id="17_q0suh"]
-[ext_resource type="Resource" path="res://story/timeline_ant-worker_tini.dtl" id="18_ybwue"]
-[ext_resource type="Resource" path="res://story/character_butterfly_philly.dch" id="19_besag"]
-[ext_resource type="Resource" path="res://story/timeline_butterfly_philly.dtl" id="20_8hfpd"]
-[ext_resource type="Resource" path="res://story/character_caterpillar_flubble.dch" id="21_7c4op"]
-[ext_resource type="Resource" path="res://story/timeline_caterpillar_flubble.dtl" id="22_rmflv"]
-[ext_resource type="Resource" path="res://story/character_cranefly_slim.dch" id="23_sm0al"]
-[ext_resource type="Resource" path="res://story/timeline_cranefly_slim.dtl" id="24_q0qha"]
-[ext_resource type="Resource" path="res://story/character_fly_buzz.dch" id="25_g2dqs"]
-[ext_resource type="Resource" path="res://story/timeline_fly_buzz.dtl" id="26_oocw6"]
-[ext_resource type="Resource" path="res://story/character_hamster_bubbles.dch" id="27_jtdwg"]
-[ext_resource type="Resource" path="res://story/timeline_hamster_bubbles.dtl" id="28_4h7tc"]
-[ext_resource type="Resource" path="res://story/character_smartphone_hi-phone.dch" id="29_tj5kv"]
-[ext_resource type="Resource" path="res://story/timeline_smartphone_hi-phone.dtl" id="30_e57s7"]
-[ext_resource type="Resource" path="res://story/character_spider_ben.dch" id="31_kruwn"]
-[ext_resource type="Resource" path="res://story/timeline_spider_ben.dtl" id="32_ydtyq"]
-[ext_resource type="Resource" path="res://story/character_toy_troll.dch" id="33_2bs20"]
-[ext_resource type="Resource" path="res://story/timeline_toy_troll.dtl" id="34_j5p41"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-chief_scramble.dch" id="5_5mpex"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-chief_Scramble.dtl" id="6_kgq5c"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_anthoven.dch" id="7_cxidy"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_anthoven.dtl" id="8_b2dgl"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_bity.dch" id="9_x7dqc"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_bity.dtl" id="10_70jwp"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_piko.dch" id="11_fe225"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_piko.dtl" id="12_eabqe"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_randi.dch" id="13_b50ex"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_randi.dtl" id="14_wm1xs"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_speck.dch" id="15_i7pji"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_speck.dtl" id="16_2hm5u"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_tini.dch" id="17_dpy1s"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_tini.dtl" id="18_a4h83"]
+[ext_resource type="Resource" path="res://story/characters/character_butterfly_philly.dch" id="19_swnln"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_butterfly_philly.dtl" id="20_jkt6m"]
+[ext_resource type="Resource" path="res://story/characters/character_caterpillar_flubble.dch" id="21_p2s0e"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_caterpillar_flubble.dtl" id="22_i6xmf"]
+[ext_resource type="Resource" path="res://story/characters/character_cranefly_slim.dch" id="23_sv1wg"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_cranefly_slim.dtl" id="24_aaiok"]
+[ext_resource type="Resource" path="res://story/characters/character_fly_buzz.dch" id="25_fsl52"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_fly_buzz.dtl" id="26_d85eb"]
+[ext_resource type="Resource" path="res://story/characters/character_hamster_bubbles.dch" id="27_fp66b"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_hamster_bubbles.dtl" id="28_muj51"]
+[ext_resource type="Resource" path="res://story/characters/character_smartphone_hi-phone.dch" id="29_moc3i"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_smartphone_hi-phone.dtl" id="30_ifc8q"]
+[ext_resource type="Resource" path="res://story/characters/character_spider_ben.dch" id="31_k5nt2"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_spider_ben.dtl" id="32_o6qyr"]
+[ext_resource type="Resource" path="res://story/characters/character_toy_troll.dch" id="33_bbb4e"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_toy_troll.dtl" id="34_gsl48"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnb7d"]
 size = Vector2(16, 208)
@@ -71,119 +71,119 @@ shape = SubResource("RectangleShape2D_vnb7d")
 position = Vector2(588, -49)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("5_r5god")
-dialogic_timeline = ExtResource("5_um573")
+dialogic_character = ExtResource("5_5mpex")
+dialogic_timeline = ExtResource("6_kgq5c")
 
 [node name="NPC_Ant-worker_Anthoven" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(565, 187)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("7_hm7ul")
-dialogic_timeline = ExtResource("6_u7abi")
+dialogic_character = ExtResource("7_cxidy")
+dialogic_timeline = ExtResource("8_b2dgl")
 directional_parent = NodePath(".")
 
 [node name="NPC_Ant-worker_Bity" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(-47, -59)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("9_85k5u")
-dialogic_timeline = ExtResource("10_715us")
+dialogic_character = ExtResource("9_x7dqc")
+dialogic_timeline = ExtResource("10_70jwp")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Ant-worker_Piko" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(-77, 298)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("11_msrv4")
-dialogic_timeline = ExtResource("12_64uxx")
+dialogic_character = ExtResource("11_fe225")
+dialogic_timeline = ExtResource("12_eabqe")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Ant-worker_Randi" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(302, 125)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("13_qnxuq")
-dialogic_timeline = ExtResource("14_5yv7q")
+dialogic_character = ExtResource("13_b50ex")
+dialogic_timeline = ExtResource("14_wm1xs")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Ant-worker_Speck" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(103, 120)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("15_kl0jc")
-dialogic_timeline = ExtResource("16_stw3n")
+dialogic_character = ExtResource("15_i7pji")
+dialogic_timeline = ExtResource("16_2hm5u")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Ant-worker_Tini" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(228, -13)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("17_q0suh")
-dialogic_timeline = ExtResource("18_ybwue")
+dialogic_character = ExtResource("17_dpy1s")
+dialogic_timeline = ExtResource("18_a4h83")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Butterfly_Philly" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(-72, 140)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("19_besag")
-dialogic_timeline = ExtResource("20_8hfpd")
+dialogic_character = ExtResource("19_swnln")
+dialogic_timeline = ExtResource("20_jkt6m")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Caterpillar_Flubble" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(206, 310)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("21_7c4op")
-dialogic_timeline = ExtResource("22_rmflv")
+dialogic_character = ExtResource("21_p2s0e")
+dialogic_timeline = ExtResource("22_i6xmf")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Cranefly_Slim" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(349, 275)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("23_sm0al")
-dialogic_timeline = ExtResource("24_q0qha")
+dialogic_character = ExtResource("23_sv1wg")
+dialogic_timeline = ExtResource("24_aaiok")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Fly_Buzz" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(521, 130)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("25_g2dqs")
-dialogic_timeline = ExtResource("26_oocw6")
+dialogic_character = ExtResource("25_fsl52")
+dialogic_timeline = ExtResource("26_d85eb")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Hamster_Bubbles" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(529, 42)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("27_jtdwg")
-dialogic_timeline = ExtResource("28_4h7tc")
+dialogic_character = ExtResource("27_fp66b")
+dialogic_timeline = ExtResource("28_muj51")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Smartphone_hi-Phone" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(122, 210)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("29_tj5kv")
-dialogic_timeline = ExtResource("30_e57s7")
+dialogic_character = ExtResource("29_moc3i")
+dialogic_timeline = ExtResource("30_ifc8q")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_spider_Ben" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(594, 308)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("31_kruwn")
-dialogic_timeline = ExtResource("32_ydtyq")
+dialogic_character = ExtResource("31_k5nt2")
+dialogic_timeline = ExtResource("32_o6qyr")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [node name="NPC_Toy_Troll" parent="." node_paths=PackedStringArray("directional_parent") instance=ExtResource("4_4b3rv")]
 position = Vector2(48, -6)
 collision_layer = 2048
 collision_mask = 1
-dialogic_character = ExtResource("33_2bs20")
-dialogic_timeline = ExtResource("34_j5p41")
+dialogic_character = ExtResource("33_bbb4e")
+dialogic_timeline = ExtResource("34_gsl48")
 directional_parent = NodePath("../NPC_Ant-worker_Anthoven")
 
 [connection signal="body_entered" from="Area2D_WarpToRoom Corridor" to="Area2D_WarpToRoom Corridor" method="_on_body_entered"]

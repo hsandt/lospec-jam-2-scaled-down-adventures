@@ -1,0 +1,10 @@
+if :
+	[voice path="res://audio/vocals/butterfly1.ogg" volume="0.0"]
+	character_butterfly_philly: It's the first day of my life today!
+	[voice path="res://audio/vocals/butterfly1.ogg" volume="0.0"]
+	character_butterfly_philly: I'm so happy!
+	character_butterfly_philly: Yay!!!
+	[voice path="res://audio/vocals/butterfly2.ogg" volume="0.0"]
+else:
+	[voice path="res://audio/vocals/butterfly2.ogg" volume="0.0"]
+	character_butterfly_philly: Yay!!!!

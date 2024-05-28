@@ -1,9 +1,0 @@
-if :
-	character_ant-worker_randi: Oh, you're new here?
-	character_ant-worker_randi: Never seen ya 'round before, even though I been workin' in this area for four weeks now.
-	character_ant-worker_randi:  By the way, you seen my colleagues?
-elif :
-	character_ant-worker_randi: Where are the others?
-else:
-	character_ant-worker_randi: Oh, the chief said you needed help over at the door zone?
-	character_ant-worker_randi: Alright, I'm comin'!

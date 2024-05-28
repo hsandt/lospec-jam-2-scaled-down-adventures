@@ -1,0 +1,10 @@
+if :
+	[voice path="res://audio/vocals/caterpillar1.ogg" volume="0.0"]
+	character_caterpillar_flubble: ahh,  I love to wedge myself in the corners
+else:
+	[voice path="res://audio/vocals/caterpillar1.ogg" volume="0.0"]
+	character_caterpillar_flubble: Keep that for yourself but...
+	[voice path="res://audio/vocals/caterpillar1.ogg" volume="0.0"]
+	character_caterpillar_flubble: In fact...
+	[voice path="res://audio/vocals/caterpillar2.ogg" volume="0.0"]
+	character_caterpillar_flubble: I'm a little stuck here...

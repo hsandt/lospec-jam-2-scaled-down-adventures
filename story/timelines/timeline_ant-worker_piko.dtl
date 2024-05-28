@@ -7,6 +7,9 @@ elif :
 elif :
 	character_ant-worker_piko: zzz zzz zzz zzz
 elif :
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
 	character_ant-worker_piko: I'm on my break, i have the right!
 else:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
 	character_ant-worker_piko: A meeting to the door, man I'm tired.
+	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]

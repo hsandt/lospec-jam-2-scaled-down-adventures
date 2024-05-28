@@ -1,0 +1,24 @@
+if {} == false:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_bity: They sent me here for nothing.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_bity: there's food to gather over there they said.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_bity: It's important they said!
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_bity: We are counting on you they said...
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_bity: Too much useless talk.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_bity: These orders are like this draft that comes from under this door since I am not a carrier but a builder.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_bity: This situation is such a non-sense.
+elif :
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_bity: Besides, I'm hungry...
+elif {} == false:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	character_ant-worker_bity: Ah, chief said so?
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	Heh, this is a work that is a little more to my measure.
+	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]
