@@ -29,6 +29,8 @@ extends DialogicLayoutLayer
 # CUSTOM: customize direction_bubble_size_factor, edge_influence_factor, tail_width_factor
 @export var behaviour_direction_bubble_size_factor := 0.4
 @export var behaviour_edge_influence_factor := 1.0
+@export var tail_bubble_offset_y := -1.0
+# OLD
 @export var bubble_tail_width_factor: float = 0.15
 
 @export_group('Name Label')
@@ -105,6 +107,8 @@ func bubble_apply_overrides(bubble:TextBubble) -> void:
 	# CUSTOM: customize tail_width_factor
 	bubble.set(&'direction_bubble_size_factor', behaviour_direction_bubble_size_factor)
 	bubble.set(&'edge_influence_factor', behaviour_edge_influence_factor)
+	bubble.set(&'tail_bubble_offset_y', tail_bubble_offset_y)
+	# OLD
 	bubble.set(&'tail_width_factor', bubble_tail_width_factor)
 
 

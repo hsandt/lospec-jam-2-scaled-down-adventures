@@ -1,6 +1,8 @@
 extends Control
 
-@onready var tail: Line2D = ($Group/Tail as Line2D)
+# CUSTOM: tail is now a texture rect
+@onready var tail: TextureRect = ($Group/Tail as TextureRect)
+#@onready var tail: Line2D = ($Group/Tail as Line2D)
 @onready var bubble: Control = ($Group/Background as Control)
 @onready var text: DialogicNode_DialogText = (%DialogText as DialogicNode_DialogText)
 # The choice container is added by the TextBubble layer
@@ -19,9 +21,11 @@ var base_position := Vector2.ZERO
 
 var base_direction := Vector2(1.0, -1.0).normalized()
 var safe_zone := 50.0
-# CUSTOM: customize direction_bubble_size_factor, edge_influence_factor, tail_width_factor
+# CUSTOM: customize direction_bubble_size_factor, edge_influence_factor
 var direction_bubble_size_factor := 0.4
 var edge_influence_factor := 1.0
+var tail_bubble_offset_y := -1.0
+# CUSTOM OLD: customize tail_width_factor
 var tail_width_factor := 0.15
 var padding := Vector2()
 
@@ -45,7 +49,8 @@ func reset() -> void:
 	# CUSTOM: remove alpha tween for perfect color palette match
 	#modulate.a = 0.0
 
-	tail.points = []
+	# CUSTOM: Tail is now a TextureRect, not a Line2D
+	#tail.points = []
 	bubble_rect = Rect2(0,0,2,2)
 
 	base_position = get_speaker_canvas_position()
@@ -79,6 +84,17 @@ func _process(_delta:float) -> void:
 	#position = position.lerp(p, 5 * delta)
 	position = p
 
+	# CUSTOM bubble tail is now texture rect instead of Line2D
+	update_bubble_tail_texture_rect()
+	#update_bubble_tail_line(direction)
+
+
+func update_bubble_tail_texture_rect():
+	tail.position = Vector2(0.0, floorf(bubble_rect.size.y / 2.0) + tail_bubble_offset_y)
+	# CUSTOM: Tail is now a TextureRect, not a Line2D
+
+
+func update_bubble_tail_line(direction: Vector2):
 	var point_a: Vector2 = Vector2.ZERO
 	var point_b: Vector2 = (base_position - position) * 0.75
 
@@ -92,7 +108,7 @@ func _process(_delta:float) -> void:
 	curve.add_point(point_a, Vector2.ZERO, direction_point * 0.5)
 	curve.add_point(point_b)
 	tail.points = curve.tessellate(5)
-	# CUSTOM: customize tail_width_factor
+	# CUSTOM OLD: customize tail_width_factor
 	tail.width = bubble_rect.size.x * tail_width_factor
 
 
@@ -127,7 +143,10 @@ func _resize_bubble(content_size:Vector2, popup:=false) -> void:
 	var bubble_size: Vector2 = content_size+(padding*2)
 	var half_size: Vector2= (bubble_size / 2.0)
 	bubble.pivot_offset = half_size
-	bubble_rect = Rect2(position, bubble_size * Vector2(1.1, 1.1))
+	# CUSTOM: removed extra margin factor for bubble_rect used to place bubble tail
+	# for perfect bubble tail placement
+	#bubble_rect = Rect2(position, bubble_size * Vector2(1.1, 1.1))
+	bubble_rect = Rect2(position, bubble_size)
 	bubble.position = -half_size
 	bubble.size = bubble_size
 

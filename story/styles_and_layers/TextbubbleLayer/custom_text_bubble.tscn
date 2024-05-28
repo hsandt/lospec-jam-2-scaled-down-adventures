@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dgn0m0tlj2pr2"]
+[gd_scene load_steps=14 format=3 uid="uid://dgn0m0tlj2pr2"]
 
 [ext_resource type="Script" path="res://story/styles_and_layers/TextbubbleLayer/custom_text_bubble.gd" id="1_fu1k3"]
-[ext_resource type="Texture2D" uid="uid://d3ade0olf6rib" path="res://sprites/white_square_1x1.png" id="2_pn2f3"]
+[ext_resource type="Texture2D" uid="uid://drmcn14cex3w3" path="res://sprites/ui/ui_bubble_body_9-slice.png" id="2_l0vmj"]
 [ext_resource type="Shader" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble.gdshader" id="2_qr3ag"]
+[ext_resource type="Texture2D" uid="uid://d2odcxdslwrkt" path="res://sprites/ui/ui_bubble_tail.png" id="2_xrsq4"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="3_cyl7l"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="4_cjxxp"]
 [ext_resource type="FontFile" uid="uid://c4yx5crkulmfy" path="res://fonts/04b03.ttf" id="4_l225q"]
@@ -51,19 +52,32 @@ script = ExtResource("1_fu1k3")
 
 [node name="Group" type="CanvasGroup" parent="."]
 
-[node name="Tail" type="Line2D" parent="Group"]
+[node name="Tail" type="TextureRect" parent="Group"]
 unique_name_in_owner = true
+z_index = 1
+offset_left = -8.0
+offset_top = 47.0
+offset_right = 7.0
+offset_bottom = 62.0
+texture = ExtResource("2_xrsq4")
+
+[node name="OLD_Tail" type="Line2D" parent="Group"]
+visible = false
 points = PackedVector2Array(-9, 7, -29, 118, -95, 174, -193, 195)
 width = 96.0
 width_curve = SubResource("Curve_0j8nu")
 
-[node name="Background" type="TextureRect" parent="Group"]
+[node name="Background" type="NinePatchRect" parent="Group"]
 unique_name_in_owner = true
 offset_left = -115.0
 offset_top = -69.0
-offset_right = 108.0
-offset_bottom = 83.0
-texture = ExtResource("2_pn2f3")
+offset_right = 112.0
+offset_bottom = 48.0
+texture = ExtResource("2_l0vmj")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
 
 [node name="OLD_Background" type="ColorRect" parent="Group"]
 visible = false
