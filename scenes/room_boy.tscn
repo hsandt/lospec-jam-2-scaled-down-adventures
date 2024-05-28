@@ -68,7 +68,7 @@ next_room_scene_path = "res://scenes/room_corridor.tscn"
 shape = SubResource("RectangleShape2D_vnb7d")
 
 [node name="NPC_Ant-chief_Scramble" parent="." instance=ExtResource("4_4b3rv")]
-position = Vector2(596, -69)
+position = Vector2(588, -49)
 collision_layer = 2048
 collision_mask = 1
 dialogic_character = ExtResource("5_r5god")
