@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Lospec Jam 2 - Scaled-Down Adventures"
-config/version="0.1.0"
+config/name="Downscaled Adventures"
+config/version="0.1.1"
 run/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
