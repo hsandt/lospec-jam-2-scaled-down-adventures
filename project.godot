@@ -30,7 +30,6 @@ ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/Autol
 [dialogic]
 
 directories/dch_directory={
-"characters/character": "res://story/characters/character.dch",
 "characters/character_ant-chief_scramble": "res://story/characters/character_ant-chief_scramble.dch",
 "characters/character_ant-worker_anthoven": "res://story/characters/character_ant-worker_anthoven.dch",
 "characters/character_ant-worker_bity": "res://story/characters/character_ant-worker_bity.dch",
@@ -44,13 +43,14 @@ directories/dch_directory={
 "characters/character_fly_buzz": "res://story/characters/character_fly_buzz.dch",
 "characters/character_girl": "res://story/characters/character_girl.dch",
 "characters/character_hamster_bubbles": "res://story/characters/character_hamster_bubbles.dch",
+"characters/character_player": "res://story/characters/character_player.dch",
 "characters/character_smartphone_hi-phone": "res://story/characters/character_smartphone_hi-phone.dch",
 "characters/character_spider_ben": "res://story/characters/character_spider_ben.dch",
 "characters/character_toy_troll": "res://story/characters/character_toy_troll.dch"
 }
 directories/dtl_directory={
 "timeline_ant-worker_anthoven": "res://story/timelines/timeline_ant-worker_anthoven.dtl",
-"timelines/timeline": "res://story/timelines/timeline.dtl",
+"timeline_intro": "res://story/timelines/timeline_intro.dtl",
 "timelines/timeline_ant-chief_Scramble": "res://story/timelines/timeline_ant-chief_Scramble.dtl",
 "timelines/timeline_ant-worker_bity": "res://story/timelines/timeline_ant-worker_bity.dtl",
 "timelines/timeline_ant-worker_piko": "res://story/timelines/timeline_ant-worker_piko.dtl",
@@ -97,6 +97,7 @@ variables={
 "bubbles_sentences_told": 0.0,
 "buzz_sentences_told": 0.0,
 "flubble_sentences_told": 0.0,
+"girl_1_in_front_of_parents_door_has_talked": false,
 "hiphone_sentences_told": 0.0,
 "philly_sentences_told": 0.0,
 "piko_accepted_to_help": false,
