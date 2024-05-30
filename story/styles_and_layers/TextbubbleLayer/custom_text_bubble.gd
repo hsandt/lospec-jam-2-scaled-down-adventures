@@ -89,9 +89,10 @@ func _process(_delta:float) -> void:
 	#update_bubble_tail_line(direction)
 
 
+# CUSTOM: Tail is now a TextureRect, not a Line2D
 func update_bubble_tail_texture_rect():
-	tail.position = Vector2(0.0, floorf(bubble_rect.size.y / 2.0) + tail_bubble_offset_y)
-	# CUSTOM: Tail is now a TextureRect, not a Line2D
+	tail.global_position.x = base_position.x
+	tail.position.y = floorf(bubble_rect.size.y / 2.0) + tail_bubble_offset_y
 
 
 func update_bubble_tail_line(direction: Vector2):
