@@ -57,12 +57,16 @@ func _ready():
 		ProjectMusicController.music_stream_player.stream = bgm_title_loop
 		ProjectMusicController.play()
 
+func _disable_button_including_focus(button: Button):
+	button.disabled = true
+	button.focus_mode = Control.FOCUS_NONE
+
 # override
 func play_game():
-	%PlayButton.disabled = true
-	%OptionsButton.disabled = true
-	%CreditsButton.disabled = true
-	%ExitButton.disabled = true
+	_disable_button_including_focus(%PlayButton)
+	_disable_button_including_focus(%OptionsButton)
+	_disable_button_including_focus(%CreditsButton)
+	_disable_button_including_focus(%ExitButton)
 
 	ProjectMusicController.fade_out(1.0)
 	await TransitionScreen.fade_out_async(fade_out_speed)
