@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgn5j1bfeywmc"]
+
+[ext_resource type="PackedScene" uid="uid://5ioqvqpwkft8" path="res://prefabs/characters/npc_ant_worker_tini.tscn" id="1_hbiie"]
+[ext_resource type="Resource" path="res://story/characters/character_butterfly_philly.dch" id="2_ub7qg"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_butterfly_philly.dtl" id="3_1psci"]
+
+[node name="NPC Butterfly Philly" instance=ExtResource("1_hbiie")]
+dialogic_character = ExtResource("2_ub7qg")
+dialogic_timeline = ExtResource("3_1psci")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://c23sbar0xt1t8"]
+
+[ext_resource type="PackedScene" uid="uid://8ouo6bw1jn8p" path="res://prefabs/characters/npc_cranefly_slim.tscn" id="1_sj3d3"]
+[ext_resource type="Resource" path="res://story/characters/character_fly_buzz.dch" id="2_ho01e"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_fly_buzz.dtl" id="3_yxh2f"]
+
+[node name="NPC Fly Buzz" instance=ExtResource("1_sj3d3")]
+dialogic_character = ExtResource("2_ho01e")
+dialogic_timeline = ExtResource("3_yxh2f")

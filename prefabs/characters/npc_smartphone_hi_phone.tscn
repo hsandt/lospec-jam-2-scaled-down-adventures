@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://8lxr16ejisqr"]
+
+[ext_resource type="PackedScene" uid="uid://byks3mnc3nch7" path="res://prefabs/characters/npc_hamster_bubbles.tscn" id="1_2xqvl"]
+[ext_resource type="Resource" path="res://story/characters/character_smartphone_hi-phone.dch" id="2_j5grl"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_smartphone_hi-phone.dtl" id="3_bsf6r"]
+
+[node name="NPC Smartphone Hi-Phone" instance=ExtResource("1_2xqvl")]
+dialogic_character = ExtResource("2_j5grl")
+dialogic_timeline = ExtResource("3_bsf6r")

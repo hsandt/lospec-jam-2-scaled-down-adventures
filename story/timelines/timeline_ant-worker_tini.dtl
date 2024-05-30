@@ -1,16 +1,20 @@
-if :
+if {tini_sentences_told} == 0:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_tini: Sometime, i wonder if should do something different of my life.
+	characters/character_ant-worker_tini: Sometime, i wonder if should do something different of my life.
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_tini: I feel like my life is an endless loop, but in my head I'm so afraid to try to do something else.
-elif :
+	characters/character_ant-worker_tini: I feel like my life is an endless loop, but in my head I'm so afraid to try to do something else.
+	set {tini_sentences_told} = 1
+elif {tini_sentences_told} == 1:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_tini: I could see myself doing sculpture for example.
+	characters/character_ant-worker_tini: I could see myself doing sculpture for example.
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_tini: Yeah it would be great!
-else:
+	characters/character_ant-worker_tini: Yeah it would be great!
+	if {scramble_accepted_to_help} == true:
+		set {tini_sentences_told} = 2
+elif {tini_sentences_told} == 2:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_tini: Pulling the door with the others?
+	characters/character_ant-worker_tini: Pulling the door with the others?
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_tini: Another boring task...
+	characters/character_ant-worker_tini: Another boring task...
 	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]
+	set {tini_accepted_to_help} = true

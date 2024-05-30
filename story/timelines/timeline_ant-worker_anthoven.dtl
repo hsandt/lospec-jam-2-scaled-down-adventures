@@ -1,25 +1,26 @@
-if {ant-worker_anthoven_sentences1_told} == false:
+if {anthoven_sentences_told} == 0:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_anthoven: I like my job, but does my job likes me ?
-	set {ant-worker_anthoven_sentences1_told} = true
-elif {ant-worker_anthoven_sentences1_told} == true:
+	characters/character_ant-worker_anthoven: I like my job, but does my job likes me ?
+	set {anthoven_sentences_told} = 1
+elif {anthoven_sentences_told} == 1:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_anthoven: Why do we follow the scent trail ?
+	characters/character_ant-worker_anthoven: Why do we follow the scent trail ?
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_anthoven: What if the real adventure lies in getting lost?
-	set {ant-worker_anthoven_sentences2_told} = true
-elif {ant-worker_anthoven_sentences2_told} == true:
+	characters/character_ant-worker_anthoven: What if the real adventure lies in getting lost?
+	set {anthoven_sentences_told} = 2
+elif {anthoven_sentences_told} == 2:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_anthoven: If I get lost on the way to the colony, 
+	characters/character_ant-worker_anthoven: If I get lost on the way to the colony,
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_anthoven: Can I start my own "ant"topia with new rules?
+	characters/character_ant-worker_anthoven: Can I start my own "ant"topia with new rules?
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_anthoven: Like mandatory nap times ?
-	set {ant-worker_anthoven_sentences3_told} = true
-elif {ant-worker_anthoven_sentences3_told} == true:
+	characters/character_ant-worker_anthoven: Like mandatory nap times ?
+	if {scramble_accepted_to_help} == true:
+		set {anthoven_sentences_told} = 3
+elif {anthoven_sentences_told} == 3:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_anthoven: To be pushing a door or not to be pushing the door.
+	characters/character_ant-worker_anthoven: To be pushing a door or not to be pushing the door.
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_anthoven: What was the question again?
+	characters/character_ant-worker_anthoven: What was the question again?
 	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]
-	set {ant-worker_anthoven_accepted_to_help} = true
+	set {anthoven_accepted_to_help} = true

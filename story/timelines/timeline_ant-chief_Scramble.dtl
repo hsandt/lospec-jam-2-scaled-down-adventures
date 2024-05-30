@@ -1,23 +1,23 @@
-if {ant-chief_scramble_sentences_told} == 0:
+if {scramble_sentences_told} == 0:
 	[voice path="res://audio/vocals/ant_chief.ogg" volume="0.0"]
-	character_ant-chief_scramble: Hey you there, go back to wor... oh sorry boy.
+	characters/character_ant-chief_scramble: Hey you there, go back to wor... oh sorry boy.
 	[voice path="res://audio/vocals/ant_chief.ogg" volume="0.0"]
-	character_ant-chief_scramble: Don't stay in the area, You could hurt yourself.
-	set {ant-chief_scramble_sentences_told} = 0.1
-elif {ant-chief_scramble_sentences_told} == 0.1:
+	characters/character_ant-chief_scramble: Don't stay in the area, You could hurt yourself.
+	set {scramble_sentences_told} = 1
+elif {scramble_sentences_told} == 1:
 	[voice path="res://audio/vocals/ant_chief.ogg" volume="0.0"]
-	character_ant-chief_scramble: What? You need help?
+	characters/character_ant-chief_scramble: What? You need help?
 	[voice path="res://audio/vocals/ant_chief.ogg" volume="0.0"]
-	character_ant-chief_scramble: To move a door?
+	characters/character_ant-chief_scramble: To move a door?
 	[voice path="res://audio/vocals/ant_chief.ogg" volume="0.0"]
-	character_ant-chief_scramble: I don't have the time to play child games kid.
-	set {ant-chief_scramble_sentences_told} = 1
-elif {ant-chief_scramble_sentences_told} == 1:
+	characters/character_ant-chief_scramble: I don't have the time to play child games kid.
+	set {scramble_sentences_told} = 2
+elif {scramble_sentences_told} == 2:
 	[voice path="res://audio/vocals/ant_chief.ogg" volume="0.0"]
-	character_ant-chief_scramble: Okay, i'll help ya with the guys.
+	characters/character_ant-chief_scramble: Okay, i'll help ya with the guys.
 	[voice path="res://audio/vocals/ant_chief.ogg" volume="0.0"]
-	character_ant-chief_scramble: You looks so defenseless that it stresses me out.
+	characters/character_ant-chief_scramble: You looks so defenseless that it stresses me out.
 	[voice path="res://audio/vocals/ant_chief.ogg" volume="0.0"]
-	character_ant-chief_scramble: Go get the other and meet me at the door.
+	characters/character_ant-chief_scramble: Go get the other and meet me at the door.
 	[voice path="res://audio/sfx/npc_chief_accepts.ogg" volume="0.0"]
-	set {ant-chief_scramble_accepted_to_help} = true
+	set {scramble_accepted_to_help} = true

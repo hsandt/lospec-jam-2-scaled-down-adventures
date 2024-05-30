@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpgwrnt3gpx6j"]
+
+[ext_resource type="PackedScene" uid="uid://b3n2bhh2y2qei" path="res://prefabs/characters/npc_ant-worker_randi.tscn" id="1_hhboj"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_speck.dch" id="2_e6r2c"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_speck.dtl" id="3_sadgj"]
+
+[node name="NPC Ant-worker Speck" instance=ExtResource("1_hhboj")]
+dialogic_character = ExtResource("2_e6r2c")
+dialogic_timeline = ExtResource("3_sadgj")

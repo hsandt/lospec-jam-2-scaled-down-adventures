@@ -1,12 +1,16 @@
-if :
+if {speck_sentences_told} == 0:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_speck: What are you looking for ?
+	characters/character_ant-worker_speck: What are you looking for ?
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_speck: Leave me alone!
-elif :
+	characters/character_ant-worker_speck: Leave me alone!
+	set {speck_sentences_told} = 1
+elif {speck_sentences_told} == 1:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_speck: Yeah i'm trying to hide to avoid working, what are you gonna do against that?
-else:
+	characters/character_ant-worker_speck: Yeah i'm trying to hide to avoid working, what are you gonna do against that?
+	if {scramble_accepted_to_help} == true:
+		set {speck_sentences_told} = 2
+elif {speck_sentences_told} == 2:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_speck: Ok, i'll help for the door but don't tell you know what to the boss,ok ?
+	characters/character_ant-worker_speck: Ok, i'll help for the door but don't tell you know what to the boss,ok ?
 	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]
+	set {speck_accepted_to_help} = true

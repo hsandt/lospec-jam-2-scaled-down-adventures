@@ -1,27 +1,29 @@
-if :
+if {hiphone_sentences_told} == 0:
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: Yes? What can i do for you?
+	characters/character_smartphone_hi-phone: Yes? What can i do for you?
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: Here is what i found for "I've been shrinked, i need help" on internet\:
+	characters/character_smartphone_hi-phone: Here is what i found for "I've been shrinked, i need help" on internet\:
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: The blue book of grammar\: common mistakes about irregular verbs and ...
+	characters/character_smartphone_hi-phone: The blue book of grammar\: common mistakes about irregular verbs and ...
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: Politopics \: "The education level of our children has dropped" said Mr ...
+	characters/character_smartphone_hi-phone: Politopics \: "The education level of our children has dropped" said Mr ...
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: Duke know'em wiki \: "Shoot your shrink ray on yourself by aiming at the mirror in order to ...
-if :
+	characters/character_smartphone_hi-phone: Duke know'em wiki \: "Shoot your shrink ray on yourself by aiming at the mirror in order to ...
+	set {hiphone_sentences_told} = 1
+elif {hiphone_sentences_told} == 1:
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: May I help you?
+	characters/character_smartphone_hi-phone: May I help you?
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: Here is what i found for "I lost my original size" on internet\:\
+	characters/character_smartphone_hi-phone: Here is what i found for "I lost my original size" on internet\:
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: Hardware depot\: 27 Clever Ideas for Teaching Measurement of All Kinds ...
+	characters/character_smartphone_hi-phone: Hardware depot\: 27 Clever Ideas for Teaching Measurement of All Kinds ...
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: Women's daily \: Does really size matters ? We asked celebrities about what is the ...
+	characters/character_smartphone_hi-phone: Women's daily \: Does really size matters ? We asked celebrities about what is the ...
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: Mac Downald's \: Check our new 'n' tasty size "The TeraMac" and its TeraMenu coming with TeraFries or TeraPotatoes ...
-else:
+	characters/character_smartphone_hi-phone: Mac Downald's \: Check our new 'n' tasty size "The TeraMac" and its TeraMenu coming with TeraFries or TeraPotatoes ...
+	set {hiphone_sentences_told} = 2
+elif {hiphone_sentences_told} == 2:
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: Yes? how can I help?
+	characters/character_smartphone_hi-phone: Yes? how can I help?
 	[voice path="res://audio/vocals/smartphone.ogg" volume="0.0"]
-	character_smartphone_hi-phone: I could not understand what you said.
+	characters/character_smartphone_hi-phone: I could not understand what you said.

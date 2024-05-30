@@ -1,6 +1,7 @@
-if :
+if {buzz_sentences_told} == 0:
 	[voice path="res://audio/vocals/fly.ogg" volume="0.0"]
-	character_fly_buzz: Heh, this time you cannot squash me haha !
-else:
+	characters/character_fly_buzz: Heh, this time you cannot squash me haha !
+	set {buzz_sentences_told} = 1
+elif {buzz_sentences_told} == 1:
 	[voice path="res://audio/vocals/fly.ogg" volume="0.0"]
-	character_fly_buzz: What are you gonna do? haha !
+	characters/character_fly_buzz: What are you gonna do? haha !

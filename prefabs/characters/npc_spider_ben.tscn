@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://br65iy0s5p31j"]
+
+[ext_resource type="PackedScene" uid="uid://8lxr16ejisqr" path="res://prefabs/characters/npc_smartphone_hi_phone.tscn" id="1_rgv8x"]
+[ext_resource type="Resource" path="res://story/characters/character_spider_ben.dch" id="2_ddy0v"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_spider_ben.dtl" id="3_si6qy"]
+
+[node name="NPC Spider Ben" instance=ExtResource("1_rgv8x")]
+dialogic_character = ExtResource("2_ddy0v")
+dialogic_timeline = ExtResource("3_si6qy")

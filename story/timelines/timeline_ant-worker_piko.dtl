@@ -1,15 +1,22 @@
-if {} == "":
-	character_ant-worker_piko: zzz zzz
-elif :
-	character_ant-worker_piko: zzz zzz
-elif :
-	character_ant-worker_piko: zzz zzz zzz
-elif :
-	character_ant-worker_piko: zzz zzz zzz zzz
-elif :
+if {piko_sentences_told} == 0:
+	characters/character_ant-worker_piko: zzz
+	set {piko_sentences_told} = 1
+elif {piko_sentences_told} == 1:
+	characters/character_ant-worker_piko: zzz zzz
+	set {piko_sentences_told} = 2
+elif {piko_sentences_told} == 2:
+	characters/character_ant-worker_piko: zzz zzz zzz
+	set {piko_sentences_told} = 3
+elif {piko_sentences_told} == 3:
+	characters/character_ant-worker_piko: zzz zzz zzz zzz
+	set {piko_sentences_told} = 4
+elif {piko_sentences_told} == 4:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_piko: I'm on my break, i have the right!
-else:
+	characters/character_ant-worker_piko: I'm on my break, i have the right!
+	if {scramble_accepted_to_help} == true:
+		set {piko_sentences_told} = 5
+elif {piko_sentences_told} == 5:
 	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
-	character_ant-worker_piko: A meeting to the door, man I'm tired.
+	characters/character_ant-worker_piko: A meeting to the door, man I'm tired.
 	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]
+	set {piko_accepted_to_help} = true

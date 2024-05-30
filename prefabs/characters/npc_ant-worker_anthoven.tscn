@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://g3rclhk3kl2h"]
+
+[ext_resource type="PackedScene" uid="uid://cawlq0nyx282u" path="res://prefabs/characters/npc_ant-chief_scramble.tscn" id="1_r80bn"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_anthoven.dch" id="2_ieg7y"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_anthoven.dtl" id="3_qbau2"]
+
+[node name="NPC Ant-worker Anthoven" instance=ExtResource("1_r80bn")]
+dialogic_character = ExtResource("2_ieg7y")
+dialogic_timeline = ExtResource("3_qbau2")

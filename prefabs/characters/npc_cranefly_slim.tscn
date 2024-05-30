@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://8ouo6bw1jn8p"]
+
+[ext_resource type="PackedScene" uid="uid://buvwsvtqufrw4" path="res://prefabs/characters/npc_caterpillar_flubble.tscn" id="1_q6syu"]
+[ext_resource type="Resource" path="res://story/characters/character_cranefly_slim.dch" id="2_ryulu"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_cranefly_slim.dtl" id="3_xcn08"]
+
+[node name="NPC Cranefly Slim" instance=ExtResource("1_q6syu")]
+dialogic_character = ExtResource("2_ryulu")
+dialogic_timeline = ExtResource("3_xcn08")

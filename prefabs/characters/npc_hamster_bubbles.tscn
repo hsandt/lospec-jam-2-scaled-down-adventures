@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://byks3mnc3nch7"]
+
+[ext_resource type="PackedScene" uid="uid://c23sbar0xt1t8" path="res://prefabs/characters/npc_fly_buzz.tscn" id="1_sdjbo"]
+[ext_resource type="Resource" path="res://story/characters/character_hamster_bubbles.dch" id="2_bx84i"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_hamster_bubbles.dtl" id="3_3qocl"]
+
+[node name="NPC Hamster Bubbles" instance=ExtResource("1_sdjbo")]
+dialogic_character = ExtResource("2_bx84i")
+dialogic_timeline = ExtResource("3_3qocl")

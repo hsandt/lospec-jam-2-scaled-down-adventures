@@ -1,9 +1,11 @@
-if :
+if {ben_sentences_told} == 0:
 	[voice path="res://audio/vocals/spider.ogg" volume="0.0"]
-	character_spider_ben: Yes?
-elif :
+	characters/character_spider_ben: Yes?
+	set {ben_sentences_told} = 1
+elif {ben_sentences_told} == 1:
 	[voice path="res://audio/vocals/spider.ogg" volume="0.0"]
-	character_spider_ben: You seem to feel uneasy, are you ok?
-else:
+	characters/character_spider_ben: You seem to feel uneasy, are you ok?
+	set {ben_sentences_told} = 2
+elif {ben_sentences_told} == 2:
 	[voice path="res://audio/vocals/spider.ogg" volume="0.0"]
-	character_spider_ben: I'm searching a good spot for a web.
+	characters/character_spider_ben: I'm searching a good spot for a web.

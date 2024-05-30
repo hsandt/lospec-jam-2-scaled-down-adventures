@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://crufcpe7yqdsx"]
+
+[ext_resource type="PackedScene" uid="uid://cawlq0nyx282u" path="res://prefabs/characters/npc_ant-chief_scramble.tscn" id="1_e1wg7"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_bity.dch" id="2_pq1ii"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_bity.dtl" id="3_f3jal"]
+
+[node name="NPC Ant-worker Bity" instance=ExtResource("1_e1wg7")]
+dialogic_character = ExtResource("2_pq1ii")
+dialogic_timeline = ExtResource("3_f3jal")
