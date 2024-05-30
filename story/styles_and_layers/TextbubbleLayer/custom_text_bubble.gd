@@ -1,7 +1,7 @@
 extends Control
 
-# CUSTOM: tail is now a texture rect
-@onready var tail: TextureRect = ($Group/Tail as TextureRect)
+# CUSTOM: tail is now a texture rect under a Control
+@onready var tail: Control = ($Group/Tail as Control)
 #@onready var tail: Line2D = ($Group/Tail as Line2D)
 @onready var bubble: Control = ($Group/Background as Control)
 @onready var text: DialogicNode_DialogText = (%DialogText as DialogicNode_DialogText)
@@ -84,13 +84,13 @@ func _process(_delta:float) -> void:
 	#position = position.lerp(p, 5 * delta)
 	position = p
 
-	# CUSTOM bubble tail is now texture rect instead of Line2D
-	update_bubble_tail_texture_rect()
+	# CUSTOM bubble tail is now texture rect instead of Line2D, under Control
+	update_bubble_tail_control()
 	#update_bubble_tail_line(direction)
 
 
-# CUSTOM: Tail is now a TextureRect, not a Line2D
-func update_bubble_tail_texture_rect():
+# CUSTOM: Tail is now a TextureRect, not a Line2D, under Control
+func update_bubble_tail_control():
 	tail.global_position.x = base_position.x
 	tail.position.y = floorf(bubble_rect.size.y / 2.0) + tail_bubble_offset_y
 

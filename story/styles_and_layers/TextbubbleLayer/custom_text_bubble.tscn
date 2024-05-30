@@ -52,13 +52,19 @@ script = ExtResource("1_fu1k3")
 
 [node name="Group" type="CanvasGroup" parent="."]
 
-[node name="Tail" type="TextureRect" parent="Group"]
+[node name="Tail" type="Control" parent="Group"]
 unique_name_in_owner = true
-z_index = 1
-offset_left = -8.0
+layout_mode = 3
+anchors_preset = 0
 offset_top = 47.0
-offset_right = 7.0
+offset_right = 15.0
 offset_bottom = 62.0
+
+[node name="TailTextureRect" type="TextureRect" parent="Group/Tail"]
+z_index = 1
+offset_left = -7.0
+offset_right = 8.0
+offset_bottom = 15.0
 texture = ExtResource("2_xrsq4")
 
 [node name="OLD_Tail" type="Line2D" parent="Group"]

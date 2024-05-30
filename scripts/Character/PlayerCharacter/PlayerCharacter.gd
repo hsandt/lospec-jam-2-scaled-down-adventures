@@ -1,7 +1,6 @@
 class_name PlayerCharacter
 extends Character
 
-
 ## Area to detect interactable in
 @export var interaction_area: Area2D
 
