@@ -26,7 +26,7 @@ extends Node
 
 
 @onready var room_on_ready: Room = get_tree().get_first_node_in_group("rooms")
-@onready var camera: InGameCamera = $%InGameCamera
+@onready var camera: InGameCamera = %InGameCamera
 @onready var player_character: PlayerCharacter = get_tree().get_first_node_in_group("player_character")
 
 var current_room_instance: Room

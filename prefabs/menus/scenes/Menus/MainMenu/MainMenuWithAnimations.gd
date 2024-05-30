@@ -59,6 +59,11 @@ func _ready():
 
 # override
 func play_game():
+	%PlayButton.disabled = true
+	%OptionsButton.disabled = true
+	%CreditsButton.disabled = true
+	%ExitButton.disabled = true
+
 	ProjectMusicController.fade_out(1.0)
 	await TransitionScreen.fade_out_async(fade_out_speed)
 	super.play_game()
