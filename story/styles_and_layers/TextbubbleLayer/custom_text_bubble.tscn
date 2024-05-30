@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dgn0m0tlj2pr2"]
+[gd_scene load_steps=16 format=3 uid="uid://dgn0m0tlj2pr2"]
 
 [ext_resource type="Script" path="res://story/styles_and_layers/TextbubbleLayer/custom_text_bubble.gd" id="1_fu1k3"]
+[ext_resource type="Theme" uid="uid://d3t5wjl4r7c7g" path="res://themes/theme_bubble.tres" id="1_fxg8t"]
 [ext_resource type="Texture2D" uid="uid://drmcn14cex3w3" path="res://sprites/ui/ui_bubble_body_9-slice.png" id="2_l0vmj"]
 [ext_resource type="Shader" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble.gdshader" id="2_qr3ag"]
 [ext_resource type="Texture2D" uid="uid://d2odcxdslwrkt" path="res://sprites/ui/ui_bubble_tail.png" id="2_xrsq4"]
@@ -8,6 +9,7 @@
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="4_cjxxp"]
 [ext_resource type="FontFile" uid="uid://c4yx5crkulmfy" path="res://fonts/04b03.ttf" id="4_l225q"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="5_ejgyi"]
+[ext_resource type="Texture2D" uid="uid://tm5pgiv47138" path="res://sprites/ui/ui_bubble_name_label_9-slice.png" id="9_yyrnc"]
 
 [sub_resource type="Curve" id="Curve_0j8nu"]
 _data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
@@ -33,21 +35,17 @@ shader_parameter/wobble_speed = 10.0
 shader_parameter/wobble_detail = 0.51
 shader_parameter/deformation_sampler = SubResource("NoiseTexture2D_kr7hw")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6ls0"]
-content_margin_left = 5.0
-content_margin_right = 5.0
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
-shadow_color = Color(0, 0, 0, 0)
-shadow_size = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbmce"]
+texture = ExtResource("9_yyrnc")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+expand_margin_top = 2.0
 
 [node name="TextBubble" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+theme = ExtResource("1_fxg8t")
 script = ExtResource("1_fu1k3")
 
 [node name="Group" type="CanvasGroup" parent="."]
@@ -124,16 +122,23 @@ script = ExtResource("4_cjxxp")
 
 [node name="NameLabelPositioner" type="HBoxContainer" parent="DialogText"]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 23.0
+anchors_preset = -1
+anchor_left = -0.792453
+anchor_top = -2.8
+anchor_right = 0.208
+anchor_bottom = -2.8
+offset_right = -0.0480003
+offset_bottom = 12.0
 grow_horizontal = 2
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="NameLabelPanel" type="PanelContainer" parent="DialogText/NameLabelPositioner"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_h6ls0")
+size_flags_vertical = 4
+auto_translate = false
+theme_override_styles/panel = SubResource("StyleBoxTexture_nbmce")
 
 [node name="NameLabel" type="Label" parent="DialogText/NameLabelPositioner/NameLabelPanel" node_paths=PackedStringArray("name_label_root")]
 unique_name_in_owner = true
