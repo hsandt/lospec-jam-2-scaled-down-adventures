@@ -1,1 +1,6 @@
 characters/character_player: Urgh...
+rotate characters/character_player: up
+[wait time="1.0"]
+rotate characters/character_player: down
+[wait time="1.0"]
+characters/character_player: ?
