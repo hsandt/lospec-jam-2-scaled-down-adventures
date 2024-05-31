@@ -61,9 +61,9 @@ offset_bottom = 62.0
 [node name="TailTextureRect" type="TextureRect" parent="Group/Tail"]
 z_index = 1
 layout_mode = 0
-offset_left = -7.0
-offset_right = 8.0
-offset_bottom = 15.0
+offset_left = -4.0
+offset_right = 5.0
+offset_bottom = 10.0
 texture = ExtResource("2_xrsq4")
 
 [node name="OLD_Tail" type="Line2D" parent="Group"]
