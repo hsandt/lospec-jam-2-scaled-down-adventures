@@ -1,34 +1,57 @@
-[gd_scene load_steps=35 format=3 uid="uid://bmifdd84jcu0b"]
+[gd_scene load_steps=58 format=3 uid="uid://bmifdd84jcu0b"]
 
 [ext_resource type="TileSet" uid="uid://b1vpevu4b6jb7" path="res://tilesets/room_tile_set.tres" id="1_dcqkj"]
 [ext_resource type="Script" path="res://scripts/Room/Room.gd" id="2_4ffww"]
 [ext_resource type="Script" path="res://scripts/Room/WarpArea.gd" id="3_1rxmd"]
 [ext_resource type="Texture2D" uid="uid://dy06ub6lkx5ep" path="res://sprites/props/carpet_building_store.png" id="4_3gke8"]
 [ext_resource type="PackedScene" uid="uid://m2cxt8ssks16" path="res://prefabs/props/carpet_house.tscn" id="5_lqewi"]
-[ext_resource type="PackedScene" uid="uid://crufcpe7yqdsx" path="res://prefabs/characters/npc_ant-worker_bity.tscn" id="6_0qafi"]
 [ext_resource type="Texture2D" uid="uid://b5e2lm3f58dwi" path="res://sprites/props/carpet_building_hospital.png" id="6_r5pby"]
 [ext_resource type="Texture2D" uid="uid://dewya50kxv2ob" path="res://sprites/props/lospec_prop_tv-and-tv-stand.png" id="7_mw3hr"]
-[ext_resource type="PackedScene" uid="uid://cyo2if3g6odom" path="res://prefabs/characters/npc_ant-worker_piko.tscn" id="7_p7tpu"]
 [ext_resource type="Texture2D" uid="uid://dxpaoxupvaatm" path="res://sprites/props/lospec-gamejam-2-prop_bed.png" id="8_1p46g"]
 [ext_resource type="Texture2D" uid="uid://cifk85w0b8mq2" path="res://sprites/props/prop_skateboard.png" id="9_ie3ke"]
 [ext_resource type="Script" path="res://scripts/Interactable/Item.gd" id="10_i453i"]
 [ext_resource type="Script" path="res://scripts/Interactable/InteractableArea.gd" id="11_2qfa2"]
-[ext_resource type="PackedScene" uid="uid://dgn5j1bfeywmc" path="res://prefabs/characters/npc_butterfly_philly.tscn" id="11_fh306"]
+[ext_resource type="PackedScene" uid="uid://bkeys2gp8pe0e" path="res://prefabs/characters/npc_butterfly.tscn" id="11_fh306"]
 [ext_resource type="Resource" path="res://story/timelines/timeline_skateboard.dtl" id="11_nxg56"]
 [ext_resource type="Script" path="res://scripts/Interactable/InteractableItem.gd" id="11_opyb6"]
-[ext_resource type="PackedScene" uid="uid://c23sbar0xt1t8" path="res://prefabs/characters/npc_fly_buzz.tscn" id="14_elixd"]
-[ext_resource type="PackedScene" uid="uid://byks3mnc3nch7" path="res://prefabs/characters/npc_hamster_bubbles.tscn" id="15_kemwd"]
-[ext_resource type="PackedScene" uid="uid://8lxr16ejisqr" path="res://prefabs/characters/npc_smartphone_hi_phone.tscn" id="16_qr7qh"]
-[ext_resource type="PackedScene" uid="uid://br65iy0s5p31j" path="res://prefabs/characters/npc_spider_ben.tscn" id="17_nof4v"]
-[ext_resource type="PackedScene" uid="uid://o8m4btxgo8bq" path="res://prefabs/characters/npc_toy_troll.tscn" id="18_qqdxd"]
+[ext_resource type="PackedScene" uid="uid://0tamv182risp" path="res://prefabs/characters/npc_fly.tscn" id="14_elixd"]
+[ext_resource type="PackedScene" uid="uid://b178a2i5i8wcm" path="res://prefabs/characters/npc_hamster.tscn" id="15_kemwd"]
+[ext_resource type="PackedScene" uid="uid://dgwnbjl1o8h16" path="res://prefabs/characters/npc_ant_chief_scramble.tscn" id="15_xqdf5"]
+[ext_resource type="PackedScene" uid="uid://c5bwt5p4hri6j" path="res://prefabs/characters/npc_smartphone.tscn" id="16_qr7qh"]
+[ext_resource type="PackedScene" uid="uid://c2yd8a5ldsbvb" path="res://prefabs/characters/npc_spider.tscn" id="17_nof4v"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_anthoven.dch" id="17_tosy5"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_anthoven.dtl" id="18_8tr8g"]
+[ext_resource type="PackedScene" uid="uid://bqr1cu5ljqwp" path="res://prefabs/characters/npc_toy.tscn" id="18_qqdxd"]
 [ext_resource type="TileSet" uid="uid://c46p10f2rqn0" path="res://tilesets/carpet_tile_set.tres" id="19_7obue"]
-[ext_resource type="PackedScene" uid="uid://buvwsvtqufrw4" path="res://prefabs/characters/npc_caterpillar_flubble.tscn" id="25_mxvyc"]
-[ext_resource type="PackedScene" uid="uid://8ouo6bw1jn8p" path="res://prefabs/characters/npc_cranefly_slim.tscn" id="26_vomrl"]
-[ext_resource type="PackedScene" uid="uid://cpgwrnt3gpx6j" path="res://prefabs/characters/npc_ant-worker_speck.tscn" id="28_r7xvc"]
-[ext_resource type="PackedScene" uid="uid://5ioqvqpwkft8" path="res://prefabs/characters/npc_ant_worker_tini.tscn" id="29_2nknw"]
-[ext_resource type="PackedScene" uid="uid://b3n2bhh2y2qei" path="res://prefabs/characters/npc_ant-worker_randi.tscn" id="29_hsb4l"]
-[ext_resource type="PackedScene" uid="uid://g3rclhk3kl2h" path="res://prefabs/characters/npc_ant-worker_anthoven.tscn" id="34_q0q51"]
-[ext_resource type="PackedScene" uid="uid://cawlq0nyx282u" path="res://prefabs/characters/npc_ant-chief_scramble.tscn" id="35_w4i4f"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_bity.dch" id="19_lbhjq"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_bity.dtl" id="20_1sgfq"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_piko.dch" id="21_k3n4d"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_piko.dtl" id="22_snu4g"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_randi.dch" id="23_jif4p"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_randi.dtl" id="24_4u2na"]
+[ext_resource type="PackedScene" uid="uid://bh8uqhs8eyqja" path="res://prefabs/characters/npc_caterpillar.tscn" id="25_mxvyc"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_speck.dch" id="25_tnfey"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_speck.dtl" id="26_qn3so"]
+[ext_resource type="PackedScene" uid="uid://b0iccjn0wm2xj" path="res://prefabs/characters/npc_cranefly.tscn" id="26_vomrl"]
+[ext_resource type="Resource" path="res://story/characters/character_ant-worker_tini.dch" id="27_gin2l"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_tini.dtl" id="28_8pcdo"]
+[ext_resource type="PackedScene" uid="uid://bmqr7w0gqb1xi" path="res://prefabs/characters/npc_ant_worker_base.tscn" id="29_2nknw"]
+[ext_resource type="Resource" path="res://story/characters/character_butterfly_philly.dch" id="30_3vuom"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_butterfly_philly.dtl" id="31_dmxce"]
+[ext_resource type="Resource" path="res://story/characters/character_caterpillar_flubble.dch" id="33_l18fc"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_caterpillar_flubble.dtl" id="34_jgwox"]
+[ext_resource type="Resource" path="res://story/characters/character_cranefly_slim.dch" id="36_sqlgn"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_cranefly_slim.dtl" id="37_fw7cc"]
+[ext_resource type="Resource" path="res://story/characters/character_fly_buzz.dch" id="39_ponvs"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_fly_buzz.dtl" id="40_ko6pu"]
+[ext_resource type="Resource" path="res://story/characters/character_hamster_bubbles.dch" id="42_a1fli"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_hamster_bubbles.dtl" id="43_jijn5"]
+[ext_resource type="Resource" path="res://story/characters/character_smartphone_hi-phone.dch" id="45_utev5"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_smartphone_hi-phone.dtl" id="46_oqcfx"]
+[ext_resource type="Resource" path="res://story/characters/character_spider_ben.dch" id="48_l5gkf"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_spider_ben.dtl" id="49_28vo7"]
+[ext_resource type="Resource" path="res://story/characters/character_toy_troll.dch" id="51_hg7hp"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_toy_troll.dtl" id="52_asqea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_us2pb"]
 size = Vector2(70, 36)
@@ -165,49 +188,79 @@ next_room_scene_path = "res://scenes/room_corridor.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_WarpToRoom Corridor"]
 shape = SubResource("RectangleShape2D_vnb7d")
 
-[node name="NPC Ant-chief Scramble" parent="." instance=ExtResource("35_w4i4f")]
-position = Vector2(597, -42)
+[node name="npc_parent" type="Node2D" parent="."]
 
-[node name="NPC Ant-worker Anthoven" parent="." instance=ExtResource("34_q0q51")]
-position = Vector2(567, 190)
+[node name="NPC_Ant-chief_Scramble" parent="npc_parent" instance=ExtResource("15_xqdf5")]
+position = Vector2(1207, -79)
 
-[node name="NPC Ant-worker Bity" parent="." instance=ExtResource("6_0qafi")]
-position = Vector2(123, -39)
+[node name="NPC_Ant-worker_Anthoven" parent="npc_parent" instance=ExtResource("29_2nknw")]
+position = Vector2(1076, -54)
+dialogic_character = ExtResource("17_tosy5")
+dialogic_timeline = ExtResource("18_8tr8g")
 
-[node name="NPC Ant-worker Piko" parent="." instance=ExtResource("7_p7tpu")]
-position = Vector2(-82, 306)
+[node name="NPC_Ant-worker_Bity" parent="npc_parent" instance=ExtResource("29_2nknw")]
+position = Vector2(560, 111)
+dialogic_character = ExtResource("19_lbhjq")
+dialogic_timeline = ExtResource("20_1sgfq")
 
-[node name="NPC Ant-worker Randi" parent="." instance=ExtResource("29_hsb4l")]
-position = Vector2(301, 125)
+[node name="NPC Ant-worker Piko" parent="npc_parent" instance=ExtResource("29_2nknw")]
+position = Vector2(721, 49)
+dialogic_character = ExtResource("21_k3n4d")
+dialogic_timeline = ExtResource("22_snu4g")
 
-[node name="NPC Ant-worker Speck" parent="." instance=ExtResource("28_r7xvc")]
-position = Vector2(110, 120)
+[node name="NPC Ant-worker Randi" parent="npc_parent" instance=ExtResource("29_2nknw")]
+position = Vector2(-36, -72)
+dialogic_character = ExtResource("23_jif4p")
+dialogic_timeline = ExtResource("24_4u2na")
 
-[node name="NPC Ant-worker Tini" parent="." instance=ExtResource("29_2nknw")]
-position = Vector2(253, -12)
+[node name="NPC Ant-worker Speck" parent="npc_parent" instance=ExtResource("29_2nknw")]
+position = Vector2(1033, 97)
+dialogic_character = ExtResource("25_tnfey")
+dialogic_timeline = ExtResource("26_qn3so")
 
-[node name="NPC Butterfly Philly" parent="." instance=ExtResource("11_fh306")]
-position = Vector2(-78, 179)
+[node name="NPC Ant-worker Tini" parent="npc_parent" instance=ExtResource("29_2nknw")]
+position = Vector2(57, -7)
+dialogic_character = ExtResource("27_gin2l")
+dialogic_timeline = ExtResource("28_8pcdo")
 
-[node name="NPC Caterpillar Flubble" parent="." instance=ExtResource("25_mxvyc")]
-position = Vector2(228, 316)
+[node name="NPC Butterfly Philly" parent="npc_parent" instance=ExtResource("11_fh306")]
+position = Vector2(938, 33)
+dialogic_character = ExtResource("30_3vuom")
+dialogic_timeline = ExtResource("31_dmxce")
 
-[node name="NPC Cranefly Slim" parent="." instance=ExtResource("26_vomrl")]
-position = Vector2(372, 285)
+[node name="NPC Caterpillar Flubble" parent="npc_parent" instance=ExtResource("25_mxvyc")]
+position = Vector2(791, 121)
+dialogic_character = ExtResource("33_l18fc")
+dialogic_timeline = ExtResource("34_jgwox")
 
-[node name="NPC Fly Buzz" parent="." instance=ExtResource("14_elixd")]
-position = Vector2(498, 133)
+[node name="NPC Cranefly Slim" parent="npc_parent" instance=ExtResource("26_vomrl")]
+position = Vector2(-81, 119)
+dialogic_character = ExtResource("36_sqlgn")
+dialogic_timeline = ExtResource("37_fw7cc")
 
-[node name="NPC Hamster Bubbles" parent="." instance=ExtResource("15_kemwd")]
-position = Vector2(550, 41)
+[node name="NPC Fly Buzz" parent="npc_parent" instance=ExtResource("14_elixd")]
+position = Vector2(108, -84)
+dialogic_character = ExtResource("39_ponvs")
+dialogic_timeline = ExtResource("40_ko6pu")
 
-[node name="NPC Smartphone Hi-Phone" parent="." instance=ExtResource("16_qr7qh")]
-position = Vector2(149, 209)
+[node name="NPC Hamster Bubbles" parent="npc_parent" instance=ExtResource("15_kemwd")]
+position = Vector2(434, -77)
+dialogic_character = ExtResource("42_a1fli")
+dialogic_timeline = ExtResource("43_jijn5")
 
-[node name="NPC Spider Ben" parent="." instance=ExtResource("17_nof4v")]
-position = Vector2(596, 307)
+[node name="NPC Smartphone Hi-Phone" parent="npc_parent" instance=ExtResource("16_qr7qh")]
+position = Vector2(664, -79)
+dialogic_character = ExtResource("45_utev5")
+dialogic_timeline = ExtResource("46_oqcfx")
 
-[node name="NPC Toy Troll" parent="." instance=ExtResource("18_qqdxd")]
-position = Vector2(-12, -59)
+[node name="NPC Spider Ben" parent="npc_parent" instance=ExtResource("17_nof4v")]
+position = Vector2(185, -37)
+dialogic_character = ExtResource("48_l5gkf")
+dialogic_timeline = ExtResource("49_28vo7")
+
+[node name="NPC Toy Troll" parent="npc_parent" instance=ExtResource("18_qqdxd")]
+position = Vector2(717, -81)
+dialogic_character = ExtResource("51_hg7hp")
+dialogic_timeline = ExtResource("52_asqea")
 
 [connection signal="body_entered" from="Area2D_WarpToRoom Corridor" to="Area2D_WarpToRoom Corridor" method="_on_body_entered"]
