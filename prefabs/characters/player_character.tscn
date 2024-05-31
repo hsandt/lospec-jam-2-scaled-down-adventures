@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://22qn8b32yrwi" path="res://sprites/characters/characters_walk right_spritesheet.png" id="11_1meop"]
 [ext_resource type="Texture2D" uid="uid://kumuswapymre" path="res://sprites/characters/characters_walk up_spritesheet.png" id="12_c180m"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wmq3u"]
-radius = 6.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qv26k"]
+size = Vector2(14, 7)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tqvwd"]
 atlas = ExtResource("4_ft48a")
@@ -166,7 +166,8 @@ move_cardinal_speed = 150.0
 
 [node name="CollisionShape2D_MoveBox" type="CollisionShape2D" parent="."]
 z_index = 1
-shape = SubResource("CircleShape2D_wmq3u")
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_qv26k")
 
 [node name="CharacterAnimationController" type="Node" parent="." node_paths=PackedStringArray("character", "animation_player")]
 script = ExtResource("2_xrkno")
