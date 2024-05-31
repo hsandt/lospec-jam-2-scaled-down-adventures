@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxapglgebrrse"]
+[gd_scene load_steps=9 format=3 uid="uid://dxapglgebrrse"]
 
 [ext_resource type="Script" path="res://scripts/InGameManager.gd" id="1_2fg1p"]
 [ext_resource type="Resource" uid="uid://3kk5m42vokhk" path="res://story/styles_and_layers/style.tres" id="2_sluu0"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" path="res://story/characters/character_player.dch" id="3_yymyc"]
 [ext_resource type="Resource" path="res://story/timelines/timeline_intro.dtl" id="4_fy2a8"]
 [ext_resource type="PackedScene" uid="uid://bo240vda13h14" path="res://prefabs/characters/player_character.tscn" id="5_52ms7"]
+[ext_resource type="AudioStream" uid="uid://behc3i7og4mv4" path="res://audio/bgm/bgm_ingame.ogg" id="5_rcurk"]
 
 [node name="InGame" type="Node2D"]
 
@@ -15,7 +16,14 @@ script = ExtResource("1_2fg1p")
 dialogic_style_to_preload = ExtResource("2_sluu0")
 dialogic_player_character = ExtResource("3_yymyc")
 first_dialogic_timeline = ExtResource("4_fy2a8")
+bgm_ingame = ExtResource("5_rcurk")
 first_room_scene = ExtResource("3_0x0ki")
+first_warp_entrance_spot_index = null
+fade_in_speed = null
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"Music"
 
 [node name="InGameCamera" type="Camera2D" parent="."]
 unique_name_in_owner = true

@@ -11,6 +11,7 @@ extends Node
 
 @export var dialogic_player_character: DialogicCharacter
 @export var first_dialogic_timeline: DialogicTimeline
+@export var bgm_ingame: AudioStream
 
 
 @export_group("Setup")
@@ -25,9 +26,10 @@ extends Node
 @export var fade_in_speed: float = 1.0
 
 
-@onready var room_on_ready: Room = get_tree().get_first_node_in_group("rooms")
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 @onready var camera: InGameCamera = %InGameCamera
 @onready var player_character: PlayerCharacter = get_tree().get_first_node_in_group("player_character")
+@onready var room_on_ready: Room = get_tree().get_first_node_in_group("rooms")
 
 var current_room_instance: Room
 
@@ -36,6 +38,7 @@ func _ready():
 	DebugUtils.assert_member_is_set(self, dialogic_style_to_preload, "dialogic_style_to_preload")
 	DebugUtils.assert_member_is_set(self, dialogic_player_character, "dialogic_player_character")
 	DebugUtils.assert_member_is_set(self, first_dialogic_timeline, "first_dialogic_timeline")
+	DebugUtils.assert_member_is_set(self, bgm_ingame, "bgm_ingame")
 	DebugUtils.assert_member_is_set(self, first_room_scene, "first_room_scene")
 
 	# This avoids most of the initial loading time on first timeline play and layout display
@@ -123,3 +126,8 @@ func play_intro_async():
 	var layout := Dialogic.start(first_dialogic_timeline)
 	layout.register_character(GameManager.in_game_manager.dialogic_player_character, player_character)
 	await Dialogic.timeline_ended
+
+	ProjectMusicController.music_stream_player = audio_stream_player
+
+	ProjectMusicController.music_stream_player.stream = bgm_ingame
+	ProjectMusicController.play()

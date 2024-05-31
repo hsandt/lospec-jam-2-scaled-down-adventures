@@ -16,6 +16,10 @@ run/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://audio/audio_bus_layout.tres"
+
 [autoload]
 
 AppManager="*res://prefabs/managers/AppManager.tscn"
