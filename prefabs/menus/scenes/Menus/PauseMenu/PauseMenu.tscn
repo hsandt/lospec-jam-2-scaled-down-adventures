@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhsjpg57evpv2"]
+
+[ext_resource type="PackedScene" uid="uid://cdwvtbtwmrqbn" path="res://addons/maaacks_menus_template/extras/scenes/PauseMenu/PauseMenu.tscn" id="1_y1b15"]
+[ext_resource type="Script" path="res://addons/maaacks_menus_template/examples/scenes/Menus/PauseMenu/PauseMenu.gd" id="2_cwqoh"]
+[ext_resource type="PackedScene" uid="uid://c6obwfb7wbibn" path="res://addons/maaacks_menus_template/examples/scenes/Menus/OptionsMenu/MiniOptionsMenu.tscn" id="3_1xv5x"]
+[ext_resource type="Theme" uid="uid://toq0xa72uxje" path="res://themes/theme_main_menu_big_buttons.tres" id="4_p5vkq"]
+[ext_resource type="Theme" uid="uid://db3af2gs3vhep" path="res://themes/window_theme.tres" id="5_1iunv"]
+
+[node name="PauseMenu" instance=ExtResource("1_y1b15")]
+script = ExtResource("2_cwqoh")
+options_packed_scene = ExtResource("3_1xv5x")
+main_menu_scene = "res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
+
+[node name="BackgroundColor" parent="." index="1"]
+color = Color(0.490196, 0.490196, 0.639216, 1)
+
+[node name="MenuContainer" parent="." index="3"]
+theme = ExtResource("4_p5vkq")
+
+[node name="MenuButtons" parent="MenuContainer/VBoxContainer" index="1"]
+theme_override_constants/separation = 8
+
+[node name="ResumeButton" parent="MenuContainer/VBoxContainer/MenuButtons" index="0"]
+custom_minimum_size = Vector2(128, 0)
+
+[node name="RestartButton" parent="MenuContainer/VBoxContainer/MenuButtons" index="1"]
+custom_minimum_size = Vector2(128, 0)
+
+[node name="OptionsButton" parent="MenuContainer/VBoxContainer/MenuButtons" index="2"]
+visible = false
+custom_minimum_size = Vector2(128, 0)
+
+[node name="MainMenuButton" parent="MenuContainer/VBoxContainer/MenuButtons" index="3"]
+custom_minimum_size = Vector2(128, 0)
+
+[node name="ExitButton" parent="MenuContainer/VBoxContainer/MenuButtons" index="4"]
+custom_minimum_size = Vector2(128, 0)
+
+[node name="SubMenuContainer" parent="." index="4"]
+custom_minimum_size = Vector2(256, 224)
+
+[node name="BackButton" parent="SubMenuContainer/VBoxContainer/HBoxContainer" index="0"]
+custom_minimum_size = Vector2(62, 0)
+
+[node name="ConfirmRestart" parent="." index="5"]
+position = Vector2i(0, 36)
+size = Vector2i(200, 80)
+min_size = Vector2i(150, 50)
+theme = ExtResource("5_1iunv")
+
+[node name="ConfirmMainMenu" parent="." index="6"]
+theme = ExtResource("5_1iunv")
+
+[node name="ConfirmExit" parent="." index="7"]
+theme = ExtResource("5_1iunv")
