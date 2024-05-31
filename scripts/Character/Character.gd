@@ -41,3 +41,13 @@ func update_direction(new_direction: MathEnums.CardinalDirection):
 func _update_direction_toward(direction_vector: Vector2):
 	var dominant_direction := MathUtils.vector_to_dominant_cardinal_direction(direction_vector, true)
 	update_direction(dominant_direction)
+
+
+func remove_after_fade_out():
+	await TransitionScreen.fade_out_async(1.0)
+
+	queue_free()
+	# just hide character to avoid dangling references
+	#await get_tree().physics_frame
+
+	await TransitionScreen.fade_in_async(1.0)

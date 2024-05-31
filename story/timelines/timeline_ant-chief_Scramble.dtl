@@ -21,3 +21,4 @@ elif {scramble_sentences_told} == 2:
 	characters/character_ant-chief_scramble: Go get the other and meet me at the door.
 	[voice path="res://audio/sfx/npc_chief_accepts.ogg" volume="0.0"]
 	set {scramble_accepted_to_help} = true
+	remove characters/character_ant-chief_scramble
