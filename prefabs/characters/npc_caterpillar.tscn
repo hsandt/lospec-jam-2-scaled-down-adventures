@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh8uqhs8eyqja"]
+
+[ext_resource type="PackedScene" uid="uid://c0127dqab5jx4" path="res://prefabs/characters/npc_base.tscn" id="1_feyb0"]
+[ext_resource type="SpriteFrames" uid="uid://befileq1y3ew0" path="res://anims/sprite_frames_butterfly.tres" id="2_54x6a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xx60i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewcr5"]
+size = Vector2(16, 16)
+
+[node name="NPC_Caterpillar" instance=ExtResource("1_feyb0")]
+
+[node name="AnimatedSprite2D" parent="." index="3"]
+sprite_frames = ExtResource("2_54x6a")
+
+[node name="CollisionShape2D" parent="InteractableArea" index="0"]
+shape = SubResource("RectangleShape2D_xx60i")
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+shape = SubResource("RectangleShape2D_ewcr5")

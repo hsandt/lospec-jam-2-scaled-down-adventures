@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://0tamv182risp"]
+
+[ext_resource type="PackedScene" uid="uid://c0127dqab5jx4" path="res://prefabs/characters/npc_base.tscn" id="1_cfj85"]
+[ext_resource type="SpriteFrames" uid="uid://befileq1y3ew0" path="res://anims/sprite_frames_butterfly.tres" id="2_860o6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46eo5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yx581"]
+size = Vector2(16, 16)
+
+[node name="NPC_fly" instance=ExtResource("1_cfj85")]
+
+[node name="AnimatedSprite2D" parent="." index="3"]
+sprite_frames = ExtResource("2_860o6")
+
+[node name="CollisionShape2D" parent="InteractableArea" index="0"]
+shape = SubResource("RectangleShape2D_46eo5")
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+shape = SubResource("RectangleShape2D_yx581")

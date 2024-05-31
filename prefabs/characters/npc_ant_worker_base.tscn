@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmqr7w0gqb1xi"]
+
+[ext_resource type="PackedScene" uid="uid://c0127dqab5jx4" path="res://prefabs/characters/npc_base.tscn" id="1_hbnjg"]
+[ext_resource type="SpriteFrames" uid="uid://dee414n5qi0lr" path="res://anims/sprite_frames_ant-worker.tres" id="2_axrl0"]
+[ext_resource type="AnimationLibrary" uid="uid://gj53x0y4fbjb" path="res://anims/animation_library_ant-worker.tres" id="2_uwspo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ydtn"]
+size = Vector2(20, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rufkp"]
+size = Vector2(12, 18)
+
+[node name="NPC_Ant_Worker_Base" instance=ExtResource("1_hbnjg")]
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": ExtResource("2_uwspo")
+}
+
+[node name="AnimatedSprite2D" parent="." index="3"]
+sprite_frames = ExtResource("2_axrl0")
+animation = &"IdleDown"
+
+[node name="CollisionShape2D" parent="InteractableArea" index="0"]
+shape = SubResource("RectangleShape2D_2ydtn")
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+shape = SubResource("RectangleShape2D_rufkp")

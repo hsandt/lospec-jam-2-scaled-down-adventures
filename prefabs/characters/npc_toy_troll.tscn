@@ -1,9 +1,0 @@
-[gd_scene load_steps=4 format=3 uid="uid://o8m4btxgo8bq"]
-
-[ext_resource type="PackedScene" uid="uid://br65iy0s5p31j" path="res://prefabs/characters/npc_spider_ben.tscn" id="1_x0xj7"]
-[ext_resource type="Resource" path="res://story/characters/character_toy_troll.dch" id="2_hysuq"]
-[ext_resource type="Resource" path="res://story/timelines/timeline_toy_troll.dtl" id="3_jbun0"]
-
-[node name="NPC Toy Troll" instance=ExtResource("1_x0xj7")]
-dialogic_character = ExtResource("2_hysuq")
-dialogic_timeline = ExtResource("3_jbun0")

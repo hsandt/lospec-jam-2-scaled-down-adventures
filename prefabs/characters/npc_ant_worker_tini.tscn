@@ -1,9 +1,0 @@
-[gd_scene load_steps=4 format=3 uid="uid://5ioqvqpwkft8"]
-
-[ext_resource type="PackedScene" uid="uid://cpgwrnt3gpx6j" path="res://prefabs/characters/npc_ant-worker_speck.tscn" id="1_mudbb"]
-[ext_resource type="Resource" path="res://story/characters/character_ant-worker_tini.dch" id="2_8os8m"]
-[ext_resource type="Resource" path="res://story/timelines/timeline_ant-worker_tini.dtl" id="3_6bvvw"]
-
-[node name="NPC Ant-worker Tini" instance=ExtResource("1_mudbb")]
-dialogic_character = ExtResource("2_8os8m")
-dialogic_timeline = ExtResource("3_6bvvw")
