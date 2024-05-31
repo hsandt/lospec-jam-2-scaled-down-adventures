@@ -1,14 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhsjpg57evpv2"]
+[gd_scene load_steps=5 format=3 uid="uid://dhsjpg57evpv2"]
 
 [ext_resource type="PackedScene" uid="uid://cdwvtbtwmrqbn" path="res://addons/maaacks_menus_template/extras/scenes/PauseMenu/PauseMenu.tscn" id="1_y1b15"]
-[ext_resource type="Script" path="res://addons/maaacks_menus_template/examples/scenes/Menus/PauseMenu/PauseMenu.gd" id="2_cwqoh"]
-[ext_resource type="PackedScene" uid="uid://c6obwfb7wbibn" path="res://addons/maaacks_menus_template/examples/scenes/Menus/OptionsMenu/MiniOptionsMenu.tscn" id="3_1xv5x"]
+[ext_resource type="Script" path="res://prefabs/menus/scenes/Menus/PauseMenu/PauseMenu.gd" id="2_kudo5"]
 [ext_resource type="Theme" uid="uid://toq0xa72uxje" path="res://themes/theme_main_menu_big_buttons.tres" id="4_p5vkq"]
 [ext_resource type="Theme" uid="uid://db3af2gs3vhep" path="res://themes/window_theme.tres" id="5_1iunv"]
 
 [node name="PauseMenu" instance=ExtResource("1_y1b15")]
-script = ExtResource("2_cwqoh")
-options_packed_scene = ExtResource("3_1xv5x")
+script = ExtResource("2_kudo5")
+options_packed_scene = null
 main_menu_scene = "res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
 
 [node name="BackgroundColor" parent="." index="1"]
