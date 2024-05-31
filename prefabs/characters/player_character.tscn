@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Character/PlayerCharacter/PlayerCharacter.gd" id="1_bj8jp"]
 [ext_resource type="Script" path="res://scripts/Character/CharacterAnimationController.gd" id="2_xrkno"]
-[ext_resource type="AnimationLibrary" uid="uid://dah17q4ivoa2y" path="res://anims/animation_library_boy.res" id="3_ncp86"]
+[ext_resource type="AnimationLibrary" uid="uid://naq0u1waxpty" path="res://anims/animation_library_boy.tres" id="3_4ytdn"]
 [ext_resource type="Texture2D" uid="uid://c2x10dp8ev2wm" path="res://sprites/characters/characters_idle down_spritesheet.png" id="4_ft48a"]
 [ext_resource type="Texture2D" uid="uid://beo8st7hmgdt3" path="res://sprites/characters/characters_idle left_spritesheet.png" id="5_mrn2n"]
 [ext_resource type="Texture2D" uid="uid://d237iccj1n4q8" path="res://sprites/characters/characters_idle right_spritesheet.png" id="6_v6q2i"]
@@ -218,7 +218,7 @@ animation_player = NodePath("../AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": ExtResource("3_ncp86")
+"": ExtResource("3_4ytdn")
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
