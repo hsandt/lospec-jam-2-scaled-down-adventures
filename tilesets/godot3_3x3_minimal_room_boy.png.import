@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0n63tfgd3sei"
-path="res://.godot/imported/room_3x3_minimal_tileset.png-51ca4bbc9b5ecf7724ed90296c1e2d9b.ctex"
+path="res://.godot/imported/godot3_3x3_minimal_room_boy.png-39b98cdc9293ceec68fca005c4dade1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilesets/room_3x3_minimal_tileset.png"
-dest_files=["res://.godot/imported/room_3x3_minimal_tileset.png-51ca4bbc9b5ecf7724ed90296c1e2d9b.ctex"]
+source_file="res://tilesets/godot3_3x3_minimal_room_boy.png"
+dest_files=["res://.godot/imported/godot3_3x3_minimal_room_boy.png-39b98cdc9293ceec68fca005c4dade1b.ctex"]
 
 [params]
 
