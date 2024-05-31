@@ -24,7 +24,7 @@ func reset():
 	scroll_active = true
 	set_header_and_footer()
 
-func _check_end_reached(previous_scroll):
+func _check_end_reached(_previous_scroll):
 	# IMPROVED by hsandt:
 	# checking that previous_scroll changed works ok for integers, to detect
 	# that we hit the end, but when using floats we may not move by a full pixel

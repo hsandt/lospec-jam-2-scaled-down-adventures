@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://bh8uqhs8eyqja"]
+[gd_scene load_steps=16 format=3 uid="uid://dy6ro40j7kvop"]
 
 [ext_resource type="PackedScene" uid="uid://c0127dqab5jx4" path="res://prefabs/characters/npc_base.tscn" id="1_feyb0"]
-[ext_resource type="SpriteFrames" uid="uid://befileq1y3ew0" path="res://anims/sprite_frames_butterfly.tres" id="2_54x6a"]
+[ext_resource type="SpriteFrames" uid="uid://c418jy8dv2hpg" path="res://anims/sprite_frames_butterfly.tres" id="2_54x6a"]
 
 [sub_resource type="Animation" id="Animation_5nrbi"]
 length = 1.33333
@@ -113,6 +113,33 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": ["IdleUp"]
+}
+
+[sub_resource type="Animation" id="Animation_g12lf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["IdleDown"]
 }
 
 [sub_resource type="Animation" id="Animation_kvfoq"]
@@ -252,33 +279,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": ["default"]
-}
-
-[sub_resource type="Animation" id="Animation_g12lf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["IdleDown"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q1dal"]

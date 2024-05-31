@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgwnbjl1o8h16"]
+[gd_scene load_steps=8 format=3 uid="uid://cvxbqp8wvty78"]
 
 [ext_resource type="PackedScene" uid="uid://c0127dqab5jx4" path="res://prefabs/characters/npc_base.tscn" id="1_7as6o"]
-[ext_resource type="SpriteFrames" uid="uid://cwrn74w0at4hl" path="res://anims/sprite_frames_ant-chief.tres" id="2_2s3ff"]
+[ext_resource type="SpriteFrames" uid="uid://2c31bibxc1fu" path="res://anims/sprite_frames_ant-chief.tres" id="2_2s3ff"]
 [ext_resource type="Resource" path="res://story/characters/character_ant-chief_scramble.dch" id="2_w5ca5"]
 [ext_resource type="Resource" path="res://story/timelines/timeline_ant-chief_Scramble.dtl" id="3_hxcca"]
-[ext_resource type="AnimationLibrary" uid="uid://c4t7pexsvjgwq" path="res://anims/animation_library_ant-chief.tres" id="4_3jdmm"]
+[ext_resource type="AnimationLibrary" uid="uid://clyaco7qdqeq4" path="res://anims/animation_library_ant-chief.tres" id="4_3jdmm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nyqde"]
 size = Vector2(20, 28)
