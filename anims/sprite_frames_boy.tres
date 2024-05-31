@@ -1,42 +1,29 @@
-[gd_resource type="SpriteFrames" load_steps=23 format=3 uid="uid://dejygjcteafbh"]
+[gd_resource type="SpriteFrames" load_steps=22 format=3 uid="uid://dejygjcteafbh"]
 
-[ext_resource type="Texture2D" uid="uid://bltmc67enas4x" path="res://sprites/characters/boy_IdleDown_spritesheet.png" id="1_ghxsu"]
+[ext_resource type="Texture2D" uid="uid://c2x10dp8ev2wm" path="res://sprites/characters/characters_idle down_spritesheet.png" id="1_0t6q2"]
 [ext_resource type="Texture2D" uid="uid://5efh8usxoitj" path="res://sprites/characters/boy_WalkLeft_spritesheet.png" id="2_ewr2x"]
+[ext_resource type="Texture2D" uid="uid://beo8st7hmgdt3" path="res://sprites/characters/characters_idle left_spritesheet.png" id="2_y36dk"]
+[ext_resource type="Texture2D" uid="uid://d237iccj1n4q8" path="res://sprites/characters/characters_idle right_spritesheet.png" id="3_xxjdp"]
+[ext_resource type="Texture2D" uid="uid://beilxy6qgvipu" path="res://sprites/characters/characters_idle up_spritesheet.png" id="4_s8di7"]
 [ext_resource type="Texture2D" uid="uid://bkyqkt8se20q2" path="res://sprites/characters/boy_WalkDown_spritesheet.png" id="5_qgmk0"]
 [ext_resource type="Texture2D" uid="uid://lryjid86oscj" path="res://sprites/characters/boy_WalkRight_spritesheet.png" id="6_6afaf"]
 [ext_resource type="Texture2D" uid="uid://cnu71mqqr6m6j" path="res://sprites/characters/boy_WalkUp_spritesheet.png" id="7_4v2l5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_egi2l"]
-atlas = ExtResource("5_qgmk0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkq01"]
+atlas = ExtResource("1_0t6q2")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gffud"]
-atlas = ExtResource("5_qgmk0")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8keoi"]
-atlas = ExtResource("2_ewr2x")
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1v0d"]
+atlas = ExtResource("2_y36dk")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_go8og"]
-atlas = ExtResource("2_ewr2x")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vc78x"]
-atlas = ExtResource("6_6afaf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_shfj6"]
+atlas = ExtResource("3_xxjdp")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2xfjv"]
-atlas = ExtResource("6_6afaf")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i0y3w"]
-atlas = ExtResource("7_4v2l5")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rk1f"]
+atlas = ExtResource("4_s8di7")
 region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_57uou"]
-atlas = ExtResource("7_4v2l5")
-region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wnlxm"]
 atlas = ExtResource("5_qgmk0")
@@ -70,18 +57,15 @@ region = Rect2(0, 0, 16, 16)
 atlas = ExtResource("7_4v2l5")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u3825"]
-atlas = ExtResource("1_ghxsu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhr37"]
+atlas = ExtResource("1_0t6q2")
 region = Rect2(0, 0, 16, 16)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_egi2l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gffud")
+"texture": SubResource("AtlasTexture_vkq01")
 }],
 "loop": true,
 "name": &"IdleDown",
@@ -89,10 +73,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8keoi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_go8og")
+"texture": SubResource("AtlasTexture_h1v0d")
 }],
 "loop": true,
 "name": &"IdleLeft",
@@ -100,10 +81,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vc78x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2xfjv")
+"texture": SubResource("AtlasTexture_shfj6")
 }],
 "loop": true,
 "name": &"IdleRight",
@@ -111,10 +89,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i0y3w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_57uou")
+"texture": SubResource("AtlasTexture_1rk1f")
 }],
 "loop": true,
 "name": &"IdleUp",
@@ -166,7 +141,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u3825")
+"texture": SubResource("AtlasTexture_dhr37")
 }],
 "loop": false,
 "name": &"default",
