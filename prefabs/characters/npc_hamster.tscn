@@ -316,7 +316,3 @@ shape = SubResource("RectangleShape2D_wjy7u")
 
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
 shape = SubResource("RectangleShape2D_uojs6")
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." index="7"]
-sprite_frames = ExtResource("2_b44ql")
-animation = &"IdleDown"

@@ -55,6 +55,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "timeline_ant-worker_anthoven": "res://story/timelines/timeline_ant-worker_anthoven.dtl",
+"timeline_door_closed": "res://story/timelines/timeline_door_closed.dtl",
 "timeline_intro": "res://story/timelines/timeline_intro.dtl",
 "timeline_skateboard": "res://story/timelines/timeline_skateboard.dtl",
 "timelines/timeline_ant-chief_Scramble": "res://story/timelines/timeline_ant-chief_Scramble.dtl",

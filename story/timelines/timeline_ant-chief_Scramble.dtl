@@ -22,3 +22,5 @@ elif {scramble_sentences_told} == 2:
 	[voice path="res://audio/sfx/npc_chief_accepts.ogg" volume="0.0"]
 	set {scramble_accepted_to_help} = true
 	remove characters/character_ant-chief_scramble
+	characters/character_player: = END OF DEMO =\
+Feel free to keep talking to other characters!
