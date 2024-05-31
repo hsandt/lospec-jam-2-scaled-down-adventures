@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c0127dqab5jx4" path="res://prefabs/characters/npc_base.tscn" id="1_ry2rp"]
 [ext_resource type="Resource" path="res://story/characters/character_girl.dch" id="2_4hc3k"]
 [ext_resource type="Resource" path="res://story/timelines/timeline_girl_1_in_front_of_parents_door.dtl" id="3_wvugn"]
-[ext_resource type="AnimationLibrary" uid="uid://dn6cwbb5bih6a" path="res://anims/animation_library_test.tres" id="4_4vxlm"]
+[ext_resource type="AnimationLibrary" uid="uid://dmdphk7vr6m00" path="res://anims/animation_library_girl.tres" id="4_4vxlm"]
 [ext_resource type="SpriteFrames" uid="uid://ctblaxw1fyrs1" path="res://anims/sprite_frames_girl.tres" id="5_0flnx"]
 
 [node name="NPC Girl" instance=ExtResource("1_ry2rp")]
