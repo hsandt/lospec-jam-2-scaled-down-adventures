@@ -103,6 +103,10 @@ func _unhandled_input(event: InputEvent):
 			await TransitionScreen.fade_out_async(10.0)
 			current_room_instance.queue_free()
 			await get_tree().physics_frame
+
+			# Clear Dialogic state completely (esp. dialogue variables)
+			Dialogic.clear()
+
 			# await should wait for end of frame, so we can safely call _change_scene_immediate here
 			# below doesn't work, as a hack we set ingame_scene_path to main menu scene
 			# and then it works...
