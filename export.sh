@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # CONFIG: change this for every new project
-title="Scaled-Down Adventures"
+title="Downscaled Adventures"
 all_platforms=(windows macos linux web)
 godot_bin="godot4.2.1_stable"
 export_folder="Export"
