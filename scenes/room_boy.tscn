@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bmifdd84jcu0b"]
+[gd_scene load_steps=35 format=3 uid="uid://bmifdd84jcu0b"]
 
 [ext_resource type="TileSet" uid="uid://b1vpevu4b6jb7" path="res://tilesets/room_tile_set.tres" id="1_dcqkj"]
 [ext_resource type="Script" path="res://scripts/Room/Room.gd" id="2_4ffww"]
@@ -10,7 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://dewya50kxv2ob" path="res://sprites/props/lospec_prop_tv-and-tv-stand.png" id="7_mw3hr"]
 [ext_resource type="PackedScene" uid="uid://cyo2if3g6odom" path="res://prefabs/characters/npc_ant-worker_piko.tscn" id="7_p7tpu"]
 [ext_resource type="Texture2D" uid="uid://dxpaoxupvaatm" path="res://sprites/props/lospec-gamejam-2-prop_bed.png" id="8_1p46g"]
+[ext_resource type="Texture2D" uid="uid://cifk85w0b8mq2" path="res://sprites/props/prop_skateboard.png" id="9_ie3ke"]
+[ext_resource type="Script" path="res://scripts/Interactable/Item.gd" id="10_i453i"]
+[ext_resource type="Script" path="res://scripts/Interactable/InteractableArea.gd" id="11_2qfa2"]
 [ext_resource type="PackedScene" uid="uid://dgn5j1bfeywmc" path="res://prefabs/characters/npc_butterfly_philly.tscn" id="11_fh306"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_skateboard.dtl" id="11_nxg56"]
+[ext_resource type="Script" path="res://scripts/Interactable/InteractableItem.gd" id="11_opyb6"]
 [ext_resource type="PackedScene" uid="uid://c23sbar0xt1t8" path="res://prefabs/characters/npc_fly_buzz.tscn" id="14_elixd"]
 [ext_resource type="PackedScene" uid="uid://byks3mnc3nch7" path="res://prefabs/characters/npc_hamster_bubbles.tscn" id="15_kemwd"]
 [ext_resource type="PackedScene" uid="uid://8lxr16ejisqr" path="res://prefabs/characters/npc_smartphone_hi_phone.tscn" id="16_qr7qh"]
@@ -30,6 +35,11 @@ size = Vector2(70, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gpcvd"]
 size = Vector2(180, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ffic"]
+size = Vector2(40, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4irc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnb7d"]
 size = Vector2(16, 208)
@@ -102,6 +112,36 @@ collision_layer = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D Bed/StaticBody2D"]
 position = Vector2(90, 49)
 shape = SubResource("RectangleShape2D_gpcvd")
+
+[node name="Item Skateboard" type="Sprite2D" parent="."]
+position = Vector2(435, 79)
+texture = ExtResource("9_ie3ke")
+centered = false
+script = ExtResource("10_i453i")
+dialogic_timeline = ExtResource("11_nxg56")
+metadata/_edit_group_ = true
+
+[node name="InteractableItem" type="Node" parent="Item Skateboard" node_paths=PackedStringArray("item")]
+script = ExtResource("11_opyb6")
+item = NodePath("..")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Item Skateboard"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item Skateboard/StaticBody2D"]
+position = Vector2(20, 7.5)
+shape = SubResource("RectangleShape2D_0ffic")
+
+[node name="InteractableArea" type="Area2D" parent="Item Skateboard" node_paths=PackedStringArray("interactable")]
+collision_layer = 2048
+collision_mask = 0
+monitoring = false
+script = ExtResource("11_2qfa2")
+interactable = NodePath("../InteractableItem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item Skateboard/InteractableArea"]
+shape = SubResource("RectangleShape2D_t4irc")
+debug_color = Color(0.678431, 0.415686, 0.741176, 0.419608)
 
 [node name="CameraLimit_TopLeft" type="Marker2D" parent="."]
 position = Vector2(-112, -182)

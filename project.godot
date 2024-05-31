@@ -34,6 +34,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"character_narrator": "res://story/characters/character_narrator.dch",
 "characters/character_ant-chief_scramble": "res://story/characters/character_ant-chief_scramble.dch",
 "characters/character_ant-worker_anthoven": "res://story/characters/character_ant-worker_anthoven.dch",
 "characters/character_ant-worker_bity": "res://story/characters/character_ant-worker_bity.dch",
@@ -55,6 +56,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "timeline_ant-worker_anthoven": "res://story/timelines/timeline_ant-worker_anthoven.dtl",
 "timeline_intro": "res://story/timelines/timeline_intro.dtl",
+"timeline_skateboard": "res://story/timelines/timeline_skateboard.dtl",
 "timelines/timeline_ant-chief_Scramble": "res://story/timelines/timeline_ant-chief_Scramble.dtl",
 "timelines/timeline_ant-worker_bity": "res://story/timelines/timeline_ant-worker_bity.dtl",
 "timelines/timeline_ant-worker_piko": "res://story/timelines/timeline_ant-worker_piko.dtl",
@@ -71,7 +73,7 @@ directories/dtl_directory={
 "timelines/timeline_spider_ben": "res://story/timelines/timeline_spider_ben.dtl",
 "timelines/timeline_toy_troll": "res://story/timelines/timeline_toy_troll.dtl"
 }
-layout/style_list=["res://story/styles_and_layers/style.tres"]
+layout/style_list=["res://story/styles_and_layers/style.tres", "res://story/styles_and_layers/style_narration.tres"]
 layout/default_style="res://story/styles_and_layers/style.tres"
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
