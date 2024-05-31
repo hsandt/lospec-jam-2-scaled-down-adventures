@@ -86,6 +86,13 @@ func _exit_tree():
 	GameManager.in_game_manager = null
 
 
+func _unhandled_input(event: InputEvent):
+	if event.is_action_pressed(&"dialogic_auto_skip"):
+		Dialogic.Inputs.auto_skip.enabled = true
+	if event.is_action_released(&"dialogic_auto_skip"):
+		Dialogic.Inputs.auto_skip.enabled = false
+
+
 ## Load room scene deferred, so it works during initialization and collision checks
 func load_room_scene_deferred(room_scene: PackedScene, warp_entrance_spot_index: int):
 	_load_room_scene.call_deferred(room_scene, warp_entrance_spot_index)
