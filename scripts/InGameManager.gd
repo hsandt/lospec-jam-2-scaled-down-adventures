@@ -25,6 +25,8 @@ extends Node
 ## Speed factor for fade in animation
 @export var fade_in_speed: float = 1.0
 
+@export var skip_intro: bool = false
+
 
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 @onready var camera: InGameCamera = %InGameCamera
@@ -130,9 +132,10 @@ func _queue_unload_current_room():
 
 
 func play_intro_async():
-	var layout := Dialogic.start(first_dialogic_timeline)
-	layout.register_character(GameManager.in_game_manager.dialogic_player_character, player_character)
-	await Dialogic.timeline_ended
+	if not skip_intro:
+		var layout := Dialogic.start(first_dialogic_timeline)
+		layout.register_character(GameManager.in_game_manager.dialogic_player_character, player_character)
+		await Dialogic.timeline_ended
 
 	ProjectMusicController.music_stream_player = audio_stream_player
 
