@@ -24,10 +24,10 @@ func _update_ui(window : Window):
 	_preselect_resolution_scale()
 	_update_resolution_options_enabled(window)
 
-func _on_fullscreen_control_setting_changed(_value):
+func _on_fullscreen_control_setting_changed(value):
+	print("DisplayServer.window_get_mode: " + str(DisplayServer.window_get_mode()))
 	var window : Window = get_window()
-	# trick: we know something changed so we can call toggle and just ignore _value
-	AppManager.toggle_fullscreen()
+	AppManager.set_fullscreen_enabled(value)
 
 	_update_resolution_options_enabled(window)
 
