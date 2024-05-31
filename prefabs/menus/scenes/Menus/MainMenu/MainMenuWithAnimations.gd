@@ -40,6 +40,11 @@ func _input(event):
 		intro_done()
 	super._input(event)
 
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		# Close sub menu, if any
+		_close_sub_menu()
+
 func _ready():
 	super._ready()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
