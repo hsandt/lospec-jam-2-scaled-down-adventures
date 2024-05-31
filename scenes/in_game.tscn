@@ -15,8 +15,9 @@
 script = ExtResource("1_2fg1p")
 dialogic_style_to_preload = ExtResource("2_sluu0")
 dialogic_player_character = ExtResource("3_yymyc")
-first_dialogic_timeline = ExtResource("4_fy2a8")
 bgm_ingame = ExtResource("5_rcurk")
+ingame_scene_path = "res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
+first_dialogic_timeline = ExtResource("4_fy2a8")
 first_room_scene = ExtResource("3_0x0ki")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

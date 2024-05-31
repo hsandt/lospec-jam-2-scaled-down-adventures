@@ -10,11 +10,17 @@ extends Node
 @export_group("Assets references")
 
 @export var dialogic_player_character: DialogicCharacter
-@export var first_dialogic_timeline: DialogicTimeline
 @export var bgm_ingame: AudioStream
+
+## Main menu scene
+## Use @export_file to avoid circular reference
+## See https://github.com/godotengine/godot/issues/24146
+@export_file("*.tscn") var ingame_scene_path: String
 
 
 @export_group("Setup")
+
+@export var first_dialogic_timeline: DialogicTimeline
 
 ## First room to load and bind camera to
 @export var first_room_scene: PackedScene
@@ -40,8 +46,10 @@ var current_room_instance: Room
 func _ready():
 	DebugUtils.assert_member_is_set(self, dialogic_style_to_preload, "dialogic_style_to_preload")
 	DebugUtils.assert_member_is_set(self, dialogic_player_character, "dialogic_player_character")
-	DebugUtils.assert_member_is_set(self, first_dialogic_timeline, "first_dialogic_timeline")
 	DebugUtils.assert_member_is_set(self, bgm_ingame, "bgm_ingame")
+	DebugUtils.assert_string_member_is_not_empty(self, ingame_scene_path, "ingame_scene_path")
+
+	DebugUtils.assert_member_is_set(self, first_dialogic_timeline, "first_dialogic_timeline")
 	DebugUtils.assert_member_is_set(self, first_room_scene, "first_room_scene")
 
 	# This avoids most of the initial loading time on first timeline play and layout display
@@ -90,9 +98,20 @@ func _exit_tree():
 
 
 func _unhandled_input(event: InputEvent):
-	if event.is_action_pressed(&"dialogic_auto_skip"):
+	if event.is_action_pressed(&"debug_game_restart"):
+		if OS.has_feature("debug"):
+			await TransitionScreen.fade_out_async(10.0)
+			current_room_instance.queue_free()
+			await get_tree().physics_frame
+			# await should wait for end of frame, so we can safely call _change_scene_immediate here
+			# below doesn't work, as a hack we set ingame_scene_path to main menu scene
+			# and then it works...
+			SceneLoader.change_scene_to_path(ingame_scene_path)
+			#get_tree().reload_current_scene
+			await TransitionScreen.fade_in_async(10.0)
+	elif event.is_action_pressed(&"dialogic_auto_skip"):
 		Dialogic.Inputs.auto_skip.enabled = true
-	if event.is_action_released(&"dialogic_auto_skip"):
+	elif event.is_action_released(&"dialogic_auto_skip"):
 		Dialogic.Inputs.auto_skip.enabled = false
 
 
