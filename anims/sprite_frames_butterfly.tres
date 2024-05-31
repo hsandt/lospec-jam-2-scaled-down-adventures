@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=23 format=3 uid="uid://befileq1y3ew0"]
+[gd_resource type="SpriteFrames" load_steps=23 format=3 uid="uid://c418jy8dv2hpg"]
 
 [ext_resource type="Texture2D" uid="uid://bfxymgae32vvm" path="res://sprites/npcs/coxsys.png" id="1_8tjbx"]
 [ext_resource type="Texture2D" uid="uid://beo8st7hmgdt3" path="res://sprites/characters/characters_idle left_spritesheet.png" id="2_mxxas"]

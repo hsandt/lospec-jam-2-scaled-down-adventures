@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=27 format=3 uid="uid://dee414n5qi0lr"]
+[gd_resource type="SpriteFrames" load_steps=27 format=3 uid="uid://chlf22dof43y5"]
 
 [ext_resource type="Texture2D" uid="uid://c82v7lkhy7p1d" path="res://sprites/npcs/Ant_worker.png" id="1_gnj5a"]
 [ext_resource type="Texture2D" uid="uid://beo8st7hmgdt3" path="res://sprites/characters/characters_idle left_spritesheet.png" id="2_5l4wo"]
