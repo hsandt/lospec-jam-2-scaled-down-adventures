@@ -12,6 +12,7 @@ h1_font_size = 32
 h2_font_size = 16
 h3_font_size = 8
 h4_font_size = 8
+current_speed = 0.5
 scroll_active = true
 
 [node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" index="0"]

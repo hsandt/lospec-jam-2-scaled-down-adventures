@@ -86,6 +86,10 @@ func _scroll_container(amount : float) -> void:
 func _process(_delta):
 	if Engine.is_editor_hint():
 		return
+	# LOCAL FIX by hsandt to avoid scrolling Credits while invisible,
+	# in the background
+	if not visible:
+		return
 	var input_axis = Input.get_axis("ui_up", "ui_down")
 	if input_axis != 0:
 		_scroll_container(10 * input_axis)
