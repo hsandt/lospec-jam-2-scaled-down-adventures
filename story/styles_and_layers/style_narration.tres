@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=11 format=3 uid="uid://nkn8eguy2pj4"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_fk627"]
+[ext_resource type="PackedScene" uid="uid://blcqurxqn3vnq" path="res://story/styles_and_layers/VisualNovelTextbox/custom_vn_textbox_layer.tscn" id="3_75ukg"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_ksoty"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="7_df2qd"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_1odr1"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_xbcc7"]
+
+[sub_resource type="Resource" id="Resource_40qyn"]
+script = ExtResource("2_fk627")
+scene = ExtResource("4_ksoty")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_hq1lf"]
+script = ExtResource("2_fk627")
+scene = ExtResource("3_75ukg")
+overrides = {
+"name_label_custom_font_size": "8.0"
+}
+
+[sub_resource type="Resource" id="Resource_3h7pv"]
+script = ExtResource("2_fk627")
+scene = ExtResource("7_df2qd")
+overrides = {
+"font_size_custom": "8.0"
+}
+
+[sub_resource type="Resource" id="Resource_gv73c"]
+script = ExtResource("2_fk627")
+scene = ExtResource("9_1odr1")
+overrides = {
+"font_custom_size": "8.0"
+}
+
+[resource]
+script = ExtResource("10_xbcc7")
+name = "style_narration"
+base_overrides = {}
+layers = Array[ExtResource("2_fk627")]([SubResource("Resource_40qyn"), SubResource("Resource_hq1lf"), SubResource("Resource_3h7pv"), SubResource("Resource_gv73c")])
+metadata/_latest_layer = 1

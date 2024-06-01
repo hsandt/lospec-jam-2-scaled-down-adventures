@@ -1,17 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxapglgebrrse"]
+[gd_scene load_steps=11 format=3 uid="uid://dxapglgebrrse"]
 
 [ext_resource type="Script" path="res://scripts/InGameManager.gd" id="1_2fg1p"]
 [ext_resource type="Resource" uid="uid://3kk5m42vokhk" path="res://story/styles_and_layers/style.tres" id="2_sluu0"]
 [ext_resource type="PackedScene" uid="uid://bmifdd84jcu0b" path="res://scenes/room_boy.tscn" id="3_0x0ki"]
 [ext_resource type="Script" path="res://scripts/Camera/InGameCamera.gd" id="3_vlni7"]
+[ext_resource type="Resource" path="res://story/characters/character_player.dch" id="3_yymyc"]
+[ext_resource type="Resource" path="res://story/timelines/timeline_intro.dtl" id="4_fy2a8"]
 [ext_resource type="PackedScene" uid="uid://bo240vda13h14" path="res://prefabs/characters/player_character.tscn" id="5_52ms7"]
+[ext_resource type="AudioStream" uid="uid://behc3i7og4mv4" path="res://audio/bgm/bgm_ingame.ogg" id="5_rcurk"]
+[ext_resource type="Script" path="res://addons/maaacks_menus_template/extras/scripts/PauseMenuController.gd" id="9_mmq42"]
+[ext_resource type="PackedScene" uid="uid://dhsjpg57evpv2" path="res://prefabs/menus/scenes/Menus/PauseMenu/PauseMenu.tscn" id="10_6io5v"]
 
 [node name="InGame" type="Node2D"]
 
 [node name="InGameManager" type="Node" parent="." groups=["in_game_manager"]]
 script = ExtResource("1_2fg1p")
 dialogic_style_to_preload = ExtResource("2_sluu0")
+dialogic_player_character = ExtResource("3_yymyc")
+bgm_ingame = ExtResource("5_rcurk")
+ingame_scene_path = "res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
+first_dialogic_timeline = ExtResource("4_fy2a8")
 first_room_scene = ExtResource("3_0x0ki")
+debug_skip_intro = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"Music"
 
 [node name="InGameCamera" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -24,3 +38,7 @@ editor_draw_drag_margin = true
 script = ExtResource("3_vlni7")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("5_52ms7")]
+
+[node name="PauseMenuController" type="Node" parent="."]
+script = ExtResource("9_mmq42")
+pause_menu_packed = ExtResource("10_6io5v")

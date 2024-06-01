@@ -3,33 +3,35 @@
 
 ### Role
 
-komehara - Story & Mission design, Programming
+komehara
+Story, Programming, UI, Misc support
 
-L-Sync - Story & Mission design, Audio
+emmy!!/boopkitty
+Art
 
-emmy!! - Art
+L-Sync
+Story & Dialogues, Audio, Additional art
 
 
-## Sourced / Unaffiliated
-### Asset Type
-#### Use Case
-Author: [Name]()
-Source: [Domain : webpage.html]()
-License: [License]()
+## Godot Plugins
+
+### = Dialogic 2.0 (alpha 14) =
+
+Author: [Emilio Coppola](https://github.com/coppolaemilio)
+Source: [GitHub](https://github.com/dialogic-godot/dialogic)
+License: [MIT License](https://github.com/dialogic-godot/dialogic/blob/main/LICENSE)
+
+### = Godot Menus Template =
+
+Author: [Marek Belski](https://github.com/Maaack/Godot-Menus-Template/graphs/contributors)
+Source: [github: Godot-Menus-Template](https://github.com/Maaack/Godot-Menus-Template)
+License: [MIT License](https://github.com/Maaack/Godot-Game-Template/blob/main/LICENSE.txt)
 
 
 ## Tools
-#### Godot
+
+#### = Godot =
+
 Author: [Juan Linietsky, Ariel Manzur, and contributors](https://godotengine.org/contact)
 Source: [godotengine.org](https://godotengine.org/)
 License: [MIT License](https://github.com/godotengine/godot/blob/master/LICENSE.txt)
-
-#### Git
-Author: [Linus Torvalds](https://github.com/torvalds)
-Source: [git-scm.com](https://git-scm.com/downloads)
-License: [GNU General Public License version 2](https://opensource.org/licenses/GPL-2.0)
-
-#### Godot Menus Template
-Author: [Marek Belski](https://github.com/Maaack/Godot-Menus-Template/graphs/contributors)
-Source: [github: Godot-Menus-Template](https://github.com/Maaack/Godot-Menus-Template)
-License: [MIT License](LICENSE.txt)

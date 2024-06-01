@@ -1,0 +1,11 @@
+if {philly_sentences_told} == 0:
+	[voice path="res://audio/vocals/butterfly1.ogg" volume="0.0"]
+	characters/character_butterfly_philly: It's the first day of my life today!
+	[voice path="res://audio/vocals/butterfly1.ogg" volume="0.0"]
+	characters/character_butterfly_philly: I'm so happy!
+	[voice path="res://audio/vocals/butterfly2.ogg" volume="0.0"]
+	characters/character_butterfly_philly: Yay!!!
+	set {philly_sentences_told} = 1
+elif {philly_sentences_told} == 1:
+	[voice path="res://audio/vocals/butterfly2.ogg" volume="0.0"]
+	characters/character_butterfly_philly: Yay!!!!

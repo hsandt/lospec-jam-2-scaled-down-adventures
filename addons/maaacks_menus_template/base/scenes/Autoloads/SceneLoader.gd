@@ -36,11 +36,12 @@ func get_resource():
 		_loaded_resource = current_loaded_resource
 	return _loaded_resource
 
-# LOCAL FIX by hsandt
+# LOCAL ADDED by hsandt
+## Load scene from path synchronously
+## This should only be called for cached or very lightweight scenes
+## and preferably with call_deferred to avoid issues
+## Otherwise, use load_scene to benefit from async loading
 func change_scene_to_path(scene_path: String) -> void:
-	# Load scene from path
-	# This should only be called for cached or very lightweight scenes
-	# Otherwise, use load_scene to benefit from async loading
 	var scene = ResourceLoader.load(scene_path, "PackedScene")
 	var err = get_tree().change_scene_to_packed(scene)
 	if err:

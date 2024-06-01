@@ -1,0 +1,27 @@
+if {bity_sentences_told} == 0:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: They sent me here for nothing.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: there's food to gather over there they said.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: It's important they said!
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: We are counting on you they said...
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: Too much useless talk.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: These orders are like this draft that comes from under this door since I am not a carrier but a builder.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: This situation is such a non-sense.
+	set {bity_sentences_told} = 1
+elif {bity_sentences_told} == 1:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: Besides, I'm hungry...
+	if {scramble_accepted_to_help} == true:
+		set {bity_sentences_told} = 2
+elif {bity_sentences_told} == 2:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: Ah, chief said so?
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_bity: Heh, this is a work that is a little more to my measure.
+	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]

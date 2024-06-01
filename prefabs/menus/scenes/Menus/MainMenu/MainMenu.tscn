@@ -34,7 +34,7 @@ theme_override_constants/margin_top = 8
 
 [node name="Title" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="0"]
 theme_override_font_sizes/font_size = 24
-text = "Down-Scaled
+text = "Downscaled
 Adventures"
 
 [node name="SubTitle" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="1"]

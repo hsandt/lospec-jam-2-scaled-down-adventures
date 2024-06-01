@@ -1,0 +1,20 @@
+if {randi_sentences_told} == 0:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_randi: Oh, you're new here?
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_randi: Never seen ya 'round before, even though I been workin' in this area for four weeks now.
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_randi: By the way, you seen my colleagues?
+	set {randi_sentences_told} = 1
+elif {randi_sentences_told} == 1:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_randi: Where are the others?
+	if {scramble_accepted_to_help} == true:
+		set {randi_sentences_told} = 2
+elif {randi_sentences_told} == 2:
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_randi: Oh, the chief said you needed help over at the door zone?
+	[voice path="res://audio/vocals/ant_worker.ogg" volume="0.0"]
+	characters/character_ant-worker_randi: Alright, I'm comin'!
+	[sound path="res://audio/sfx/npc_worker_accepts.ogg" volume="0.0"]
+	set {randi_accepted_to_help} = true

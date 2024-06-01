@@ -1,0 +1,5 @@
+if {troll_sentence_told} == 0:
+	characters/character_toy_troll: ...
+	set {troll_sentence_told} = 1
+elif {troll_sentence_told} == 1:
+	characters/character_toy_troll: "It's just a toy..."

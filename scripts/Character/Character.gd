@@ -30,9 +30,31 @@ func _physics_process(_delta: float):
 	move_and_slide()
 
 
-func _update_direction_toward(direction_vector: Vector2):
-	# DirectionalParent children must all face RIGHT in initial scene setup, as it is
-	# Godot's angle reference
-	current_direction = MathUtils.vector_to_dominant_cardinal_direction(direction_vector, true)
+func update_direction(new_direction: MathEnums.CardinalDirection):
+	current_direction = new_direction
 	if directional_parent:
+		# DirectionalParent children must all face RIGHT in initial scene setup, as it is
+		# Godot's angle reference
 		directional_parent.rotation = MathUtils.cardinal_direction_to_angle(current_direction)
+
+
+func _update_direction_toward(direction_vector: Vector2):
+	var dominant_direction := MathUtils.vector_to_dominant_cardinal_direction(direction_vector, true)
+	update_direction(dominant_direction)
+
+
+func remove_after_fade_out():
+	await TransitionScreen.fade_out_async(1.0)
+
+	# don't queue free, it would cause issues with Dialogic still using character
+	# for dialogue
+	# instead hide it and disable all collisions
+	# set_process(PROCESS_MODE_DISABLED) won't disable collisions so manually disable
+	# each collider
+	visible = false
+
+	for child in find_children("*", "CollisionShape2D"):
+		var collision_shape := child as CollisionShape2D
+		collision_shape.disabled = true
+
+	await TransitionScreen.fade_in_async(1.0)

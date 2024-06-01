@@ -40,6 +40,11 @@ func _input(event):
 		intro_done()
 	super._input(event)
 
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		# Close sub menu, if any
+		_close_sub_menu()
+
 func _ready():
 	super._ready()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
@@ -57,8 +62,17 @@ func _ready():
 		ProjectMusicController.music_stream_player.stream = bgm_title_loop
 		ProjectMusicController.play()
 
+func _disable_button_including_focus(button: Button):
+	button.disabled = true
+	button.focus_mode = Control.FOCUS_NONE
+
 # override
 func play_game():
+	_disable_button_including_focus(%PlayButton)
+	_disable_button_including_focus(%OptionsButton)
+	_disable_button_including_focus(%CreditsButton)
+	_disable_button_including_focus(%ExitButton)
+
 	ProjectMusicController.fade_out(1.0)
 	await TransitionScreen.fade_out_async(fade_out_speed)
 	super.play_game()

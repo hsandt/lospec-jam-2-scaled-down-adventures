@@ -1,0 +1,13 @@
+if {slim_sentences_told} == 0:
+	[voice path="res://audio/vocals/cranefly.ogg" volume="0.0"]
+	characters/character_cranefly_slim: Hol'up, calm down,
+	[voice path="res://audio/vocals/cranefly.ogg" volume="0.0"]
+	characters/character_cranefly_slim: i'm no mosquito man, imma cranefly.
+	[voice path="res://audio/vocals/cranefly.ogg" volume="0.0"]
+	characters/character_cranefly_slim: Why do people hate mosquitoes so much?
+	set {slim_sentences_told} = 1
+elif {slim_sentences_told} == 1:
+	[voice path="res://audio/vocals/cranefly.ogg" volume="0.0"]
+	characters/character_cranefly_slim: Ohhh no, i'm not gonna fly you fly in the air.
+	[voice path="res://audio/vocals/cranefly.ogg" volume="0.0"]
+	characters/character_cranefly_slim: Lose some fat first!

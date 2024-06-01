@@ -1,7 +1,6 @@
 class_name PlayerCharacter
 extends Character
 
-
 ## Area to detect interactable in
 @export var interaction_area: Area2D
 
@@ -9,11 +8,15 @@ extends Character
 ## Is the character interacting with something or someone?
 var is_interacting: bool
 
+## Is the character acting for a cinematic?
+var is_playing_cinematic: bool
+
 
 func _ready():
 	DebugUtils.assert_member_is_set(self, interaction_area, "interaction_area")
 
 	is_interacting = false
+	is_playing_cinematic = false
 
 
 func _process(_delta: float):
@@ -26,7 +29,7 @@ func _process(_delta: float):
 
 func _unhandled_input(event: InputEvent):
 	# check if a dialog is already running or if any other interaction is running
-	if Dialogic.current_timeline != null or is_interacting:
+	if Dialogic.current_timeline != null or is_interacting or is_playing_cinematic:
 		return
 
 	# Exact match to avoid conflicts with Alt+Enter
@@ -36,12 +39,12 @@ func _unhandled_input(event: InputEvent):
 
 
 func can_move_freely() -> bool:
-	return !is_interacting
+	return !is_interacting and !is_playing_cinematic
 
 
 func can_interact() -> bool:
 	# character cannot interrupt interaction with another interaction
-	return !is_interacting
+	return !is_interacting and !is_playing_cinematic
 
 
 func _process_interact():
