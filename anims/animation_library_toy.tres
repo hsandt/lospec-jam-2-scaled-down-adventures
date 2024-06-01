@@ -1,10 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://cv0dk0kcajhyx"]
+[gd_resource type="AnimationLibrary" load_steps=11 format=3 uid="uid://ccnxth0kttsug"]
 
-[ext_resource type="PackedScene" uid="uid://c0127dqab5jx4" path="res://prefabs/characters/npc_base.tscn" id="1_s4pil"]
-[ext_resource type="SpriteFrames" uid="uid://duaa8vy7xtr1c" path="res://anims/sprite_frames_troll.tres" id="2_uklpx"]
-
-[sub_resource type="Animation" id="Animation_22cge"]
-length = 1.33333
+[sub_resource type="Animation" id="Animation_r4xer"]
+length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -31,7 +28,7 @@ tracks/1/keys = {
 "values": ["IdleDown"]
 }
 
-[sub_resource type="Animation" id="Animation_vtxgk"]
+[sub_resource type="Animation" id="Animation_0v1ay"]
 length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
@@ -59,7 +56,7 @@ tracks/1/keys = {
 "values": ["IdleLeft"]
 }
 
-[sub_resource type="Animation" id="Animation_1os51"]
+[sub_resource type="Animation" id="Animation_ogo7e"]
 length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
@@ -87,7 +84,7 @@ tracks/1/keys = {
 "values": ["IdleRight"]
 }
 
-[sub_resource type="Animation" id="Animation_6vt7c"]
+[sub_resource type="Animation" id="Animation_psifl"]
 length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
@@ -115,7 +112,7 @@ tracks/1/keys = {
 "values": ["IdleUp"]
 }
 
-[sub_resource type="Animation" id="Animation_m7nky"]
+[sub_resource type="Animation" id="Animation_6nyyi"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -142,7 +139,7 @@ tracks/1/keys = {
 "values": ["IdleDown"]
 }
 
-[sub_resource type="Animation" id="Animation_k2w2f"]
+[sub_resource type="Animation" id="Animation_v2pne"]
 length = 0.29985
 loop_mode = 1
 tracks/0/type = "value"
@@ -170,7 +167,7 @@ tracks/1/keys = {
 "values": ["WalkDown"]
 }
 
-[sub_resource type="Animation" id="Animation_bsfhl"]
+[sub_resource type="Animation" id="Animation_si6o7"]
 length = 0.29985
 loop_mode = 1
 tracks/0/type = "value"
@@ -198,7 +195,7 @@ tracks/1/keys = {
 "values": ["WalkLeft"]
 }
 
-[sub_resource type="Animation" id="Animation_i6llc"]
+[sub_resource type="Animation" id="Animation_j55wv"]
 length = 0.29985
 loop_mode = 1
 tracks/0/type = "value"
@@ -226,7 +223,7 @@ tracks/1/keys = {
 "values": ["WalkRight"]
 }
 
-[sub_resource type="Animation" id="Animation_bjj1f"]
+[sub_resource type="Animation" id="Animation_3nmqv"]
 length = 0.29985
 loop_mode = 1
 tracks/0/type = "value"
@@ -254,7 +251,7 @@ tracks/1/keys = {
 "values": ["WalkUp"]
 }
 
-[sub_resource type="Animation" id="Animation_kadgq"]
+[sub_resource type="Animation" id="Animation_jpmny"]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -281,41 +278,16 @@ tracks/1/keys = {
 "values": ["default"]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_dg6vc"]
+[resource]
 _data = {
-"IdleDown": SubResource("Animation_22cge"),
-"IdleLeft": SubResource("Animation_vtxgk"),
-"IdleRight": SubResource("Animation_1os51"),
-"IdleUp": SubResource("Animation_6vt7c"),
-"RESET": SubResource("Animation_m7nky"),
-"WalkDown": SubResource("Animation_k2w2f"),
-"WalkLeft": SubResource("Animation_bsfhl"),
-"WalkRight": SubResource("Animation_i6llc"),
-"WalkUp": SubResource("Animation_bjj1f"),
-"default": SubResource("Animation_kadgq")
+"IdleDown": SubResource("Animation_r4xer"),
+"IdleLeft": SubResource("Animation_0v1ay"),
+"IdleRight": SubResource("Animation_ogo7e"),
+"IdleUp": SubResource("Animation_psifl"),
+"RESET": SubResource("Animation_6nyyi"),
+"WalkDown": SubResource("Animation_v2pne"),
+"WalkLeft": SubResource("Animation_si6o7"),
+"WalkRight": SubResource("Animation_j55wv"),
+"WalkUp": SubResource("Animation_3nmqv"),
+"default": SubResource("Animation_jpmny")
 }
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mur7"]
-size = Vector2(44, 57)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_orys1"]
-size = Vector2(34, 49)
-
-[node name="NPC_Toy" instance=ExtResource("1_s4pil")]
-
-[node name="AnimationPlayer" parent="." index="2"]
-libraries = {
-"": SubResource("AnimationLibrary_dg6vc")
-}
-
-[node name="AnimatedSprite2D" parent="." index="3"]
-sprite_frames = ExtResource("2_uklpx")
-animation = &"IdleDown"
-
-[node name="CollisionShape2D" parent="InteractableArea" index="0"]
-position = Vector2(0, 18.5)
-shape = SubResource("RectangleShape2D_4mur7")
-
-[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
-position = Vector2(0, 16.5)
-shape = SubResource("RectangleShape2D_orys1")
