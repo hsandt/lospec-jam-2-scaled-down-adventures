@@ -213,10 +213,10 @@ shape = SubResource("RectangleShape2D_gdhx3")
 debug_color = Color(0.678431, 0.415686, 0.741176, 0.419608)
 
 [node name="CameraLimit_TopLeft" type="Marker2D" parent="."]
-position = Vector2(-112, -182)
+position = Vector2(-110, -173)
 
 [node name="CameraLimit_BottomRight" type="Marker2D" parent="."]
-position = Vector2(1202, 127)
+position = Vector2(946, 127)
 
 [node name="Marker2D_EntranceSpot0" type="Marker2D" parent="."]
 position = Vector2(15, 2)
@@ -275,12 +275,12 @@ dialogic_character = ExtResource("30_3vuom")
 dialogic_timeline = ExtResource("31_dmxce")
 
 [node name="NPC Caterpillar Flubble" parent="npc_parent" instance=ExtResource("25_mxvyc")]
-position = Vector2(503, 112)
+position = Vector2(503, 124)
 dialogic_character = ExtResource("33_l18fc")
 dialogic_timeline = ExtResource("34_jgwox")
 
 [node name="NPC Cranefly Slim" parent="npc_parent" instance=ExtResource("26_vomrl")]
-position = Vector2(-81, 119)
+position = Vector2(-80, 115)
 dialogic_character = ExtResource("36_sqlgn")
 dialogic_timeline = ExtResource("37_fw7cc")
 
