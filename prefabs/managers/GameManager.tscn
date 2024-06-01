@@ -14,6 +14,7 @@ script = ExtResource("1_a65vf")
 in_game_scene = ExtResource("2_mseh8")
 
 [node name="CanvasLayer_FullScreen" type="CanvasLayer" parent="."]
+layer = 100
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer_FullScreen"]
 material = SubResource("ShaderMaterial_ln3bo")
