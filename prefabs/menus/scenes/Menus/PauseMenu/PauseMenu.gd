@@ -16,5 +16,18 @@ func _unhandled_input(event):
 
 func _on_confirm_restart_confirmed():
 	in_game_manager._queue_unload_current_room()
+
+	# Clear Dialogic state completely (esp. dialogue variables)
+	Dialogic.clear()
+
 	SceneLoader.reload_current_scene()
 	InGameMenuController.close_menu()
+
+
+func _on_confirm_main_menu_confirmed():
+	# Clear Dialogic state completely (esp. dialogue variables)
+	Dialogic.clear()
+
+	SceneLoader.load_scene(main_menu_scene)
+	InGameMenuController.close_menu()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

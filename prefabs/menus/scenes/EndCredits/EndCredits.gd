@@ -8,6 +8,9 @@ func _end_reached():
 	super._end_reached()
 
 func _on_MenuButton_pressed():
+	# Clear Dialogic state completely (esp. dialogue variables)
+	Dialogic.clear()
+
 	SceneLoader.load_scene(main_menu_scene)
 
 func _on_ExitButton_pressed():
