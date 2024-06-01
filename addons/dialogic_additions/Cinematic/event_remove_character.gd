@@ -29,7 +29,7 @@ func _execute() -> void:
 	if character:
 		var character_node := Dialogic.Styles.get_layout_node().registered_characters[character] as Character
 		if character_node:
-			character_node.remove_after_fade_out()
+			await character_node.remove_after_fade_out()
 		else:
 			push_error("[DialogicRemoveCharacterEvent] _execute: character has no registered node to remove")
 	else:

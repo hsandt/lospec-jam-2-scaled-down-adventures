@@ -46,8 +46,15 @@ func _update_direction_toward(direction_vector: Vector2):
 func remove_after_fade_out():
 	await TransitionScreen.fade_out_async(1.0)
 
-	queue_free()
-	# just hide character to avoid dangling references
-	#await get_tree().physics_frame
+	# don't queue free, it would cause issues with Dialogic still using character
+	# for dialogue
+	# instead hide it and disable all collisions
+	# set_process(PROCESS_MODE_DISABLED) won't disable collisions so manually disable
+	# each collider
+	visible = false
+
+	for child in find_children("*", "CollisionShape2D"):
+		var collision_shape := child as CollisionShape2D
+		collision_shape.disabled = true
 
 	await TransitionScreen.fade_in_async(1.0)
