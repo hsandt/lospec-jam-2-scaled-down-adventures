@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Downscaled Adventures"
-config/version="0.2.0"
+config/version="0.2.1"
 run/main_scene="res://prefabs/menus/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
