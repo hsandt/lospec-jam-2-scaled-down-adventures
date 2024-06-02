@@ -52,7 +52,9 @@ static func get_filtered_action_names() -> Array[StringName]:
 	var return_list : Array[StringName] = []
 	var action_list : Array[StringName] = InputMap.get_actions()
 	for action_name in action_list:
-		if not action_name.begins_with("ui_"):
+		# LOCAL PATCH by hsandt: show important built-in actions:
+		# ui_cancel
+		if not action_name.begins_with("ui_") or action_name == "ui_cancel":
 			return_list.append(action_name)
 	return return_list
 
