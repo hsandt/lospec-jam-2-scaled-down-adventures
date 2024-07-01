@@ -156,7 +156,7 @@ func _queue_unload_current_room():
 
 
 func play_intro_async():
-	if not debug_skip_intro and OS.has_feature("debug"):
+	if not (debug_skip_intro and OS.has_feature("debug")):
 		var layout := Dialogic.start(first_dialogic_timeline)
 		layout.register_character(GameManager.in_game_manager.dialogic_player_character, player_character)
 		await Dialogic.timeline_ended
