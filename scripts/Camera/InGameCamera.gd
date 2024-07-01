@@ -22,7 +22,17 @@ func move_to_player_character():
 func move_instantly_to_player_character():
 	if follow_player_character:
 		position = player_character.position
+
+		# Disable drag window for the instant reset
+		# to make sure camera is centered on target
+		drag_horizontal_enabled = false
+		drag_vertical_enabled = false
+
 		reset_smoothing()
+
+		# Re-enable drag
+		drag_horizontal_enabled = true
+		drag_vertical_enabled = true
 
 
 func set_camera_limits_for_room(room: Room):
